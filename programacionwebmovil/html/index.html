@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0">
-    <title>Encabezado de Página</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timac Header</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header class="header" style="background-color: #FC4C21">
-        <div class="logo" style="margin-left: -5px">
-            <img src="logo0.png" alt="Logo de timac" style="width: 100px; height: auto">
-        </div>
-    </header>
+<header id="main_header" xlu-include-file="../html/header.html"></header>
+<script src="../js/xlu-include-file.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", xLuIncludeFile);
+</script>
 </body>
 </html>
