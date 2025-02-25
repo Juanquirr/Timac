@@ -1,8 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-y: hidden;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -47,6 +53,7 @@ body {
 
 .main-content {
     flex: 1 0 auto;
+    overflow: auto;
 }
 
 .header-content {
@@ -56,7 +63,6 @@ body {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
     flex-shrink: 0;
 }
 
@@ -134,7 +140,7 @@ body {
 }
 
 .footer-pack {
-    height: 300px;
+    min-height: 300px;
     background: var(--headerfootercolor-0, #fc4c21);
     border-style: solid;
     border-color: #000000;
@@ -259,14 +265,10 @@ body {
     text-align: center;
 }
 
-
 .map{
-
     height: 250px;
     width: 30%;
 }
-
-
 
 .ellipse-3 {
     background: #0564fd;
