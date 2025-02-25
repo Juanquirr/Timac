@@ -271,3 +271,37 @@ body,html {
     position: relative;
 }
 
+.product-card {
+    border: 1px solid #000;
+    background-color: #6a9c89;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    margin: 10px 0 0 0;
+    width: 90%;
+    max-height: 75%;
+    border-radius: 15px;
+}
+
+.product-title {
+    font-size: 1em;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.product-price {
+    font-size: 1em;
+    margin: 0;
+}
