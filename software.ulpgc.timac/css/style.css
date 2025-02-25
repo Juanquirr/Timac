@@ -1,7 +1,12 @@
-body,html {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 :root {
@@ -40,6 +45,10 @@ body,html {
     --mg-300: #a2c1b5;
 }
 
+.main-content {
+    flex: 1 0 auto;
+}
+
 .header-content {
     background-color: #FC4C21;
     display: flex;
@@ -48,6 +57,7 @@ body,html {
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .logo {
@@ -133,6 +143,7 @@ body,html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .social-community {
