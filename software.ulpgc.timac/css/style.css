@@ -1,0 +1,126 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+:root {
+    --font-family: Montserrat;
+    --bodytitle-font-size: 36px;
+    --footertitle-font-size: 32px;
+    --bodyprice-font-size: 24px;
+    --bodyfiltertags-font-size: 24px;
+    --bodytext-font-size: 16px;
+    --footertext-font-size: 16px;
+    --log-in-sing-up-font-size: 16px;
+    --producttag-font-size: 10px;
+    --bodylittletext-font-size: 10px;
+    --font-weight: 600px;
+    --headerfootercolor-0: #fc4c21;
+    --headerfootercolor-100: #fc623d;
+    --headerfootercolor-200: #fd7959;
+    --headerfootercolor-400: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(to left, #fd8f74, #fd8f74);
+    --headerfootercolor-500: #febcac;
+    --secondarycolor-0: #f5e8b7;
+    --secondarycolor-100: #f6ebc0;
+    --secondarycolor-200: #f8eec9;
+    --secondarycolor-300: #f9f1d2;
+    --containerbackground-0: #c1d8c3;
+    --containerbackground-100: #c9ddcb;
+    --containerbackground-200: #d1e2d2;
+    --containerbackground-300: #d8e7da;
+    --mg-0: #6a9c89;
+    --mg-100: #7da898;
+    --mg-200: #8fb5a7;
+    --mg-300: #a2c1b5;
+}
+
+.header-content {
+    background-color: #FC4C21;
+    display: flex;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-left: 0;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.shopping {
+    margin: 0 20px;
+    min-height: 30px;
+    min-width: 30px;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.user {
+    margin: 0 20px;
+    min-height: 30px;
+    min-width: 30px;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.search {
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.searchbar {
+    width: 400px;
+    height: 30px;
+    font-size: var();
+    font-family: var(--font-family), sans-serif;
+}
+
+.nav-button {
+    background-color: #c9ddcb;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 0 3px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-carrousel {
+    display: flex;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+}
+
+.body-text {
+    font-family: var(--font-family), serif;
+    font-optical-sizing: auto;
+    font-weight: var(--font-weight);
+    font-style: normal;
+    font-size: var(--bodytext-font-size);
+}
+
+.body-title {
+    font-family: var(--font-family), serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: var(--bodytitle-font-size);
+}
+
+

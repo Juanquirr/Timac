@@ -28,3 +28,5 @@ async function xLuIncludeFile() {
         xLuIncludeFile(); // Recursivo solo si se procesó algo
     }
 }
+
+xLuIncludeFile();
