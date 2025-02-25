@@ -123,4 +123,37 @@ body, html {
     font-size: var(--bodytitle-font-size);
 }
 
+.product-card {
+    border: 1px solid #000;
+    background-color: #6a9c89;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 150px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.2s;
+}
 
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    margin: 10px 0 0 0;
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-title {
+    font-size: 1em;
+    margin: 0;
+}
+.product-price {
+    font-size: 1em;
+    margin: 0;
+}
