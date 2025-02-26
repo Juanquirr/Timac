@@ -321,6 +321,8 @@ body {
 
 .main-content {
     padding: 15px;
+    width: 85%;
+    margin: auto;
 }
 
 .product-section {
@@ -329,7 +331,7 @@ body {
 
 .product-section-title {
     font-family: var(--font-family), sans-serif;
-    font-size: var(--bodytitle-font-size);
+    font-size: var(--footertitle-font-size);
     margin-bottom: 5px;
 }
 .product-slider {
@@ -339,3 +341,7 @@ body {
     overflow-x: auto;
 }
 
+.product-card-link {
+    text-decoration: none;
+    color: inherit;
+}
