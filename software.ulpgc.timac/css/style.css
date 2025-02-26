@@ -6,13 +6,12 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-y: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 :root {
@@ -54,6 +53,8 @@ body {
 .main-content {
     flex: 1 0 auto;
     overflow: auto;
+    margin: 30px auto;
+    width: 65%;
 }
 
 .header-content {
@@ -123,6 +124,8 @@ body {
     align-content: center;
 }
 
+
+/* FONTS */
 .body-text {
     font-family: var(--font-family), serif;
     font-optical-sizing: auto;
@@ -139,6 +142,26 @@ body {
     font-size: var(--bodytitle-font-size);
 }
 
+.big-price {
+    font-family: var(--font-family), serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: var(--bodytitle-font-size);
+    color: red;
+}
+
+.add-basket-text {
+    font-family: var(--font-family), serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: var(--footertitle-font-size);
+    color: white;
+}
+
+
+/* FOOTER */
 .footer-pack {
     min-height: 300px;
     background: var(--headerfootercolor-0, #fc4c21);
@@ -284,3 +307,91 @@ body {
     position: relative;
 }
 
+
+/* DETAILED PRODUCT */
+.main-container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.top-boxes {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.top-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.-left{
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-box {
+    min-height: 300px;
+    height: auto;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.availability {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+}
+
+.in-store {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.counter-button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.counter-value {
+    font-size: 20px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.add-basket-button {
+    background-color: var(--headerfootercolor-0);
+    width: 80%;
+    height: 100%;
+    font-size: var(--bodyprice-font-size);
+    text-align: center;
+    cursor: pointer;
+    margin: 20px 0;
+    padding: 15px 0;
+    border: none;
+}
+
+#add-basket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.biggest-product {
+    height: auto;
+    width: 600px;
+    aspect-ratio: 1;
+}
