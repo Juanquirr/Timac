@@ -55,7 +55,7 @@ body {
     flex: 1 0 auto;
     overflow: auto;
     margin: 30px auto;
-    width: 100%;
+    width: 70%;
 }
 
 .header-content {
@@ -397,6 +397,8 @@ body {
     margin: 20px 0;
     padding: 15px 0;
     border-style: outset;
+    text-decoration: none;
+    color: inherit;
 }
 
 #add-basket-container {
