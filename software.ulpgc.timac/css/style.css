@@ -619,3 +619,142 @@ body {
     margin-top: 20px;
     border-style: outset;
 }
+
+/* SIGN UP PAGE */
+.signup-main-container {
+    display: flex;
+    height: 100%;
+}
+
+.left-section {
+    width: 40%;
+    background-color: var(--headerfootercolor-0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.left-section>h2 {
+    font-family: var(--font-family), sans-serif;
+    font-size: var(--bodytitle-font-size);
+    margin: 20px 0;
+}
+
+.left-section>p {
+    font-family: var(--font-family), sans-serif;
+    font-size: var(--footertitle-font-size);
+}
+
+.left-section img {
+    max-width: 400px;
+}
+
+.right-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.social-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 10px;
+}
+
+.social-button {
+    font-family: var(--font-family), sans-serif;
+    font-size: var(--footertext-font-size);
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.social-button img {
+    max-width: 22px;
+    margin-right: 10px;
+}
+
+.separator {
+    font-family: var(--font-family), sans-serif;
+    font-size: var(--bodytext-font-size);
+
+}
+
+.signup-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.small-input-label {
+    width: 50%;
+}
+
+.small-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.signup-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.signup-button {
+    background-color: var(--headerfootercolor-0);
+    width: 100%;
+    height: 100%;
+    font-size: var(--bodyprice-font-size);
+    text-align: center;
+    cursor: pointer;
+    padding: 15px 0;
+    /*border-style: outset;*/
+    text-decoration: none;
+    color: inherit;
+    border-radius: 5px;
+}
+
+.signup-button-text {
+    font-family: var(--font-family), sans-serif;
+    color: white;
+}
+
+.signup-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    width: 100%;
+}
+
+.login-link {
+    font-family: var(--font-family), sans-serif;
+    font-size: var(--bodytext-font-size);
+}
+
+.login-link>a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--headerfootercolor-0);
+}
