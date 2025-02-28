@@ -20,6 +20,12 @@ body {
     width: 70%;
 }
 
+.main-content-for-product-display {
+    flex: 1 0 auto;
+    overflow: auto;
+    width: 100%;
+}
+
 :root {
     --font-family: Montserrat;
     --bodytitle-font-size: 36px;
@@ -793,7 +799,6 @@ body {
     overflow: visible;
 }
 .single-big-product-available-in-store {
-    border: solid 1px var(--mg-300);
     color: #000000;
     text-align: center;
     font-family: var(--font-family ), serif;
