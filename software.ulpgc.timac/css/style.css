@@ -14,6 +14,13 @@ body {
     min-height: 100%;
 }
 
+.main-content {
+    flex: 1 0 auto;
+    overflow: auto;
+    margin: 30px auto;
+    width: 70%;
+}
+
 :root {
     --font-family: Montserrat;
     --bodytitle-font-size: 36px;
@@ -51,13 +58,7 @@ body {
     --mg-300: #a2c1b5;
 }
 
-.main-content {
-    flex: 1 0 auto;
-    overflow: auto;
-    margin: 30px auto;
-    width: 70%;
-}
-
+/* HEADER */
 .header-content {
     background-color: #FC4C21;
     display: flex;
