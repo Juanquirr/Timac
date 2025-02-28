@@ -1,1 +1,5 @@
-# Timac
+# Timac Hardware Store
+
+## Description
+
+## Figma mockups
