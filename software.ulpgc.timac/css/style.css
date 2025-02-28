@@ -527,9 +527,6 @@ body {
     border-radius: 10px;
 }
 
-
-
-
 .subcategory-option{
     flex: 1 0 auto;
     overflow: auto;
@@ -543,10 +540,7 @@ body {
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-
 }
-
-
 
 .subcategory-selection-sub-category-option {
     height: auto;
