@@ -22,3 +22,11 @@ https://www.figma.com/design/3fVWDDbW7exRWzwFwiELCQ/juan.rodriguez215's-team-lib
 - Mario García Abellán
 - Ian Samuel Trujillo Gil
 - Juan Carlos Rodríguez Ramírez
+
+## Sprint Videos
+This section collects videos documenting the progress and achievements made during each sprint of the TIMAC development. Each video showcases the progress in functionalities, design, and improvements implemented throughout the project.
+
+- Sprint 1 - mockups and templates
+
+  - https://youtu.be/Pn9QSw8qdP8 
+  - https://drive.google.com/file/d/1lFkoxU5oljkgZ2xqpl0w00q5O0yCPB5C/view?usp=sharing
