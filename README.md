@@ -16,7 +16,7 @@ With this project, we aim not only to improve the digital presence of hardware s
 6. Add a product to cart
 
 ## Figma mockups
-https://www.figma.com/design/3fVWDDbW7exRWzwFwiELCQ/juan.rodriguez215's-team-library?m=auto&t=V6CSQpqOPRTKGa9K-1
+https://www.figma.com/design/3fVWDDbW7exRWzwFwiELCQ/juan.rodriguez215's-team-library?node-id=3312-4
 
 ## Developers
 - Mario García Abellán
