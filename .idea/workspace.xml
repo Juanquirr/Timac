@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Refactor.">
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_02_2025_10_09_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_02_2025_10_09__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -30,7 +40,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Juanquirr/Timac.git&quot;,
-    &quot;accountId&quot;: &quot;38c25de1-a76c-423a-8f73-26c065bb555e&quot;
+    &quot;accountId&quot;: &quot;8d77463c-c159-49c7-b42f-073164e74997&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -43,11 +53,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JavaScript Debug.basket-page.html.executor": "Run",
     "JavaScript Debug.create-account-page.html.executor": "Run",
+    "JavaScript Debug.detailed-product-page.html.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.product-pack.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "mario-grc",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,7 +72,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-WS-243.24978.60" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.25659.40" />
       </set>
     </attachedChunks>
   </component>
@@ -72,6 +85,8 @@
       <option name="presentableId" value="Default" />
       <updated>1740737136686</updated>
       <workItem from="1740737137730" duration="1085000" />
+      <workItem from="1741617417977" duration="891000" />
+      <workItem from="1741618445677" duration="4401000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -118,6 +133,7 @@
     <MESSAGE value="Minor fix in detailed-product.html" />
     <MESSAGE value="Refactor with merge of Juanquirr branch." />
     <MESSAGE value="Refactor." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor." />
+    <MESSAGE value="para merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="para merge" />
   </component>
 </project>
