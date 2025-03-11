@@ -1,0 +1,52 @@
+/* Filter bar */
+.filter-bar {
+    display: flex;
+    background-color: #D8E7DA;
+    flex-direction: column;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 250px;
+    height: 275px;
+    justify-content: start;
+}
+
+.filter-bar-title {
+    border-bottom: 2px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50%;
+}
+
+.filter-bar-title>p {
+    margin-bottom: 0;
+}
+
+.filter-bar-title hr {
+    width: 100%;
+    background-color: black;
+    height: 1px;
+    border: none;
+}
+
+.filter-bar-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.filter-bar-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.filter-bar-arrow {
+    transform: rotate(45deg);
+    height: 30px;
+    width: 60px;
+    overflow: visible;
+}
