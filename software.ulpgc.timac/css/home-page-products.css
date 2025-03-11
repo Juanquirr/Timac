@@ -1,0 +1,43 @@
+/* PRODUCT PACK - HOME PAGE */
+.product-card {
+    border: 1px solid #0000;
+    background-color: #8FB5A7;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 150px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.2s;
+    align-items: revert;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    margin: 10px auto 0 auto;
+    width: 90%;
+    max-height: 70%;
+    border-radius: 5px;
+    display: block;
+}
+
+.product-section {
+    margin-bottom: 40px;
+}
+
+.product-slider {
+    display: flex;
+    border-radius: 5px;
+    background-color: #D8E7DA;
+    overflow-x: auto;
+}
+
+.product-card-link {
+    text-decoration: none;
+    color: inherit;
+}
