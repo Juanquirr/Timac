@@ -4,37 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Hotfix in index.html">
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/basket.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/detailed-product.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/filter-bar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/home-page-products.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/registration.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-option.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_02_2025_10_09_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_28_02_2025_10_09__Changes_.xml" beforeDir="false" />
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Major refactor and simplification for JS implementations.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/create-account-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/create-account-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/log-in-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/log-in-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket-product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/detailed-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/detailed-product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/filter-bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/filter-bar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/home-sections.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/home-sections.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/product-pack.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/product-pack.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/single-big-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/single-big-product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-option.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-option.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,28 +51,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaScript Debug.basket-page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.create-account-page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.detailed-product-page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.header.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.log-in-page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.subcategory-option-selector-page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.subcategory-results-page.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;juanquirr&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.basket-page.html.executor": "Run",
+    "JavaScript Debug.create-account-page.html.executor": "Run",
+    "JavaScript Debug.detailed-product-page.html.executor": "Run",
+    "JavaScript Debug.header.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.log-in-page.html.executor": "Run",
+    "JavaScript Debug.subcategory-option-selector-page.html.executor": "Run",
+    "JavaScript Debug.subcategory-results-page.html.executor": "Run",
+    "JavaScript Debug.subcategory-results.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "juanquirr",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario\Desktop\Tercero\2º Semestre\PWM\Timac\software.ulpgc.timac\html" />
@@ -132,7 +105,7 @@
       <workItem from="1740831429519" duration="5000" />
       <workItem from="1741190746120" duration="87000" />
       <workItem from="1741617805182" duration="7336000" />
-      <workItem from="1741645788222" duration="4396000" />
+      <workItem from="1741645788222" duration="5052000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -174,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740761556559</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Major refactor and simplification for JS implementations.">
+      <option name="closed" value="true" />
+      <created>1741651584110</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741651584110</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +177,7 @@
     <MESSAGE value="Refactor with merge of Juanquirr branch." />
     <MESSAGE value="Refactor." />
     <MESSAGE value="Hotfix in index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hotfix in index.html" />
+    <MESSAGE value="Major refactor and simplification for JS implementations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Major refactor and simplification for JS implementations." />
   </component>
 </project>
