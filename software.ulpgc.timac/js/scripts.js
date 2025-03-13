@@ -1,27 +1,34 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const observer = new MutationObserver(() => {
-        const decreaseButton = document.getElementById("decrease");
-        const increaseButton = document.getElementById("increase");
-        const counterElement = document.getElementById("counter");
+function initCounters() {
+    const counterElements = document.querySelectorAll(".counter-container");
 
-        initCounter(decreaseButton, increaseButton, counterElement);
-    });
-    observer.observe(document.body, {childList: true, subtree: true});
-});
+    counterElements.forEach(counterElement => {
+       const decreaseButton = counterElement.querySelector(".counter-button.decrease");
+       const increaseButton = counterElement.querySelector(".counter-button.increase");
+       const counterValue = counterElement.querySelector(".counter-value.counter");
 
-function initCounter(decreaseButton, increaseButton, counterElement) {
+       if(!counterElement.dataset.initialized && decreaseButton && increaseButton && counterValue){
+           counterElement.dataset.initialized = "true";
 
-    let count = parseInt(counterElement.textContent);
+           let count = parseInt(counterValue.textContent) || 0;
 
-    increaseButton.addEventListener("click", function () {
-        count++;
-        counterElement.textContent = count;
-    });
+           decreaseButton.addEventListener("click", () => {
+               if(count > 0){
+                   count--;
+                   counterValue.textContent = count;
+               }
+           });
 
-    decreaseButton.addEventListener("click", function () {
-        if (count > 0){
-            count--;
-            counterElement.textContent = count;
-        }
+           increaseButton.addEventListener("click", () => {
+               count++;
+               counterValue.textContent = count;
+           });
+       }
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const observer = new MutationObserver(() => {
+        initCounters();
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+})
