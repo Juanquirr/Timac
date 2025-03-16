@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Check phone input
     const phoneInput = document.getElementById("phone-input");
 
     phoneInput.addEventListener("input", function () {
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Check passwords
     const form = document.getElementById("form");
     const password1 = document.getElementById("password1");
     const password2 = document.getElementById("password2");
