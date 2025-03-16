@@ -32,18 +32,19 @@
 
         <form class="signup-form">
             <label>
-                <input class="signup-input" type="email" placeholder="Email Address">
+                <input class="signup-input" type="email" placeholder="Email Address" required>
             </label>
             <label>
-                <input class="signup-input" type="password" placeholder="Password">
+                <input class="signup-input" type="password" placeholder="Password" required>
             </label>
+
+            <div class="signup-button-container">
+                <button type="submit" class="signup-button" id="signup-button">
+                    <span class="signup-button-text">Log in</span>
+                </button>
+            </div>
         </form>
 
-        <div class="signup-button-container">
-            <a href="../html/index.html" class="signup-button" id="signup-button" target="_self">
-                <span class="signup-button-text">Log In</span>
-            </a>
-        </div>
         <p class="login-link">Don't have an account? <a href="#">Create account</a></p>
     </div>
 </div>

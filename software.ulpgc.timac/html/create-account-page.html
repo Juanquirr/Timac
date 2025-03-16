@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up at TIMAC</title>
+    <script src="../js/formCheck.js" defer></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/registration.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,34 +31,36 @@
 
         <p class="separator">- OR -</p>
 
-        <form class="signup-form">
+        <form class="signup-form" id="signup-form">
             <label>
-                <input class="signup-input" type="text" placeholder="Full Name">
+                <input class="signup-input" type="text" placeholder="Full Name" required>
             </label>
             <div class="input-group">
                 <label class="small-input-label">
-                    <input type="text" placeholder="Phone" class="small-input">
+                    <input type="text" placeholder="Phone" required class="small-input" id="phone-input">
                 </label>
                 <label class="small-input-label">
-                    <input type="text" placeholder="Birth Date" class="small-input">
+                    <input type="date" min="1900-01-01" placeholder="Birth Date" class="small-input">
                 </label>
             </div>
             <label>
-                <input class="signup-input" type="email" placeholder="Email Address">
+                <input class="signup-input" type="email" placeholder="Email Address" required>
             </label>
             <label>
-                <input class="signup-input" type="password" placeholder="Password">
+                <input class="signup-input" type="password" placeholder="Password" id="password1" required>
             </label>
             <label>
-                <input class="signup-input" type="password" placeholder="Repeat Password">
+                <input class="signup-input" type="password" placeholder="Repeat Password" id="password2" required>
             </label>
+            <span id="passwordError"></span>
+
+            <div class="signup-button-container">
+                <button type="submit" class="signup-button" id="signup-button">
+                    <span class="signup-button-text">Sign Up</span>
+                </button>
+            </div>
         </form>
 
-        <div class="signup-button-container">
-            <a href="../html/index.html" class="signup-button" id="signup-button" target="_self">
-                <span class="signup-button-text">Sign Up</span>
-            </a>
-        </div>
         <p class="login-link">Already have an account? <a href="#">Log in</a></p>
     </div>
 </div>
