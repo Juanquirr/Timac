@@ -1,5 +1,4 @@
 async function xLuIncludeFile() {
-    // Usamos un selector más específico en lugar de "*"
     let elements = document.querySelectorAll("[xlu-include-file]");
 
     for (let element of elements) {
@@ -21,7 +20,4 @@ async function xLuIncludeFile() {
     }
 }
 
-// Ejecutar una sola vez y luego cargar el producto
-xLuIncludeFile().then(() => {
-    loadProduct(); // Asegúrate de que loadProduct esté definido en otro script
-});
+xLuIncludeFile();
