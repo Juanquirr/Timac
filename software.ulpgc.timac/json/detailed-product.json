@@ -1,5 +1,4 @@
 {
-  "product": {
     "image": "../assets/hammer.jpg",
     "alt": "Hammer picture",
     "title": "HAMMER",
@@ -17,5 +16,4 @@
       "Best hammer in the market right now. No words or explanation could transmit the peace of having this hammer.",
       "If thinking on buying it, do not hesitate."
     ]
-  }
 }

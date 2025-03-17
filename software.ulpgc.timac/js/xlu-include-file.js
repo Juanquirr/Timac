@@ -19,4 +19,4 @@ async function xLuIncludeFile() {
         }
     }
 }
-xLuIncludeFile().then(r => loadProduct());
+xLuIncludeFile();
