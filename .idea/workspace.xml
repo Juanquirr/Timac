@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Major refactor and simplification for JS implementations.">
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Refactor.">
+      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/detailed-product.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/detailed-product.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/detailed-product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/xlu-include-file.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/xlu-include-file.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/detailed-product.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,14 +21,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sprint1" />
+        <entry key="$PROJECT_DIR$" value="mario-grc" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,9 +45,6 @@
     &quot;accountId&quot;: &quot;38c25de1-a76c-423a-8f73-26c065bb555e&quot;
   }
 }</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -51,38 +53,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.basket-page.html.executor": "Run",
-    "JavaScript Debug.create-account-page.html.executor": "Run",
-    "JavaScript Debug.detailed-product-page.html.executor": "Run",
-    "JavaScript Debug.header.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.log-in-page.html.executor": "Run",
-    "JavaScript Debug.subcategory-option-selector-page.html.executor": "Run",
-    "JavaScript Debug.subcategory-results-page.html.executor": "Run",
-    "JavaScript Debug.subcategory-results.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "juanquirr",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.basket-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.create-account-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.detailed-product-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.product-pack.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;juanquirr&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Usuario\Desktop\Tercero\2º Semestre\PWM\Timac\software.ulpgc.timac\html" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Usuario\Desktop\Tercero\2º Semestre\PWM\Timac\software.ulpgc.timac\html" />
-      <recent name="C:\Users\Usuario\Desktop\Tercero\2º Semestre\PWM\Timac\software.ulpgc.timac\templates" />
       <recent name="C:\Users\Usuario\Desktop\Tercero\2º Semestre\PWM\Timac\software.ulpgc.timac" />
-      <recent name="C:\Users\Usuario\Desktop\Tercero\2º Semestre\PWM\Timac\software.ulpgc.timac\html\templates" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -101,11 +92,14 @@
       <option name="presentableId" value="Default" />
       <updated>1740737136686</updated>
       <workItem from="1740737137730" duration="1085000" />
-      <workItem from="1740824984871" duration="4962000" />
-      <workItem from="1740831429519" duration="5000" />
-      <workItem from="1741190746120" duration="87000" />
-      <workItem from="1741617805182" duration="7336000" />
-      <workItem from="1741645788222" duration="5052000" />
+      <workItem from="1741617417977" duration="891000" />
+      <workItem from="1741618445677" duration="4401000" />
+      <workItem from="1741721020674" duration="4845000" />
+      <workItem from="1741790652320" duration="2563000" />
+      <workItem from="1741881958327" duration="16000" />
+      <workItem from="1741885425212" duration="359000" />
+      <workItem from="1742224168396" duration="925000" />
+      <workItem from="1742225797688" duration="1494000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -131,31 +125,7 @@
       <option name="project" value="LOCAL" />
       <updated>1740737791116</updated>
     </task>
-    <task id="LOCAL-00004" summary="Hotfix in index.html">
-      <option name="closed" value="true" />
-      <created>1740761528711</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1740761528711</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Hotfix in index.html">
-      <option name="closed" value="true" />
-      <created>1740761556559</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1740761556559</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Major refactor and simplification for JS implementations.">
-      <option name="closed" value="true" />
-      <created>1741651584110</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1741651584110</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,8 +146,7 @@
     <MESSAGE value="Minor fix in detailed-product.html" />
     <MESSAGE value="Refactor with merge of Juanquirr branch." />
     <MESSAGE value="Refactor." />
-    <MESSAGE value="Hotfix in index.html" />
-    <MESSAGE value="Major refactor and simplification for JS implementations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Major refactor and simplification for JS implementations." />
+    <MESSAGE value="para merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="para merge" />
   </component>
 </project>
