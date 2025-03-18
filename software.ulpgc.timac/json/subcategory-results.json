@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "price": "99,99€",
+    "image": "../assets/ellipse-20.png",
+    "link": "../html/index.html",
+    "available_in_store": true,
+    "available_to_deliver": true
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "price": "49,99€",
+    "image": "../assets/ellipse-20.png",
+    "link": "../html/index.html",
+    "available_in_store": false,
+    "available_to_deliver": true
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "price": "19,99€",
+    "image": "../assets/ellipse-20.png",
+    "link": "../html/index.html",
+    "available_in_store": true,
+    "available_to_deliver": false
+  },
+  {
+    "id": 4,
+    "name": "Product 4",
+    "price": "190,99€",
+    "image": "../assets/ellipse-20.png",
+    "link": "../html/index.html",
+    "available_in_store": true,
+    "available_to_deliver": false
+  },
+
+  {
+    "id": 5,
+    "name": "Product 5",
+    "price": "190,99€",
+    "image": "../assets/ellipse-20.png",
+    "link": "../html/index.html",
+    "available_in_store": true,
+    "available_to_deliver": false
+  }
+]
