@@ -121,7 +121,6 @@
 .signup-button-container {
     display: flex;
     justify-content: center;
-    margin: 10px;
     width: 100%;
 }
 
@@ -134,4 +133,11 @@
     text-decoration: none;
     font-weight: bold;
     color: var(--headerfootercolor-0);
+}
+
+#passwordError {
+    display: none;
+    color: red;
+    font-size: 0.8em;
+    font-family: var(--font-family), sans-serif;
 }

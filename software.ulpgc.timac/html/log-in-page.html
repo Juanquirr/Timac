@@ -15,7 +15,9 @@
     <div class="left-section">
         <h2>Welcome to TIMAC!</h2>
         <p>Your trusted hardware store, <br> Making your projects easier than ever.</p>
-        <img src="../assets/logo0.png" alt="TIMAC Logo" class="logo">
+        <a href="../html/index.html">
+            <img src="../assets/logo0.png" alt="TIMAC Logo" class="logo">
+        </a>
     </div>
 
     <div class="right-section">
@@ -32,19 +34,20 @@
 
         <form class="signup-form">
             <label>
-                <input class="signup-input" type="email" placeholder="Email Address">
+                <input class="signup-input" type="email" placeholder="Email Address" required>
             </label>
             <label>
-                <input class="signup-input" type="password" placeholder="Password">
+                <input class="signup-input" type="password" placeholder="Password" required>
             </label>
+
+            <div class="signup-button-container">
+                <button type="submit" class="signup-button" id="signup-button">
+                    <span class="signup-button-text">Log in</span>
+                </button>
+            </div>
         </form>
 
-        <div class="signup-button-container">
-            <a href="../html/index.html" class="signup-button" id="signup-button" target="_self">
-                <span class="signup-button-text">Log In</span>
-            </a>
-        </div>
-        <p class="login-link">Don't have an account? <a href="#">Create account</a></p>
+        <p class="login-link">Don't have an account? <a href="../html/create-account-page.html">Create account</a></p>
     </div>
 </div>
 </body>
