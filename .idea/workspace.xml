@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Load subcategory products from JSON: dynamically fetch products on subcategory result page.">
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Ensure load-subcategory-products-from-json runs after DOM is loaded.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/load-subcategory-products-from-json.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-subcategory-products-from-json.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/xlu-include-file.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/xlu-include-file.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,26 +48,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.create-account-page.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.subcategory-results-page.html.executor": "Run",
-    "Node.js.load-subcategory-products-from-json.js.executor": "Run",
-    "Node.js.test.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "iansamueltrujillogil",
-    "last_opened_file_path": "C:/Users/Ian/Desktop/temp/!descargas/Plantas_y_Animales",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propDebugger",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.create-account-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.subcategory-results-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.load-subcategory-products-from-json.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.test.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;iansamueltrujillogil&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ian/Desktop/temp/!descargas/Plantas_y_Animales&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ian\WebstormProjects\Timac3\software.ulpgc.timac\json" />
@@ -104,7 +102,8 @@
       <workItem from="1741888385959" duration="58000" />
       <workItem from="1741952598888" duration="931000" />
       <workItem from="1742155338210" duration="493000" />
-      <workItem from="1742223581141" duration="5670000" />
+      <workItem from="1742223581141" duration="6564000" />
+      <workItem from="1742324417906" duration="396000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -138,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741952905323</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ensure load-subcategory-products-from-json runs after DOM is loaded.">
+      <option name="closed" value="true" />
+      <created>1742229998253</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742229998253</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +168,7 @@
     <MESSAGE value="Refactor." />
     <MESSAGE value="Merge with IanSamuelTrujilloGil branch." />
     <MESSAGE value="Load subcategory products from JSON: dynamically fetch products on subcategory result page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Load subcategory products from JSON: dynamically fetch products on subcategory result page." />
+    <MESSAGE value="Ensure load-subcategory-products-from-json runs after DOM is loaded." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ensure load-subcategory-products-from-json runs after DOM is loaded." />
   </component>
 </project>

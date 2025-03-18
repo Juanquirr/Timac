@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded',  () => {
     function loadProducts() {
 
         const productContainer = document.querySelector('.product-display-product-container');
