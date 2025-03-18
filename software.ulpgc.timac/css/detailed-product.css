@@ -10,15 +10,25 @@
     gap: 20px;
 }
 
-.top-box-detailed-product {
+.top-box-detailed-product-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-box-detailed-product-right {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.-left{
-    justify-content: center;
-    align-items: center;
+.information-detailed-product {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 }
 
 

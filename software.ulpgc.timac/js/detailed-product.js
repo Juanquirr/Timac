@@ -1,46 +1,73 @@
-document.addEventListener("DOMContentLoaded", async() => {
+document.addEventListener("DOMContentLoaded", () => {
 
     function loadProduct() {
-        try {
-            fetch('../json/detailed-product.json')
-                .then(response => response.json())
-                .then(
-                    product => {
-                        const container = document.querySelector('.-left');
-                        const productImage = document.createElement('div');
-                        productImage.innerHTML = `<img id="biggest-product" src="${product.image}" alt="Hammer">`
-                        container.appendChild(productImage);
-                    }
-                );
-        }
-        catch (error) {
-            console.error('Error loading product:', error);
-            document.getElementById('detailed-product').innerHTML = '<p>Error loading product json</p>';
-        }
+        fetch('../json/detailed-product.json')
+            .then(response => response.json())
+            .then(product => {
+                const imageContainer = document.querySelector('.top-box-detailed-product-left');
+                const img = document.createElement('img');
+                img.src = product.image;
+                img.alt = product.alt;
+                imageContainer.appendChild(img);
 
-        //     const decreaseBtn = document.getElementById('decrease');
-        //     const increaseBtn = document.getElementById('increase');
-        //     const counterSpan = document.getElementById('counter');
-        //     let counter = 0;
-        //
-        //     decreaseBtn.addEventListener('click', () => {
-        //         if (counter > 0) {
-        //             counter--;
-        //             counterSpan.textContent = counter;
-        //         }
-        //     });
-        //
-        //     increaseBtn.addEventListener('click', () => {
-        //         counter++;
-        //         counterSpan.textContent = counter;
-        //     });
-        //
-        //     // Opcional: funcionalidad para "Add to basket"
-        //     const addBasketBtn = document.getElementById('add-basket-button');
-        //     addBasketBtn.addEventListener('click', (e) => {
-        //         // Aquí podrías guardar el producto y la cantidad en localStorage o una variable global
-        //         console.log(`Added ${counter} ${product.title} to basket`);
-        //     });
+                const informationContainer = document.querySelector('.information-detailed-product');
+                const information = document.createElement('div');
+                information.innerHTML = `
+                    <h1 class="body-title font-base">${product.title}</h1>
+                    <h2 class="big-price font-base">${product.price}</h2>
+                    <p class="body-text font-base">
+                        Subcategory: ${product.subcategory}<br>
+                        Brand: ${product.brand}<br>
+                        Color: ${product.color}<br>
+                        Specific attribute 1: ${product.specific_attribute_1}<br>
+                        Specific attribute 2: ${product.specific_attribute_2}
+                    </p>
+                    <div class="availability">
+                        <div class="in-store">
+                            <img src="../assets/star.png" alt="Star"/>
+                            <p class="body-text font-base">${product.availability['in-store'] ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
+                        </div>
+                        <div class="in-store">
+                            <img src="../assets/arrow.png" alt="Arrow"/>
+                            <p class="body-text font-base">${product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY'}</p>
+                        </div>
+                    </div>
+                `;
+                informationContainer.appendChild(information);
+
+                const decreaseBtn = document.getElementById('decrease');
+                const increaseBtn = document.getElementById('increase');
+                const counterSpan = document.getElementById('counter');
+                let counter = 0;
+                decreaseBtn.addEventListener('click', () => {
+                    if (counter > 0) {
+                        counter--;
+                        counterSpan.textContent = counter;
+                    }
+                });
+
+                increaseBtn.addEventListener('click', () => {
+                    counter++;
+                    counterSpan.textContent = counter;
+                });
+
+                const addBasketBtn = document.getElementById('add-basket-button');
+
+                addBasketBtn.addEventListener('click', (_) => {
+                    console.log(`Added ${counter} ${product.title} to basket`);
+                });
+
+                const descriptionContainer = document.querySelector('.bottom-box-detailed-product');
+                descriptionContainer.innerHTML = `
+                    <h2 class="body-title font-base">About this item</h2>
+                    <p class="body-text font-base">${product.description.join('<br>')}</p>
+                `;
+
+            })
+            .catch(error => {
+                console.error('Error loading product:', error);
+                document.getElementById('detailed-product').innerHTML = '<p>Error loading product json</p>';
+            });
     }
 
     function waitForElement(selector, callback) {
@@ -57,5 +84,6 @@ document.addEventListener("DOMContentLoaded", async() => {
         });
         observer.observe(document.body, { childList: true, subtree: true });
     }
-    waitForElement(".-left", loadProduct);
+
+    waitForElement(".top-box-detailed-product-left", loadProduct);
 });

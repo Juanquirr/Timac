@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Refactor.">
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/detailed-product.json" afterDir="false" />
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Functional version.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/detailed-product.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/detailed-product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/xlu-include-file.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/xlu-include-file.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/detailed-product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/json/detailed-product.json" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/detailed-product.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/detailed-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/detailed-product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -55,6 +54,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;JavaScript Debug.basket-page.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.create-account-page.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.detailed-product-page.html.executor&quot;: &quot;Run&quot;,
@@ -100,6 +100,8 @@
       <workItem from="1741885425212" duration="359000" />
       <workItem from="1742224168396" duration="925000" />
       <workItem from="1742225797688" duration="1494000" />
+      <workItem from="1742227303524" duration="2674000" />
+      <workItem from="1742294463023" duration="3811000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -125,7 +127,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740737791116</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Functional version.">
+      <option name="closed" value="true" />
+      <created>1742227574710</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742227574710</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Functional version.">
+      <option name="closed" value="true" />
+      <created>1742229913797</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742229913797</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +165,7 @@
     <MESSAGE value="Refactor with merge of Juanquirr branch." />
     <MESSAGE value="Refactor." />
     <MESSAGE value="para merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="para merge" />
+    <MESSAGE value="Functional version." />
+    <option name="LAST_COMMIT_MESSAGE" value="Functional version." />
   </component>
 </project>
