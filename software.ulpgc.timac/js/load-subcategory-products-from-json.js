@@ -20,17 +20,17 @@ document.addEventListener('DOMContentLoaded',  () => {
                     productElement.innerHTML = `
             <a class="single-big-product-full-link" href="${product.link}"></a>
             <img class="single-big-product-image" src="${product.image}" alt="${product.name}"/>
-            <h1 class="single-big-product-title">${product.name}</h1>
-            <div class="single-big-product-price">
+            <h1 class="single-big-product-title font-base body-text">${product.name}</h1>
+            <div class="single-big-product-price font-base body-text">
               <h2>${product.price}</h2>
             </div>
             <div class="single-big-product-start-container">
               <img class="single-big-product-star" src="../assets/star-10.svg" alt=""/>
-              <p class="single-big-product-available-in-store">${product.available_in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
+              <p class="single-big-product-available-in-store font-base body-little">${product.available_in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
             </div>
             <div class="single-big-product-arrow-container">
               <img class="single-big-product-arrow" src="../assets/arrow-10.svg" alt=""/>
-              <p class="single-big-product-available-to-deliver">${product.available_to_deliver ? 'AVAILABLE TO DELIVER' : 'NOT AVAILABLE TO DELIVER'}</p>
+              <p class="single-big-product-available-to-deliver font-base body-little">${product.available_to_deliver ? 'AVAILABLE TO DELIVER' : 'NOT AVAILABLE TO DELIVER'}</p>
             </div>
           `;
                     productContainer.appendChild(productElement);
