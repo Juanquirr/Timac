@@ -1,3 +1,5 @@
+import { clearContainer, waitForElement } from './utils.js';
+
 document.addEventListener('DOMContentLoaded',  () => {
     function loadProducts() {
 
@@ -37,29 +39,6 @@ document.addEventListener('DOMContentLoaded',  () => {
                 });
             })
             .catch(error => console.error('Error loading products:', error));
-    }
-
-    function clearContainer(container) {
-        while (container.firstChild) {
-            container.removeChild(container.firstChild);
-        }
-    }
-
-    function waitForElement(selector, callback) {
-        const element = document.querySelector(selector);
-        if (element) {
-            callback();
-            return;
-        }
-
-        const observer = new MutationObserver((mutations, obs) => {
-            if (document.querySelector(selector)) {
-                obs.disconnect();
-                callback();
-            }
-        });
-
-        observer.observe(document.body, { childList: true, subtree: true });
     }
 
     waitForElement(".product-display-product-container", loadProducts);
