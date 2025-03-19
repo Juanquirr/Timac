@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Functional version.">
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Merge with all branches and refactor.">
+      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/load-subcategory-products-from-json.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-subcategory-products-from-json.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/single-big-product.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,15 +18,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="mario-grc" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,26 +51,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.basket-page.html.executor": "Run",
-    "JavaScript Debug.create-account-page.html.executor": "Run",
-    "JavaScript Debug.detailed-product-page.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.product-pack.html.executor": "Run",
-    "JavaScript Debug.subcategory-results-page.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.basket-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.create-account-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.detailed-product-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.product-pack.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.subcategory-results-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;juanquirr&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario\Desktop\Tercero\2º Semestre\PWM\Timac\software.ulpgc.timac" />
@@ -102,6 +102,9 @@
       <workItem from="1742225797688" duration="1494000" />
       <workItem from="1742227303524" duration="2674000" />
       <workItem from="1742294463023" duration="3811000" />
+      <workItem from="1742329577405" duration="601000" />
+      <workItem from="1742332220975" duration="199000" />
+      <workItem from="1742332428662" duration="1211000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -143,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742229913797</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Merge with all branches and refactor.">
+      <option name="closed" value="true" />
+      <created>1742325660370</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742325660370</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +177,7 @@
     <MESSAGE value="Refactor." />
     <MESSAGE value="para merge" />
     <MESSAGE value="Functional version." />
-    <option name="LAST_COMMIT_MESSAGE" value="Functional version." />
+    <MESSAGE value="Merge with all branches and refactor." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge with all branches and refactor." />
   </component>
 </project>
