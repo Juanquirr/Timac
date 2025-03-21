@@ -1,0 +1,84 @@
+{
+  "products": [
+      {
+        "id": "1",
+        "image": "../assets/silicone.jpg",
+        "image_alt": "Silicone",
+        "name": "SILICONE FEI DAI",
+        "availability": {
+          "in_store": "NOT AVAILABLE IN STORE",
+          "delivery": "NOT AVAILABLE FOR DELIVERY"
+        },
+        "price": "0.99€",
+        "quantity": 1,
+        "description": [
+          "Best hammer in the market right now. No words or explanation could transmit the peace of having this hammer.",
+          "If thinking on buying it, do not hesitate."
+        ]
+      },
+    {
+      "id": "2",
+      "image": "../assets/screwdriver.png",
+      "image_alt": "Screwdriver",
+      "name": "SCREWDRIVER FEI DAI",
+      "availability": {
+        "in_store": "NOT AVAILABLE IN STORE",
+        "delivery": "NOT AVAILABLE FOR DELIVERY"
+      },
+      "price": "9.99€",
+      "quantity": 1,
+      "description": [
+        "Best hammer in the market right now. No words or explanation could transmit the peace of having this hammer.",
+        "If thinking on buying it, do not hesitate."
+      ]
+    },
+    {
+      "id": "3",
+      "image": "../assets/hammer.jpg",
+      "image_alt": "Hammer",
+      "name": "HAMMER FEI DAI",
+      "availability": {
+        "in_store": "NOT AVAILABLE IN STORE",
+        "delivery": "NOT AVAILABLE FOR DELIVERY"
+      },
+      "price": "19.99€",
+      "quantity": 1,
+      "description": [
+        "Best hammer in the market right now. No words or explanation could transmit the peace of having this hammer.",
+        "If thinking on buying it, do not hesitate."
+      ]
+    },
+    {
+      "id": "4",
+      "image": "../assets/hammer.jpg",
+      "image_alt": "Hammer",
+      "name": "HAMMER FEI DAI 4",
+      "availability": {
+        "in_store": "NOT AVAILABLE IN STORE",
+        "delivery": "NOT AVAILABLE FOR DELIVERY"
+      },
+      "price": "19.99€",
+      "quantity": 1,
+      "description": [
+        "Best hammer in the market right now. No words or explanation could transmit the peace of having this hammer.",
+        "If thinking on buying it, do not hesitate."
+      ]
+    },
+    {
+      "id": "5",
+      "image": "../assets/hammer.jpg",
+      "image_alt": "Hammer",
+      "name": "HAMMER FEI DAI 5",
+      "availability": {
+        "in_store": "NOT AVAILABLE IN STORE",
+        "delivery": "NOT AVAILABLE FOR DELIVERY"
+      },
+      "price": "19.99€",
+      "quantity": 1,
+      "description": [
+        "Best hammer in the market right now. No words or explanation could transmit the peace of having this hammer.",
+        "If thinking on buying it, do not hesitate."
+      ]
+    }
+  ]
+}
