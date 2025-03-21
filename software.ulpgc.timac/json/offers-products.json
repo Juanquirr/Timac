@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Screwdriver",
+    "price": "9.99",
+    "image": "../assets/screwdriver.png",
+    "link": "index.html"
+  },
+  {
+    "name": "Hammer",
+    "price": "14.99",
+    "image": "../assets/hammer.jpg",
+    "link": "index.html"
+  },
+  {
+    "name": "Screwdriver",
+    "price": "500.99",
+    "image": "../assets/screwdriver.png",
+    "link": "index.html"
+  },
+  {
+    "name": "Screwdriver",
+    "price": "550.99",
+    "image": "../assets/screwdriver.png",
+    "link": "index.html"
+  }
+]
