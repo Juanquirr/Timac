@@ -254,21 +254,10 @@ html, body {
 .map{
     height: 250px;
     width: 30%;
+    text-align: center;
 }
 
-.ellipse-3 {
-    background: #0564fd;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: #000000;
-    border-width: 1px;
-    width: 10px;
-    height: 10px;
-    left: 130px;
-    bottom: 110px;
-    aspect-ratio: 1;
-    position: relative;
-}
+
 
 /* FONTS */
 .font-base {
