@@ -1,33 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     function loadDetailedProduct() {
-        fetch('../json/detailed-product.json')
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("id");
+
+        fetch('../json/products.json')
             .then(response => response.json())
-            .then(product => {
+            .then(data => {
+                const product = data.products.find(p => p.id === productId);
+
+                if (!product) {
+                    document.getElementById('detailed-product').innerHTML = '<p>Product not found</p>';
+                    return;
+                }
+
                 const imageContainer = document.querySelector('.top-box-detailed-product-left');
                 const img = document.createElement('img');
                 img.src = product.image;
-                img.alt = product.alt;
+                img.alt = product.image_alt;
                 imageContainer.appendChild(img);
 
                 const informationContainer = document.querySelector('.information-detailed-product');
                 const information = document.createElement('div');
                 information.innerHTML = `
-                    <h1 class="body-title font-base">${product.title}</h1>
+                    <h1 class="body-title font-base">${product.name}</h1>
                     <h2 class="big-price font-base">${product.price}</h2>
                     <p class="body-text font-base">
-                        Subcategory: ${product.subcategory}<br>
-                        Brand: ${product.brand}<br>
-                        Color: ${product.color}<br>
-                        Specific attribute 1: ${product.specific_attribute_1}<br>
-                        Specific attribute 2: ${product.specific_attribute_2}
+                        Subcategory: ${product.subcategory || 'N/A'}<br>
+                        Brand: ${product.brand || 'N/A'}<br>
+                        Color: ${product.color || 'N/A'}<br>
+                        Specific attribute 1: ${product.specific_attribute_1 || 'N/A'}<br>
+                        Specific attribute 2: ${product.specific_attribute_2 || 'N/A'}
                     </p>
                     <div class="availability">
-                        <div class="in-store">
+                        <div class="availability-in-store">
                             <img src="../assets/star.png" alt="Star"/>
-                            <p class="body-text font-base">${product.availability['in-store'] ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
+                            <p class="body-text font-base">${product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
                         </div>
-                        <div class="in-store">
+                        <div class="availability-for-delivery">
                             <img src="../assets/arrow.png" alt="Arrow"/>
                             <p class="body-text font-base">${product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY'}</p>
                         </div>
@@ -38,7 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 const decreaseBtn = document.getElementById('decrease');
                 const increaseBtn = document.getElementById('increase');
                 const counterSpan = document.getElementById('counter');
-                let counter = 0;
+
+                let basket = JSON.parse(localStorage.getItem("basket")) || [];
+                const existingProduct = basket.find(item => item.id === product.id);
+                let counter = existingProduct ? existingProduct.quantity : 0;
+                counterSpan.textContent = counter;
+
                 decreaseBtn.addEventListener('click', () => {
                     if (counter > 0) {
                         counter--;
@@ -49,13 +64,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 increaseBtn.addEventListener('click', () => {
                     counter++;
                     counterSpan.textContent = counter;
-                    localStorage.setItem("hammer", counter)
                 });
 
                 const addBasketBtn = document.getElementById('add-basket-button');
 
-                addBasketBtn.addEventListener('click', (_) => {
-                    console.log(`Added ${counter} ${product.title} to basket`);
+                addBasketBtn.addEventListener('click', () => {
+                    if (counter > 0) {
+                        let basket = JSON.parse(localStorage.getItem("basket")) || [];
+                        const existingProductIndex = basket.findIndex(item => item.id === product.id);
+                        if (existingProductIndex > -1) {
+                            basket[existingProductIndex].quantity = counter;
+                        } else {
+                            basket.push({ id: product.id, quantity: counter });
+                        }
+                        localStorage.setItem("basket", JSON.stringify(basket));
+                        console.log(`Added ${counter} ${product.name} to basket`);
+                    } else {
+                        console.log("Please select a quantity greater than 0.");
+                    }
                 });
 
                 const descriptionContainer = document.querySelector('.bottom-box-detailed-product');
@@ -63,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h2 class="body-title font-base">About this item</h2>
                     <p class="body-text font-base">${product.description.join('<br>')}</p>
                 `;
-
             })
             .catch(error => {
                 console.error('Error loading product:', error);

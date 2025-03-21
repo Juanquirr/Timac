@@ -42,12 +42,19 @@
 .availability {
     display: flex;
     flex-direction: column;
-    align-items: normal;
 }
 
-.in-store {
-    display: flex;
-    align-items: center;
+.availability-in-store {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: start;
+    gap: 5px;
+}
+
+.availability-for-delivery {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: start;
     gap: 5px;
 }
 

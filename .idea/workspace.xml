@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Merge with all branches and refactor.">
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/basket.js" afterDir="false" />
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Merge with main and localstorage functionality">
+      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/products.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/basket.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/detailed-product.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/detailed-product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/basket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/json/basket.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/json/detailed-product.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/json/subcategory-results.json" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/subcategory-results.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket-product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +63,7 @@
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;JavaScript Debug.basket-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.basket-product.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.create-account-page.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.detailed-product-page.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
@@ -105,6 +114,13 @@
       <workItem from="1742329577405" duration="601000" />
       <workItem from="1742332220975" duration="199000" />
       <workItem from="1742332428662" duration="1211000" />
+      <workItem from="1742379677862" duration="55000" />
+      <workItem from="1742395146577" duration="9027000" />
+      <workItem from="1742409452730" duration="22000" />
+      <workItem from="1742412626474" duration="5640000" />
+      <workItem from="1742494169130" duration="2154000" />
+      <workItem from="1742555531827" duration="9147000" />
+      <workItem from="1742568274635" duration="681000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -154,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742325660370</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge with main and localstorage functionality">
+      <option name="closed" value="true" />
+      <created>1742379700913</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742379700913</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +202,7 @@
     <MESSAGE value="para merge" />
     <MESSAGE value="Functional version." />
     <MESSAGE value="Merge with all branches and refactor." />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge with all branches and refactor." />
+    <MESSAGE value="Merge with main and localstorage functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge with main and localstorage functionality" />
   </component>
 </project>
