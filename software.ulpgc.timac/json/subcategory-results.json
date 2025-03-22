@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
+    "name": "Hammer",
     "price": "99,99€",
     "image": "../assets/ellipse-20.png",
     "link": "../html/index.html",
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "name": "Product 2",
+    "name": "Screwdriver",
     "price": "49,99€",
     "image": "../assets/ellipse-20.png",
     "link": "../html/index.html",
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "name": "Product 3",
+    "name": "Tape fei dai",
     "price": "19,99€",
     "image": "../assets/ellipse-20.png",
     "link": "../html/index.html",
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "name": "Product 4",
+    "name": "Silicone",
     "price": "190,99€",
     "image": "../assets/ellipse-20.png",
     "link": "../html/index.html",
