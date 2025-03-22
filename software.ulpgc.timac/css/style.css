@@ -147,32 +147,24 @@ html, body {
     flex-wrap: wrap;
 }
 
-@media (max-width: 1250px) {
-    .map {
-        display: none;
-    }
-    .footer-pack{
-        justify-content: center;
-    }
-}
-
-@media (min-width: 1250px) {
-    .map {
-        display: block;
-    }
-    .footer-pack{
-        justify-content: space-evenly;
-    }
-}
-
-.join-our-social-community {
-    color: #ffffff;
-    font-family: var(--font-family), serif;
-    font-size:var(--footertitle-font-size) ;
-    font-weight:var(--font-weight) ;
+.contact-info-container{
     width: 100%;
-    text-align: center;
+    gap: 3%;
+    display: flex;
+    justify-content: left;
 }
+
+.contact-container{
+    height: 250px;
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: left;
+    align-items: start;
+}
+
 
 .whatsapp-logo {
     flex-shrink: 0;
@@ -202,6 +194,73 @@ html, body {
     overflow: visible;
     aspect-ratio: 1;
 }
+.social-icons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.join-our-social-community {
+    color: #ffffff;
+    font-family: var(--font-family), serif;
+    font-size:var(--footertitle-font-size) ;
+    font-weight:var(--font-weight) ;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+@media (max-width: 1200px) {
+    .map {
+        display: none;
+    }
+    .footer-pack{
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .map {
+        display: block;
+    }
+    .footer-pack{
+        justify-content: space-evenly;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .map {
+        display: none;
+    }
+    .contact-container{
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container{
+        gap: 0;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .footer-pack{
+        flex-direction: column;
+    }
+    .contact-container{
+        width: 100%;
+    }
+    .social-community{
+        width: 100%;
+    }
+    .social-icons{
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}
 
 .address {
     color: #ffffff;
@@ -214,16 +273,7 @@ html, body {
     margin-top: 15px;
 }
 
-.contact-container{
-    height: 250px;
-    width: 30%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: left;
-    align-items: start;
-}
+
 
 .phone-number {
     color: #ffffff;
@@ -235,12 +285,7 @@ html, body {
 }
 
 
-.contact-info-container{
-    width: 100%;
-    gap: 3%;
-    display: flex;
-    justify-content: left;
-}
+
 
 .contact {
     font-family: var(--font-family), sans-serif;
