@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Make footer responsive.">
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="feat: update header to be responsive.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/detailed-product.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/detailed-product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/home-page-products.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/home-page-products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/json/new-at-timac-products.json" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/new-at-timac-products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/json/offers-products.json" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/offers-products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/json/trending-products.json" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/trending-products.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +43,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Juanquirr/Timac.git&quot;,
-    &quot;accountId&quot;: &quot;d3d4ef0f-cf53-4e56-84da-037888837ff0&quot;
+    &quot;accountId&quot;: &quot;af666e48-7602-4824-bf98-0c09adb84a7e&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -58,11 +62,10 @@
     &quot;JavaScript Debug.detailed-product-page.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.product-pack.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.subcategory-option-selector-page.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.subcategory-results-page.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;juanquirr&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;iansamueltrujillogil&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Ian/WebstormProjects/Timac3/software.ulpgc.timac/js&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -85,7 +88,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-WS-243.24978.60" />
       </set>
     </attachedChunks>
   </component>
@@ -119,7 +122,8 @@
       <workItem from="1742665793967" duration="1438000" />
       <workItem from="1742674088020" duration="10884000" />
       <workItem from="1742729559547" duration="3737000" />
-      <workItem from="1742755455015" duration="7229000" />
+      <workItem from="1742742267462" duration="9253000" />
+      <workItem from="1742761115390" duration="1473000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />

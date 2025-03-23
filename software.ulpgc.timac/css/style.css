@@ -11,6 +11,7 @@ html, body {
     min-height: 100%;
 }
 
+
 .main-content {
     display: flex;
     flex: 1 0 auto;
@@ -488,7 +489,3 @@ html, body {
     margin: 0;
 }
 
-.product-section-title {
-    font-size: var(--footertitle-font-size);
-    margin-bottom: 5px;
-}
