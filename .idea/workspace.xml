@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Minor changes.">
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-new-at-timac-products-from-json.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-offers-products-from-json.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-trending-products-from-json.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/new-at-timac-products.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/offers-products.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/trending-products.json" afterDir="false" />
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="feat(footer): center map and update image with built-in circle.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/home-page-products.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/home-page-products.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/load-subcategory-products-from-json.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-subcategory-products-from-json.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/home-sections.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/home-sections.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/product-pack.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="mario-grc" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -121,6 +110,12 @@
       <workItem from="1742343528522" duration="2256000" />
       <workItem from="1742396467455" duration="194000" />
       <workItem from="1742417067672" duration="665000" />
+      <workItem from="1742558787847" duration="2481000" />
+      <workItem from="1742561324888" duration="681000" />
+      <workItem from="1742564586759" duration="443000" />
+      <workItem from="1742570445931" duration="32000" />
+      <workItem from="1742576571679" duration="6270000" />
+      <workItem from="1742665793967" duration="1438000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -162,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742229913797</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat(footer): center map and update image with built-in circle.">
+      <option name="closed" value="true" />
+      <created>1742561162251</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1742561162251</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +188,8 @@
     <MESSAGE value="Refactor." />
     <MESSAGE value="para merge" />
     <MESSAGE value="Functional version." />
-    <option name="LAST_COMMIT_MESSAGE" value="Functional version." />
+    <MESSAGE value="feat: implement dynamic loading of home sections products from JSON." />
+    <MESSAGE value="feat(footer): center map and update image with built-in circle." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(footer): center map and update image with built-in circle." />
   </component>
 </project>

@@ -4,7 +4,7 @@
     "name": "Hammer",
     "price": "99,99€",
     "image": "../assets/ellipse-20.png",
-    "link": "../html/index.html",
+    "link": "http://localhost:63342/Timac/software.ulpgc.timac/html/detailed-product-page.html?id=1",
     "available_in_store": true,
     "available_to_deliver": true
   },
@@ -13,7 +13,7 @@
     "name": "Screwdriver",
     "price": "49,99€",
     "image": "../assets/ellipse-20.png",
-    "link": "../html/index.html",
+    "link": "http://localhost:63342/Timac/software.ulpgc.timac/html/detailed-product-page.html?id=2",
     "available_in_store": false,
     "available_to_deliver": true
   },
@@ -22,7 +22,7 @@
     "name": "Tape fei dai",
     "price": "19,99€",
     "image": "../assets/ellipse-20.png",
-    "link": "../html/index.html",
+    "link": "http://localhost:63342/Timac/software.ulpgc.timac/html/detailed-product-page.html?id=3",
     "available_in_store": true,
     "available_to_deliver": false
   },
@@ -31,7 +31,7 @@
     "name": "Silicone",
     "price": "190,99€",
     "image": "../assets/ellipse-20.png",
-    "link": "../html/index.html",
+    "link": "http://localhost:63342/Timac/software.ulpgc.timac/html/detailed-product-page.html?id=4",
     "available_in_store": true,
     "available_to_deliver": false
   },
@@ -41,7 +41,7 @@
     "name": "Product 5",
     "price": "190,99€",
     "image": "../assets/ellipse-20.png",
-    "link": "../html/index.html",
+    "link": "http://localhost:63342/Timac/software.ulpgc.timac/html/detailed-product-page.html?id=5",
     "available_in_store": true,
     "available_to_deliver": false
   }
