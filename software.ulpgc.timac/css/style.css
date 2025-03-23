@@ -12,10 +12,10 @@ html, body {
 }
 
 .main-content {
+    display: flex;
     flex: 1 0 auto;
     overflow: auto;
-    margin: 30px auto;
-    width: 70%;
+    justify-content: center;
 }
 
 .main-content-for-product-display {
@@ -127,11 +127,6 @@ html, body {
     display: flex;
     justify-content: center;
 }
-
-
-
-
-
 
 /* FOOTER */
 .footer-pack {
