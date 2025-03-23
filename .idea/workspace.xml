@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Make footer responsive.">
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-subcategory-option-selector-from-json.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/json/subcategory-option-selector.json" afterDir="false" />
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="feat: Load subcategories from JSON in subcategory-option-selector-page.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,8 @@
       <workItem from="1742570445931" duration="32000" />
       <workItem from="1742576571679" duration="6270000" />
       <workItem from="1742665793967" duration="1438000" />
-      <workItem from="1742674088020" duration="1789000" />
+      <workItem from="1742674088020" duration="10884000" />
+      <workItem from="1742729559547" duration="3737000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -167,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742561162251</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: Load subcategories from JSON in subcategory-option-selector-page.">
+      <option name="closed" value="true" />
+      <created>1742676258153</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1742676258153</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +200,7 @@
     <MESSAGE value="Functional version." />
     <MESSAGE value="feat: implement dynamic loading of home sections products from JSON." />
     <MESSAGE value="feat(footer): center map and update image with built-in circle." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(footer): center map and update image with built-in circle." />
+    <MESSAGE value="feat: Load subcategories from JSON in subcategory-option-selector-page." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Load subcategories from JSON in subcategory-option-selector-page." />
   </component>
 </project>
