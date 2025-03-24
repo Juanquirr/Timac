@@ -29,7 +29,7 @@
 }
 
 .basket-deliver-button {
-    background-color: var(--headerfootercolor-0);
+    background-color: var(--headerfootercolor-500);
     width: 250px;
     height: 70px;
     margin: 0 15px;
@@ -37,6 +37,10 @@
     cursor: pointer;
     border-style: outset;
     border-radius: 10px;
+}
+
+.basket-deliver-button.selected {
+    background-color: var(--headerfootercolor-0);
 }
 
 .bottom-basket-section {

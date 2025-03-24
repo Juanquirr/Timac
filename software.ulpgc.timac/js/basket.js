@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         const product = allProducts.find(p => p.id === item.id);
                         return product ? { ...product, quantity: item.quantity } : null;
                     })
-                    .filter(Boolean); // Remove any null entries ??
+                    .filter(Boolean);
 
                 const totalItems = basketProducts.length;
                 header.innerHTML = `My basket - ${totalItems} items<hr>`;
@@ -94,6 +94,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 });
 
+                const deliveryButtons = document.querySelectorAll('.basket-deliver-button');
+                deliveryButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        deliveryButtons.forEach(btn => btn.classList.remove('selected'));
+                        button.classList.add('selected');
+                        updateSummary();
+                    });
+                });
+
+                deliveryButtons[1].classList.add('selected');
+
                 const paymentSection = document.querySelector('.summary-section section');
                 paymentSection.innerHTML = `
                     <h2 class="body-subtitle center-text font-base">Payment Methods</h2>
@@ -130,7 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (product && item.quantity > 0) {
                             const productElement = Array.from(productsContainer.querySelectorAll('.basket-product'))
                                 .find(el => el.querySelector('h3').textContent === product.name);
-                            const checkbox = productElement ? productElement.querySelector('input[type="checkbox"]') : null;
+                            const checkbox = productElement ? productElement
+                                .querySelector('input[type="checkbox"]') : null;
 
                             if (checkbox && checkbox.checked) {
                                 const price = parseFloat(product.price.replace('€', ''));
@@ -139,12 +151,20 @@ document.addEventListener("DOMContentLoaded", () => {
                         }
                     });
 
+                    const selectedButton = document.querySelector('.basket-deliver-button.selected');
+                    const isDeliverySelected = selectedButton && selectedButton.querySelector('.basket-text')
+                        .textContent.trim() === 'Delivery';
+                    const deliveryFee = isDeliverySelected ? 5 : 0;
+                    const estimatedTotal = subtotal + deliveryFee;
+
                     const summary = document.querySelector('.summary-section dl');
                     summary.innerHTML = `
                         <dt>Subtotal:</dt>
                         <dd>${subtotal.toFixed(2)}€</dd>
+                        <dt>Delivery Fee:</dt>
+                        <dd>${deliveryFee.toFixed(2)}€</dd>
                         <dt>Estimated Total:</dt>
-                        <dd>${subtotal.toFixed(2)}€</dd>
+                        <dd>${estimatedTotal.toFixed(2)}€</dd>
                     `;
                 }
 
