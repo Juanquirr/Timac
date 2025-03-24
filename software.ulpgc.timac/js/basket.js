@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         const product = allProducts.find(p => p.id === item.id);
                         return product ? { ...product, quantity: item.quantity } : null;
                     })
-                    .filter(Boolean); // Remove any null entries ??
+                    .filter(Boolean);
 
                 const totalItems = basketProducts.length;
                 header.innerHTML = `My basket - ${totalItems} items<hr>`;
@@ -33,21 +33,23 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <div class="item-details">
                             <h3 class="body-subtitle font-base">${product.name}</h3>
-                            <div class="availability">
-                                <div class="availability-in-store">
-                                    <img src="../assets/star.png" alt="Star"/>
-                                    <p class="body-little font-base">${product.availability.in_store}</p>
-                                </div>
-                                <div class="availability-for-delivery">
-                                    <img src="../assets/arrow.png" alt="Arrow"/>
-                                    <p class="body-little font-base">${product.availability.delivery}</p>
-                                </div>
+                        <div class="availability">
+                            <div class="availability-in-store">
+                                <img src="../assets/star.png" alt="Star"/>
+                                <p class="body-text font-base">${product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
                             </div>
-                            <p class="big-price font-base">${product.price}</p>
+                            <div class="availability-for-delivery">
+                                <img src="../assets/arrow.png" alt="Arrow"/>
+                                <p class="body-text font-base">${product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY'}</p>
+                            </div>
+                        </div>
                             <div class="counter-container">
                                 <button class="counter-button decrease">-</button>
                                 <span class="counter-value counter">${product.quantity}</span>
                                 <button class="counter-button increase">+</button>
+                            </div>
+                            <div class="basket-product-price">
+                                <p class="big-price font-base">${product.price}</p>                            
                             </div>
                         </div>
                         <button class="remove">🗑️</button>
@@ -92,6 +94,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 });
 
+                const deliveryButtons = document.querySelectorAll('.basket-deliver-button');
+                deliveryButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        deliveryButtons.forEach(btn => btn.classList.remove('selected'));
+                        button.classList.add('selected');
+                        updateSummary();
+                    });
+                });
+
+                deliveryButtons[1].classList.add('selected');
+
                 const paymentSection = document.querySelector('.summary-section section');
                 paymentSection.innerHTML = `
                     <h2 class="body-subtitle center-text font-base">Payment Methods</h2>
@@ -128,7 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (product && item.quantity > 0) {
                             const productElement = Array.from(productsContainer.querySelectorAll('.basket-product'))
                                 .find(el => el.querySelector('h3').textContent === product.name);
-                            const checkbox = productElement ? productElement.querySelector('input[type="checkbox"]') : null;
+                            const checkbox = productElement ? productElement
+                                .querySelector('input[type="checkbox"]') : null;
 
                             if (checkbox && checkbox.checked) {
                                 const price = parseFloat(product.price.replace('€', ''));
@@ -137,12 +151,20 @@ document.addEventListener("DOMContentLoaded", () => {
                         }
                     });
 
+                    const selectedButton = document.querySelector('.basket-deliver-button.selected');
+                    const isDeliverySelected = selectedButton && selectedButton.querySelector('.basket-text')
+                        .textContent.trim() === 'Delivery';
+                    const deliveryFee = isDeliverySelected ? 5 : 0;
+                    const estimatedTotal = subtotal + deliveryFee;
+
                     const summary = document.querySelector('.summary-section dl');
                     summary.innerHTML = `
                         <dt>Subtotal:</dt>
                         <dd>${subtotal.toFixed(2)}€</dd>
+                        <dt>Delivery Fee:</dt>
+                        <dd>${deliveryFee.toFixed(2)}€</dd>
                         <dt>Estimated Total:</dt>
-                        <dd>${subtotal.toFixed(2)}€</dd>
+                        <dd>${estimatedTotal.toFixed(2)}€</dd>
                     `;
                 }
 
