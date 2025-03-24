@@ -20,7 +20,10 @@ document.addEventListener('DOMContentLoaded',  () => {
             .then(products => {
                 clearContainer(productContainer);
 
-                const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchQuery.toLowerCase()));
+                const filteredProducts = products.filter(product =>
+                    product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    product.category.toLowerCase().includes(searchQuery.toLowerCase())
+                );
 
                 if (filteredProducts.length === 0) {
                     productContainer.innerHTML = `<p>No results found for ${searchQuery}</p>`;

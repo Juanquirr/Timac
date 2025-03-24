@@ -4,7 +4,8 @@
     "name": "Hammer",
     "price": "99,99€",
     "image": "../assets/ellipse-20.png",
-    "link": "http://localhost:63342/Timac/software.ulpgc.timac/html/detailed-product-page.html?id=1",
+    "link": "../html/detailed-product-page.html?id=1",
+    "category": "Hand Tools",
     "available_in_store": true,
     "available_to_deliver": true
   },
@@ -13,7 +14,8 @@
     "name": "Screwdriver",
     "price": "49,99€",
     "image": "../assets/ellipse-20.png",
-    "link": "http://localhost:63342/Timac/software.ulpgc.timac/html/detailed-product-page.html?id=2",
+    "link": "../html/detailed-product-page.html?id=2",
+    "category": "Hand Tools",
     "available_in_store": false,
     "available_to_deliver": true
   },
@@ -22,7 +24,8 @@
     "name": "Tape fei dai",
     "price": "19,99€",
     "image": "../assets/ellipse-20.png",
-    "link": "http://localhost:63342/Timac/software.ulpgc.timac/html/detailed-product-page.html?id=3",
+    "link": "../html/detailed-product-page.html?id=3",
+    "category": "Electrical",
     "available_in_store": true,
     "available_to_deliver": false
   },
@@ -31,7 +34,8 @@
     "name": "Silicone",
     "price": "190,99€",
     "image": "../assets/ellipse-20.png",
-    "link": "http://localhost:63342/Timac/software.ulpgc.timac/html/detailed-product-page.html?id=4",
+    "link": "../html/detailed-product-page.html?id=4",
+    "category": "Power Tools",
     "available_in_store": true,
     "available_to_deliver": false
   },
@@ -41,7 +45,8 @@
     "name": "Product 5",
     "price": "190,99€",
     "image": "../assets/ellipse-20.png",
-    "link": "http://localhost:63342/Timac/software.ulpgc.timac/html/detailed-product-page.html?id=5",
+    "link": "../html/detailed-product-page.html?id=5",
+    "category": "Plumbing",
     "available_in_store": true,
     "available_to_deliver": false
   }
