@@ -33,21 +33,23 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <div class="item-details">
                             <h3 class="body-subtitle font-base">${product.name}</h3>
-                            <div class="availability">
-                                <div class="availability-in-store">
-                                    <img src="../assets/star.png" alt="Star"/>
-                                    <p class="body-little font-base">${product.availability.in_store}</p>
-                                </div>
-                                <div class="availability-for-delivery">
-                                    <img src="../assets/arrow.png" alt="Arrow"/>
-                                    <p class="body-little font-base">${product.availability.delivery}</p>
-                                </div>
+                        <div class="availability">
+                            <div class="availability-in-store">
+                                <img src="../assets/star.png" alt="Star"/>
+                                <p class="body-text font-base">${product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
                             </div>
-                            <p class="big-price font-base">${product.price}</p>
+                            <div class="availability-for-delivery">
+                                <img src="../assets/arrow.png" alt="Arrow"/>
+                                <p class="body-text font-base">${product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY'}</p>
+                            </div>
+                        </div>
                             <div class="counter-container">
                                 <button class="counter-button decrease">-</button>
                                 <span class="counter-value counter">${product.quantity}</span>
                                 <button class="counter-button increase">+</button>
+                            </div>
+                            <div class="basket-product-price">
+                                <p class="big-price font-base">${product.price}</p>                            
                             </div>
                         </div>
                         <button class="remove">🗑️</button>
