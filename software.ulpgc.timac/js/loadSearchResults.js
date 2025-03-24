@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded',  () => {
         const params = new URLSearchParams(window.location.search);
         const searchQuery = params.get("query") || "";  // si no hay query pongo cadena vacia para que los cargue todos
 
+        document.querySelector(".subcategory-name").textContent = "Search results for \"" + searchQuery + "\"";
+
         fetch('../json/subcategory-results.json')
             .then(response => response.json())
             .then(products => {
