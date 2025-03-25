@@ -12,6 +12,8 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    align-items: center;
+    margin: 0 15%;
 }
 
 .top-box-detailed-product-left {
@@ -37,7 +39,8 @@
 
 .bottom-box-detailed-product {
     text-align: justify;
-    margin: 0 55px;
+    margin: 0 15%;
+    align-items: center;
 }
 
 .availability {
@@ -46,16 +49,14 @@
 }
 
 .availability-in-store {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: start;
+    display: flex;
+    align-items: center;
     gap: 5px;
 }
 
 .availability-for-delivery {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: start;
+    display: flex;
+    align-items: center;
     gap: 5px;
 }
 
@@ -64,13 +65,13 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px;
 }
 
 .counter-button {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     font-size: 20px;
+    background-color: var(--headerfootercolor-100);
     cursor: pointer;
 }
 
@@ -81,6 +82,7 @@
 }
 
 .add-basket-button {
+    align-self: start;
     background-color: var(--headerfootercolor-0);
     width: 50%;
     font-size: var(--bodyprice-font-size);
@@ -101,22 +103,20 @@
 
 @media (min-width: 992px) {
     .top-box-detailed-product-left img {
-        width: 80%;
+        width: 50%;
         height: auto;
     }
 }
 
 @media (max-width: 992px) {
-
     .top-box-detailed-product-left img {
-        width: 40%;
+        width: 100%;
         height: auto;
     }
 
     .top-boxes-detailed-product {
         margin-top: 30px;
         flex-direction: column;
-        width: 100%;
     }
 
     .information-detailed-product * {
@@ -129,23 +129,21 @@
         text-align: center;
     }
 
-
-    #add-basket-container * {
+    .add-basket-button {
         margin: 0;
-        width: 50%;
+        width: 70%;
+        align-self: center;
     }
 
     .bottom-box-detailed-product {
-        text-align: center;
-        margin: 0 10px;
+        text-align: justify;
         justify-content: center;
     }
 }
 
 @media (max-width: 576px) {
     .top-box-detailed-product-left img {
-        width: 60%;
+        width: 70%;
         height: auto;
     }
-
 }
