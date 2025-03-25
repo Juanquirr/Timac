@@ -1,4 +1,8 @@
 /* BASKET */
+* {
+    box-sizing: border-box;
+}
+
 .basket-container {
     display: flex;
     flex-direction: row;
@@ -8,7 +12,8 @@
     gap: 20px;
 }
 
-.basket-page-left {
+.basket-products-container {
+    width: 50%;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -29,29 +34,29 @@
 }
 
 .basket-deliver-button {
-    background-color: var(--headerfootercolor-500);
-    width: 250px;
+    background-color: var(--headerfootercolor-200);
+    width: 80%;
     height: 70px;
-    margin: 0 15px;
+    margin: 0 5%;
     text-align: center;
     cursor: pointer;
-    border-style: outset;
     border-radius: 10px;
+    border: 0;
 }
 
 .basket-deliver-button.selected {
     background-color: var(--headerfootercolor-0);
+    border: 5px solid black;
 }
 
 .bottom-basket-section {
-    flex: 1;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 10%;
 }
 
 .basket-product {
-    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,14 +74,16 @@
 .item-image {
     width: 30%;
     height: auto;
-    margin-right: 20px;
-    object-fit: contain;
+    margin: 0 20px;
+    padding: 0;
 }
 
 .item-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid black;
 }
 
 .item-details {
@@ -100,17 +107,44 @@
     gap: 5px;
 }
 
-.basket-summary-bar {
-    width: 20%;
+.basket-summary-container {
+    width: 18%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #f5f5f5;
     border-radius: 5px;
+    margin-bottom: 10%;
 }
 
-.summary-section {
-    margin: 0 10px;
+.basket-summary-price-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.basket-summary-payment-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.basket-summary-payment-container label {
+    margin: 0;
+}
+
+.basket-summary-payment-container p {
+    margin: 0;
+}
+
+.basket-summary-payment-container input {
+    width: 20px;
+    height: 20px;
+}
+
+.basket-summary-vertical {
+
 }
 
 .checkout-now {
@@ -119,8 +153,9 @@
     height: 70px;
     text-align: center;
     cursor: pointer;
-    margin-top: 20px;
-    border-style: outset;
+    margin: 20px 0;
+    border: 0;
+    border-radius: 10px;
 }
 
 .counter-container {
@@ -144,6 +179,30 @@
     text-align: center;
 }
 
+.basket-summary-section dl {
+    margin: 0;
+    padding: 0;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.summary-row dt,
+.summary-row dd {
+    margin: 0;
+}
+
+.summary-row dt {
+    font-weight: bold;
+}
+
+.summary-row dd {
+    text-align: right;
+}
+
 @media (max-width: 1200px) {
     .basket-container {
         display: flex;
@@ -152,16 +211,80 @@
         align-items: center;
     }
 
-    .basket-summary-bar {
+    .basket-products-container {
         width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #f5f5f5;
-        border-radius: 5px;
     }
 
+    .basket-summary-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        margin: 20px 0;
+        flex-direction: row;
+    }
 
-
+    .basket-summary-vertical {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
+@media (max-width: 576px) {
+    .basket-delivery-option {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .basket-deliver-button {
+        background-color: var(--headerfootercolor-200);
+        width: 80%;
+        height: 70px;
+        margin: 5% 0;
+        text-align: center;
+        cursor: pointer;
+        border-style: outset;
+        border-radius: 10px;
+    }
+
+    .basket-summary-container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+
+    .basket-summary-vertical {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .basket-products-container {
+        width: 90%;
+    }
+
+    .basket-product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item-details * {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .item-image {
+        width: 50%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+}

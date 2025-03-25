@@ -33,16 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <div class="item-details">
                             <h3 class="body-subtitle font-base">${product.name}</h3>
-                        <div class="availability">
-                            <div class="availability-in-store">
-                                <img src="../assets/star.png" alt="Star"/>
-                                <p class="body-text font-base">${product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
+                            <div class="availability">
+                                <div class="availability-in-store">
+                                    <img src="../assets/star.png" alt="Star"/>
+                                    <p class="body-text font-base">${product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
+                                </div>
+                                <div class="availability-for-delivery">
+                                    <img src="../assets/arrow.png" alt="Arrow"/>
+                                    <p class="body-text font-base">${product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY'}</p>
+                                </div>
                             </div>
-                            <div class="availability-for-delivery">
-                                <img src="../assets/arrow.png" alt="Arrow"/>
-                                <p class="body-text font-base">${product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY'}</p>
-                            </div>
-                        </div>
                             <div class="counter-container">
                                 <button class="counter-button decrease">-</button>
                                 <span class="counter-value counter">${product.quantity}</span>
@@ -105,12 +105,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 deliveryButtons[1].classList.add('selected');
 
-                const paymentSection = document.querySelector('.summary-section section');
-                paymentSection.innerHTML = `
-                    <h2 class="body-subtitle center-text font-base">Payment Methods</h2>
-                    <p class="body-text font-base">Visa ending in 1234</p>
-                    <p class="body-text font-base">Mastercard ending in 5678</p>
+                const paymentSection = document.querySelector('.basket-summary-vertical section');
+                const paymentOptions = `
+                    <div class="basket-summary-payment-container">
+                        <label>
+                            <input type="radio" name="payment-method" value="visa" checked>
+                        </label>
+                        <p class="body-text font-base">VISA</p>
+                    </div>
+                    <div class="basket-summary-payment-container">
+                        <label>
+                            <input type="radio" name="payment-method" value="mastercard">
+                        </label>
+                        <p class="body-text font-base">MASTERCARD</p>
+                    </div>
                 `;
+                paymentSection.insertAdjacentHTML('beforeend', paymentOptions);
 
                 function updateBasket(productId, quantity) {
                     let basket = JSON.parse(localStorage.getItem("basket")) || [];
@@ -141,8 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         if (product && item.quantity > 0) {
                             const productElement = Array.from(productsContainer.querySelectorAll('.basket-product'))
                                 .find(el => el.querySelector('h3').textContent === product.name);
-                            const checkbox = productElement ? productElement
-                                .querySelector('input[type="checkbox"]') : null;
+                            const checkbox = productElement ? productElement.querySelector('input[type="checkbox"]') : null;
 
                             if (checkbox && checkbox.checked) {
                                 const price = parseFloat(product.price.replace('€', ''));
@@ -152,19 +161,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
 
                     const selectedButton = document.querySelector('.basket-deliver-button.selected');
-                    const isDeliverySelected = selectedButton && selectedButton.querySelector('.basket-text')
-                        .textContent.trim() === 'Delivery';
+                    const isDeliverySelected = selectedButton && selectedButton.querySelector('.basket-text').textContent.trim() === 'Delivery';
                     const deliveryFee = isDeliverySelected ? 5 : 0;
                     const estimatedTotal = subtotal + deliveryFee;
 
-                    const summary = document.querySelector('.summary-section dl');
+                    const summary = document.querySelector('.basket-summary-price-section dl');
                     summary.innerHTML = `
-                        <dt>Subtotal:</dt>
-                        <dd>${subtotal.toFixed(2)}€</dd>
-                        <dt>Delivery Fee:</dt>
-                        <dd>${deliveryFee.toFixed(2)}€</dd>
-                        <dt>Estimated Total:</dt>
-                        <dd>${estimatedTotal.toFixed(2)}€</dd>
+                        <div class="summary-row">
+                            <dt>Subtotal:</dt>
+                            <dd>${subtotal.toFixed(2)}€</dd>
+                        </div>
+                        <div class="summary-row">
+                            <dt>Delivery Fee:</dt>
+                            <dd>${deliveryFee.toFixed(2)}€</dd>
+                        </div>
+                        <div class="summary-row">
+                            <dt>Estimated Total:</dt>
+                            <dd>${estimatedTotal.toFixed(2)}€</dd>
+                        </div>
                     `;
                 }
 
