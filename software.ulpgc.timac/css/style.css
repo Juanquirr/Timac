@@ -411,13 +411,7 @@ html, body {
     font-size: var(--bodytitle-font-size);
 }
 
-.product-display-title-sort-by-text {
-    top: 2px;
-    flex-shrink: 0;
-    text-align: center;
-    font-size: var(--bodyfiltertags-font-size);
-    position: relative;
-}
+
 
 .product-display-title-button {
     text-align: center;
@@ -460,22 +454,9 @@ html, body {
     margin: 0;
 }
 
-.single-big-product-available-in-store {
-    text-align: center;
-    font-size: var(--bodylittletext-font-size);
-    width: 200px;
-    height: 22px;
-    margin: 0;
-}
 
-.single-big-product-available-to-deliver {
-    text-align: center;
-    font-size: var(--bodylittletext-font-size, 10px);
-    position: relative;
-    width: 200px;
-    height: 22px;
-    margin: 0;
-}
+
+
 
 .product-title {
     font-size: 1em;

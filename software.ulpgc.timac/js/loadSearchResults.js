@@ -36,13 +36,15 @@ document.addEventListener('DOMContentLoaded',  () => {
             <div class="single-big-product-price font-base body-text">
               <h2>${product.price}</h2>
             </div>
-            <div class="single-big-product-start-container">
-              <img class="single-big-product-star" src="../assets/star-10.svg" alt=""/>
-              <p class="single-big-product-available-in-store font-base body-little">${product.available_in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
-            </div>
-            <div class="single-big-product-arrow-container">
-              <img class="single-big-product-arrow" src="../assets/arrow-10.svg" alt=""/>
-              <p class="single-big-product-available-to-deliver font-base body-little">${product.available_to_deliver ? 'AVAILABLE TO DELIVER' : 'NOT AVAILABLE TO DELIVER'}</p>
+            <div class="availability">
+                <div class="availability-in-store">
+                    <img src="../assets/star.png" alt="Star"/>
+                    <p class="body-text font-base">${product.available_in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
+                </div>
+                <div class="availability-for-delivery">
+                    <img src="../assets/arrow.png" alt="Arrow"/>
+                    <p class="body-text font-base">${product.available_to_deliver ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY'}</p>
+                </div>
             </div>
           `;
                     productContainer.appendChild(productElement);
