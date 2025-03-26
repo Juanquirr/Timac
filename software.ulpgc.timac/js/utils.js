@@ -24,24 +24,30 @@ export function waitForElement(selector, callback) {
 }
 
 
-export function loadHomePageProductsFromJSON(jsonFilePath, containerSelector) {
+export function loadHomePageProductsFromJSON(jsonFilePath, containerSelector, type) {
     const productContainer = document.querySelector(containerSelector);
 
-    if (!productContainer) {
-        console.error('Container not found!');
-        return;
-    }
+    if (!productContainer) console.error('Container not found!');
+
     console.log(productContainer);
     fetch(jsonFilePath)
         .then(response => response.json())
-        .then(products => {
+        .then(data => {
+            const filteredProducts = data.products.filter(product => product[type] === true);
+
             clearContainer(productContainer);
-            products.forEach(product => {
+
+            if (filteredProducts.length === 0) {
+                productContainer.innerHTML = `<p>No products found for ${type}</p>`;
+                return;
+            }
+
+            filteredProducts.forEach(product => {
                 const productElement = document.createElement('div');
                 productElement.classList.add('product-card');
 
                 productElement.innerHTML = `
-                    <a href="${product.link}" class="product-link">
+                    <a href="../html/detailed-product-page.html?id=${product.id}" class="product-link">
                     <img src="${product.image}" alt="Product Image" class="product-image">
                     <p class="product-title font-base">${product.name}</p>
                     <p class="product-price font-base">${product.price}€</p>

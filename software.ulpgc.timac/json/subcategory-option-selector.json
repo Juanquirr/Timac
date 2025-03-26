@@ -1,31 +1,79 @@
-[
-  {
-    "image": "../assets/hammer.jpg",
-    "name": "Power Tools",
-    "alt": "Power Tools",
-    "link": "../html/subcategory-option-selector-page.html"
-  },
-  {
-    "image": "../assets/ellipse-20.png",
-    "name": "Hand Tools",
-    "alt": "Hand Tools",
-    "link": "../html/subcategory-option-selector-page.html"
-  },
-  {
-    "image": "../assets/ellipse-20.png",
-    "name": "Plumbing",
-    "link": "../html/subcategory-option-selector-page.html"
-  },
-  {
-    "image": "../assets/ellipse-20.png",
-    "name": "Electrical",
-    "alt": "Electrical",
-    "link": "../html/subcategory-option-selector-page.html"
-  },
-  {
-    "image": "../assets/ellipse-20.png",
-    "name": "Paint",
-    "alt": "Paint",
-    "link": "../html/subcategory-option-selector-page.html"
-  }
-]
+{
+  "Building": [
+    {
+      "image": "../assets/hammer.jpg",
+      "name": "Doors",
+      "alt": "Doors",
+      "link": "../html/subcategory-results-page.html?query=Doors"
+    },
+    {
+      "image": "../assets/ellipse-20.png",
+      "name": "Windows",
+      "alt": "Windows",
+      "link": "../html/subcategory-results-page.html?query=Windows"
+    },
+    {
+      "image": "../assets/ellipse-20.png",
+      "name": "Building supplies",
+      "alt": "Building supplies",
+      "link": "../html/subcategory-results-page.html?query=Building supplies"
+    }
+  ],
+  "Heating": [
+    {
+      "image": "../assets/hammer.jpg",
+      "name": "Air conditioners",
+      "alt": "Air conditioners",
+      "link": "../html/subcategory-results-page.html?query=Air conditioners"
+    },
+    {
+      "image": "../assets/hammer.jpg",
+      "name": "Fans",
+      "alt": "Fans",
+      "link": "../html/subcategory-results-page.html?query=Fans"
+    }
+  ],
+  "Lighting": [
+    {
+      "image": "../assets/hammer.jpg",
+      "name": "LED Lights",
+      "alt": "LED Lights",
+      "link": "../html/subcategory-results-page.html?query=LED Lights"
+    },
+    {
+      "image": "../assets/hammer.jpg",
+      "name": "Electrical",
+      "alt": "Electrical",
+      "link": "../html/subcategory-results-page.html?query=Electrical"
+    }
+  ],
+  "Painting":[
+    {
+      "image": "../assets/hammer.jpg",
+      "name": "Interior paint",
+      "alt": "Interior paint",
+      "link": "../html/subcategory-results-page.html?query=Interior paint"
+    },
+    {
+      "image": "../assets/hammer.jpg",
+      "name": "Exterior paint",
+      "alt": "Exterior paint",
+      "link": "../html/subcategory-results-page.html?query=Exterior paint"
+    }
+  ],
+  "Tools": [
+    {
+      "image": "../assets/hammer.jpg",
+      "name": "Power Tools",
+      "alt": "Power Tools",
+      "link": "../html/subcategory-results-page.html?query=Power Tools"
+    },
+    {
+      "image": "../assets/hammer.jpg",
+      "name": "Air conditioners",
+      "alt": "Air conditioners",
+      "link": "../html/subcategory-results-page.html?query=Air conditioners"
+    }
+  ]
+
+}
