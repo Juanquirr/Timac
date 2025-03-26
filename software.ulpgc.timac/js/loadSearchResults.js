@@ -15,18 +15,22 @@ document.addEventListener('DOMContentLoaded',  () => {
 
         document.querySelector(".subcategory-name").textContent = "Search results for \"" + searchQuery + "\"";
 
-        fetch('../json/subcategory-results.json')
+        fetch('../json/products.json')
             .then(response => response.json())
-            .then(products => {
+            .then(data => {
+
+                const products = data.products;
+
                 clearContainer(productContainer);
 
                 const filteredProducts = products.filter(product =>
                     product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    product.category.toLowerCase().includes(searchQuery.toLowerCase())
+                    product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    product.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
                 );
 
                 if (filteredProducts.length === 0) {
-                    productContainer.innerHTML = `<p>No results found for ${searchQuery}</p>`;
+                    productContainer.innerHTML = `<p>No results found for "${searchQuery}"</p>`;
                 }
 
                 filteredProducts.forEach(product => {
@@ -35,7 +39,7 @@ document.addEventListener('DOMContentLoaded',  () => {
                     productElement.classList.add('single-big-product-container');
 
                     productElement.innerHTML = `
-            <a class="single-big-product-full-link" href="${product.link}"></a>
+            <a class="single-big-product-full-link" href="../html/detailed-product-page.html?id=${product.id}"></a>
             <img class="single-big-product-image" src="${product.image}" alt="${product.name}"/>
             <h1 class="single-big-product-title font-base body-text">${product.name}</h1>
             <div class="single-big-product-price font-base body-text">

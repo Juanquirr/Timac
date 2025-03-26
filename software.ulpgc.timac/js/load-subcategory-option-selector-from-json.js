@@ -10,10 +10,17 @@ document.addEventListener('DOMContentLoaded',  () => {
             return;
         }
 
+        const params = new URLSearchParams(window.location.search);
+        const searchQuery = params.get("category") || "";  // si no hay query pongo cadena vacia para que los cargue todos
+
         fetch('../json/subcategory-option-selector.json')
             .then(response => response.json())
-            .then(subcategories  => {
+            .then(data  => {
+
+                const subcategories = data[searchQuery];
+
                 clearContainer(subcategoryContainer);
+
                 subcategories .forEach(subcategory => {
                     const subcategoryElement = document.createElement('div');
                     subcategoryElement.classList.add('subcategory-selection-sub-category-option');

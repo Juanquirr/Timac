@@ -1,5 +1,5 @@
 {
-  "Building & Hardware": [
+  "Building": [
     {
       "image": "../assets/hammer.jpg",
       "name": "Doors",
@@ -19,7 +19,7 @@
       "link": "../html/subcategory-results-page.html?query=Building supplies"
     }
   ],
-  "Heating & cooling": [
+  "Heating": [
     {
       "image": "../assets/hammer.jpg",
       "name": "Air conditioners",
@@ -33,7 +33,7 @@
       "link": "../html/subcategory-results-page.html?query=Fans"
     }
   ],
-  "Lighting & Electrical": [
+  "Lighting": [
     {
       "image": "../assets/hammer.jpg",
       "name": "LED Lights",
@@ -47,7 +47,7 @@
       "link": "../html/subcategory-results-page.html?query=Electrical"
     }
   ],
-  "Painting & decoration":[
+  "Painting":[
     {
       "image": "../assets/hammer.jpg",
       "name": "Interior paint",
@@ -61,7 +61,7 @@
       "link": "../html/subcategory-results-page.html?query=Exterior paint"
     }
   ],
-  "Tools & equipment": [
+  "Tools": [
     {
       "image": "../assets/hammer.jpg",
       "name": "Power Tools",
