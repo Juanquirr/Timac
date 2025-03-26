@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded',  () => {
 
                     productElement.innerHTML = `
             <a class="single-big-product-full-link" href="../html/detailed-product-page.html?id=${product.id}"></a>
+            <div class="single-big-product-image-container">
             <img class="single-big-product-image" src="${product.image}" alt="${product.name}"/>
+            </div>
             <h1 class="single-big-product-title font-base body-text">${product.name}</h1>
             <div class="single-big-product-price font-base body-text">
               <h2>${product.price}</h2>

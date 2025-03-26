@@ -101,11 +101,18 @@
     z-index: 1;
 }
 
+.single-big-product-image-container{
+    height: 240px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .single-big-product-image {
     margin-top: 8%;
     border-radius: 15px;
-    width: 225px;
-    height: 232px;
+    max-height: 95%;
+    width: auto;
     position: relative;
     object-fit: cover;
 }

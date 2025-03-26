@@ -48,7 +48,9 @@ export function loadHomePageProductsFromJSON(jsonFilePath, containerSelector, ty
 
                 productElement.innerHTML = `
                     <a href="../html/detailed-product-page.html?id=${product.id}" class="product-link">
+                    <div class="product-image-container">
                     <img src="${product.image}" alt="Product Image" class="product-image">
+                    </div>
                     <p class="product-title font-base">${product.name}</p>
                     <p class="product-price font-base">${product.price}€</p>
                     <a> 

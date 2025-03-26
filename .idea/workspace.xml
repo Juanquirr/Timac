@@ -7,9 +7,10 @@
     <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Basket page new functionality.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/basket.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/basket.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/basket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/home-page-products.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/home-page-products.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/loadSearchResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/loadSearchResults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +42,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Juanquirr/Timac.git&quot;,
-    &quot;accountId&quot;: &quot;38c25de1-a76c-423a-8f73-26c065bb555e&quot;
+    &quot;accountId&quot;: &quot;af666e48-7602-4824-bf98-0c09adb84a7e&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -63,7 +64,7 @@
     &quot;JavaScript Debug.subcategory-results-page.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;juanquirr&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;iansamueltrujillogil&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Ian/WebstormProjects/Timac3/software.ulpgc.timac/js&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -130,6 +131,8 @@
       <workItem from="1742857193098" duration="322000" />
       <workItem from="1742901179881" duration="237000" />
       <workItem from="1742920507447" duration="2298000" />
+      <workItem from="1742999554474" duration="3387000" />
+      <workItem from="1743020787074" duration="3138000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
