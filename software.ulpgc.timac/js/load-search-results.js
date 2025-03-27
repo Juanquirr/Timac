@@ -1,6 +1,6 @@
 import { clearContainer, waitForElement } from './utils.js';
 
-document.addEventListener('DOMContentLoaded',  () => {
+document.addEventListener('DOMContentLoaded', () => {
     function loadProducts() {
 
         const productContainer = document.querySelector('.product-display-product-container');
@@ -23,15 +23,21 @@ document.addEventListener('DOMContentLoaded',  () => {
 
                 clearContainer(productContainer);
 
-                const filteredProducts = products.filter(product =>
+                let filteredProducts = products.filter(product =>
                     product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                     product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
                     product.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
                 );
 
-                if (filteredProducts.length === 0) {
-                    productContainer.innerHTML = `<p>No results found for "${searchQuery}"</p>`;
+                if (searchQuery === "new" || searchQuery === "offers" || searchQuery === "trending") {
+                    filteredProducts = products.filter(product => {
+                        if (searchQuery === "new") return product.new === true;
+                        if (searchQuery === "offers") return product.on_sale === true;
+                        if (searchQuery === "trending") return product.trending === true;
+                    });
                 }
+
+                if (filteredProducts.length === 0) productContainer.innerHTML = `<p>No results found for "${searchQuery}"</p>`;
 
                 filteredProducts.forEach(product => {
 

@@ -73,6 +73,12 @@
     font-size: 20px;
     background-color: var(--headerfootercolor-100);
     cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.counter-button:hover {
+    border: 2px solid black;
 }
 
 .counter-value {
@@ -90,9 +96,13 @@
     cursor: pointer;
     margin: 20px 0;
     padding: 15px 0;
-    border-style: outset;
     text-decoration: none;
-    color: inherit;
+    border-radius: 10px;
+    border: none;
+}
+
+.add-basket-button:hover {
+    border: 2px solid black
 }
 
 #add-basket-container {

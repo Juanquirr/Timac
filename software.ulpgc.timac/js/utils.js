@@ -52,7 +52,7 @@ export function loadHomePageProductsFromJSON(jsonFilePath, containerSelector, ty
                     <img src="${product.image}" alt="Product Image" class="product-image">
                     </div>
                     <p class="product-title font-base">${product.name}</p>
-                    <p class="product-price font-base">${product.price}€</p>
+                    <p class="product-price font-base">${product.price}</p>
                     <a> 
                 `;
                 productContainer.appendChild(productElement);

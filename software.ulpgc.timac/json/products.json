@@ -8,6 +8,7 @@
       "name": "Silicone Fei Dai",
       "category": "Building & Hardware",
       "subcategory": "Building supplies",
+      "brand" : "Fei Dai",
       "new": false,
       "trending": false,
       "on_sale": true,
@@ -18,8 +19,7 @@
       "price": "4.99€",
       "quantity": 1,
       "description": [
-        "Best hammer in the market right now. No words or explanation could transmit the peace of having this hammer.",
-        "If thinking on buying it, do not hesitate."
+        "Best hammer in the market right now. No words or explanation could transmit the peace of having this hammer. If thinking on buying it, do not hesitate."
       ]
     },
     {
@@ -29,6 +29,7 @@
       "name": "Screwdriver Fei Dai",
       "category": "Tools & Equipment",
       "subcategory": "Power Tools",
+      "brand" : "Fei Dai",
       "new": true,
       "trending": true,
       "on_sale": false,
@@ -49,6 +50,7 @@
       "name": "Hammer",
       "category": "Tools & Equipment",
       "subcategory": "Power Tools",
+      "brand" : "Fei Dai",
       "new": false,
       "trending": true,
       "on_sale": false,
@@ -72,6 +74,7 @@
       "name": "Wrench",
       "category": "Tools & Equipment",
       "subcategory": "Power Tools",
+      "brand" : "Fei Dai",
       "new": false,
       "trending": false,
       "on_sale": false,
@@ -89,11 +92,12 @@
     },
     {
       "id": "5",
-      "image": "../assets/ellipse-20.png",
+      "image": "../assets/hammer-drill.png",
       "image_alt": "Drill",
       "name": "Drill Fei Dai",
       "category": "Tools & Equipment",
       "subcategory": "Power Tools",
+      "brand" : "Fei Dai",
       "new": false,
       "trending": false,
       "on_sale": false,
@@ -116,6 +120,7 @@
       "name": "LED lamp Fei Dai",
       "category": "Lighting & Electrical",
       "subcategory": "LED Lights",
+      "brand" : "Fei Dai",
       "new": false,
       "trending": true,
       "on_sale": true,
@@ -138,6 +143,8 @@
       "name": "INTERIOR PAINT FEI DAI",
       "category": "Painting & Decorating",
       "subcategory": "Interior paint",
+      "brand" : "Fei Dai",
+      "color": "Dark green (RBG #009e49, Pantone PMS 355)",
       "new": false,
       "trending": false,
       "on_sale": true,
@@ -149,7 +156,7 @@
       "quantity": 1,
       "description": [
         "Fei Dai Interior Paint is a high-quality, water-based paint designed for easy application and a smooth, durable finish on walls and ceilings.",
-        "Available in a soft matte white, this 2.5L can covers up to 30 square meters, making it ideal for refreshing living rooms, bedrooms, or any interior space.",
+        "Available in a soft matte green, this 2.5L can covers up to 30 square meters, making it ideal for refreshing living rooms, bedrooms, or any interior space.",
         "Its low-odor formula ensures a pleasant painting experience, and it dries quickly, allowing for a second coat in just 2-4 hours."
       ]
     },
@@ -160,6 +167,7 @@
       "name": "Air Conditioner Fei Dai",
       "category": "Heating & Cooling",
       "subcategory": "Air conditioners",
+      "brand" : "Fei Dai",
       "new": false,
       "trending": false,
       "on_sale": false,
@@ -182,6 +190,7 @@
       "name": "Pedestal Fan Fei Dai",
       "category": "Heating & Cooling",
       "subcategory": "Fans",
+      "brand" : "Fei Dai",
       "new": false,
       "trending": true,
       "on_sale": false,
@@ -204,12 +213,13 @@
       "name": "Duct Tape Fei Dai",
       "category": "Building & Hardware",
       "subcategory": "Building supplies",
+      "brand" : "Fei Dai",
       "new": false,
       "trending": true,
       "on_sale": false,
       "availability": {
-        "in_store": "NOT AVAILABLE IN STORE",
-        "delivery": "NOT AVAILABLE FOR DELIVERY"
+        "in_store": false,
+        "delivery": false
       },
       "price": "3.49€",
       "quantity": 1,
@@ -217,6 +227,140 @@
         "Fei Dai Duct Tape is a versatile, heavy-duty adhesive tape perfect for a wide range of repairs and construction projects.",
         "With strong adhesion and a durable, waterproof backing, this tape is ideal for sealing, bundling, or temporarily fixing materials like pipes, wood, or plastic.",
         "Each roll measures 50 meters in length and 48mm in width, providing ample coverage for both professional and DIY use."
+      ]
+    },
+    {
+      "id": "11",
+      "image": "../assets/adapter.png",
+      "image_alt": "Adapter",
+      "name": "Adapter Fei Dai",
+      "category": "Lighting & Electrical",
+      "subcategory": "Electrical",
+      "brand" : "Fei Dai",
+      "new": true,
+      "trending": false,
+      "on_sale": false,
+      "availability": {
+        "in_store": true,
+        "delivery": true
+      },
+      "price": "6.99€",
+      "quantity": 1,
+      "description": [
+        "The Fei Dai Universal Plug Adapter is a must-have for travelers, compatible with outlets in over 150 countries, including the USA, Europe, UK, and Australia.",
+        "Featuring a compact design with a built-in safety shutter and a 10A fuse for protection, this adapter ensures safe and reliable charging for your devices.",
+        "Supports a voltage range of 110-240V, making it ideal for phones, laptops, and other electronics."
+      ]
+    },
+    {
+      "id": "12",
+      "image": "../assets/cement.png",
+      "image_alt": "Cement",
+      "name": "Cement mix Fei Dai",
+      "category": "Building & Hardware",
+      "subcategory": "Building supplies",
+      "brand" : "Fei Dai",
+      "new": true,
+      "trending": false,
+      "on_sale": true,
+      "availability": {
+        "in_store": true,
+        "delivery": false
+      },
+      "price": "29.99€",
+      "quantity": 1,
+      "description": [
+        "Fei Dai Cement Mix 25kg is a high-quality, ready-to-use cement ideal for a wide range of construction projects, including foundations, slabs, and repairs.",
+        "This 25kg bag provides excellent strength and durability, with a fast-setting formula that ensures quick and reliable results.",
+        "Perfect for both professional builders and DIY enthusiasts, it can be mixed with sand and gravel to create strong concrete."
+      ]
+    },
+    {
+      "id": "13",
+      "image": "../assets/door-handle.png",
+      "image_alt": "Door handle",
+      "name": "Door handle Fei Dai",
+      "category": "Building & Hardware",
+      "subcategory": "Doors",
+      "brand" : "Fei Dai",
+      "new": true,
+      "trending": false,
+      "on_sale": true,
+      "availability": {
+        "in_store": true,
+        "delivery": true
+      },
+      "price": "19.99€",
+      "quantity": 1,
+      "description": [
+        "The Fei Dai Brass Door handle combines elegance and functionality, featuring a polished brass finish that adds a touch of sophistication to any door.",
+        "Designed for easy installation, this doorknob includes a secure locking mechanism, making it ideal for interior doors in homes or offices.",
+        "Durable and resistant to corrosion, it ensures long-lasting performance and a comfortable grip for daily use."
+      ]
+    },
+    {
+      "id": "14",
+      "image": "../assets/innopack-exterior-painting.png",
+      "image_alt": "Exterior painting",
+      "name": "Innopack Exterior Painting",
+      "category": "Painting & Decorating",
+      "subcategory": "Exterior paint",
+      "brand" : "Innopack",
+      "new": false,
+      "trending": true,
+      "on_sale": false,
+      "availability": {
+        "in_store": false,
+        "delivery": true
+      },
+      "price": "40.59€",
+      "quantity": 1,
+      "description": [
+        "Transform your home’s exterior with Innopack Dark Green Exterior Paint! This rich, deep green hue offers a bold yet timeless look, perfect for siding, trim, or accents. Formulated for durability, it resists fading, weathering, and peeling, ensuring long-lasting vibrancy. Easy to apply with excellent coverage, this paint brings a touch of nature-inspired elegance to any outdoor space."
+      ]
+    },
+    {
+      "id": "15",
+      "image": "../assets/window.png",
+      "image_alt": "Window",
+      "name": "Window",
+      "category": "Building & Hardware",
+      "subcategory": "Windows",
+      "brand" : "",
+      "color": "White",
+      "new": false,
+      "trending": true,
+      "on_sale": false,
+      "availability": {
+        "in_store": true,
+        "delivery": false
+      },
+      "price": "35.70€",
+      "quantity": 1,
+      "description": [
+        "Upgrade your home with our durable, energy-efficient window! Featuring a sleek design, double-pane glass for superior insulation, and easy-to-use tilt-in functionality for effortless cleaning. Perfect for any room, this window offers both style and practicality at an unbeatable price.",
+        "40cm x 80cm."
+      ]
+    },
+    {
+      "id": "16",
+      "image": "../assets/doorknob.png",
+      "image_alt": "Doorknob",
+      "name": "Doorknob Fei Dai",
+      "category": "Building & Hardware",
+      "subcategory": "Doors",
+      "brand" : "Fei Dai",
+      "new": false,
+      "trending": true,
+      "on_sale": true,
+      "availability": {
+        "in_store": true,
+        "delivery": false
+      },
+      "price": "18.70€",
+      "quantity": 1,
+      "description": [
+        "Enhance your door with this sleek, reliable doorknob! Crafted for durability and smooth operation, it features a classic design that complements any style, from modern to traditional. Easy to install with a secure fit, this doorknob offers both functionality and a polished finish, making it the perfect upgrade for your home’s interior or exterior doors."
       ]
     }
   ]
