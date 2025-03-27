@@ -34,7 +34,8 @@
 }
 
 .product-section {
-    margin-bottom: 40px;
+    max-width: 1500px;
+    margin: 0 auto 40px auto;
 }
 
 .product-slider {
@@ -74,6 +75,7 @@
     margin: 30px auto;
     width: 70%;
 }
+
 
 @media (max-width: 992px) {
     .main-content-index{
