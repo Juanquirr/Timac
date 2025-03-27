@@ -1,19 +1,19 @@
 {
   "Building": [
     {
-      "image": "../assets/hammer.jpg",
+      "image": "../assets/doorknob.png",
       "name": "Doors",
       "alt": "Doors",
       "link": "../html/subcategory-results-page.html?query=Doors"
     },
     {
-      "image": "../assets/ellipse-20.png",
+      "image": "../assets/window.png",
       "name": "Windows",
       "alt": "Windows",
       "link": "../html/subcategory-results-page.html?query=Windows"
     },
     {
-      "image": "../assets/ellipse-20.png",
+      "image": "../assets/cement.png",
       "name": "Building supplies",
       "alt": "Building supplies",
       "link": "../html/subcategory-results-page.html?query=Building supplies"
@@ -21,13 +21,13 @@
   ],
   "Heating": [
     {
-      "image": "../assets/hammer.jpg",
+      "image": "../assets/air-conditioner.png",
       "name": "Air conditioners",
       "alt": "Air conditioners",
       "link": "../html/subcategory-results-page.html?query=Air conditioners"
     },
     {
-      "image": "../assets/hammer.jpg",
+      "image": "../assets/fan.png",
       "name": "Fans",
       "alt": "Fans",
       "link": "../html/subcategory-results-page.html?query=Fans"
@@ -35,13 +35,13 @@
   ],
   "Lighting": [
     {
-      "image": "../assets/hammer.jpg",
+      "image": "../assets/led-lamp.png",
       "name": "LED Lights",
       "alt": "LED Lights",
       "link": "../html/subcategory-results-page.html?query=LED Lights"
     },
     {
-      "image": "../assets/hammer.jpg",
+      "image": "../assets/adapter.png",
       "name": "Electrical",
       "alt": "Electrical",
       "link": "../html/subcategory-results-page.html?query=Electrical"
@@ -49,13 +49,13 @@
   ],
   "Painting":[
     {
-      "image": "../assets/hammer.jpg",
+      "image": "../assets/paint-can.jpg",
       "name": "Interior paint",
       "alt": "Interior paint",
       "link": "../html/subcategory-results-page.html?query=Interior paint"
     },
     {
-      "image": "../assets/hammer.jpg",
+      "image": "../assets/innopack-exterior-painting.png",
       "name": "Exterior paint",
       "alt": "Exterior paint",
       "link": "../html/subcategory-results-page.html?query=Exterior paint"
@@ -63,16 +63,16 @@
   ],
   "Tools": [
     {
-      "image": "../assets/hammer.jpg",
+      "image": "../assets/hammer-drill.png",
       "name": "Power Tools",
       "alt": "Power Tools",
       "link": "../html/subcategory-results-page.html?query=Power Tools"
     },
     {
       "image": "../assets/hammer.jpg",
-      "name": "Air conditioners",
-      "alt": "Air conditioners",
-      "link": "../html/subcategory-results-page.html?query=Air conditioners"
+      "name": "Equipment",
+      "alt": "Equipment",
+      "link": "../html/subcategory-results-page.html?query=Equipment"
     }
   ]
 

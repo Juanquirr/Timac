@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         Subcategory: ${product.subcategory || 'N/A'}<br>
                         Brand: ${product.brand || 'N/A'}<br>
                         Color: ${product.color || 'N/A'}<br>
-                        Specific attribute 1: ${product.specific_attribute_1 || 'N/A'}<br>
-                        Specific attribute 2: ${product.specific_attribute_2 || 'N/A'}
                     </p>
                     <div class="availability">
                         <div class="availability-in-store">

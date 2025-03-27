@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <p class="big-price font-base">${product.price}</p>                            
                             </div>
                         </div>
-                        <button class="remove">🗑️</button>
+                        <button class="remove">❌</button>
                     `;
 
                     productsContainer.appendChild(productElement);
