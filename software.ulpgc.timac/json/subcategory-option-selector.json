@@ -74,6 +74,20 @@
       "alt": "Equipment",
       "link": "../html/subcategory-results-page.html?query=Equipment"
     }
+  ],
+  "New": [
+    {
+      "image": "../assets/new-products.png",
+      "name": "New at Timac",
+      "alt": "New at Timac",
+      "link": "../html/subcategory-results-page.html?query=new"
+    },
+    {
+      "image": "../assets/fire.jpg",
+      "name": "Trending",
+      "alt": "Trending",
+      "link": "../html/subcategory-results-page.html?query=trending"
+    }
   ]
 
 }

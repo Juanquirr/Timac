@@ -92,7 +92,7 @@
     },
     {
       "id": "5",
-      "image": "../assets/ellipse-20.png",
+      "image": "../assets/hammer-drill.png",
       "image_alt": "Drill",
       "name": "Drill Fei Dai",
       "category": "Tools & Equipment",
@@ -277,9 +277,9 @@
     },
     {
       "id": "13",
-      "image": "../assets/doorknob.png",
-      "image_alt": "Duct Tape",
-      "name": "Duct Tape Fei Dai",
+      "image": "../assets/door-handle.png",
+      "image_alt": "Door handle",
+      "name": "Door handle Fei Dai",
       "category": "Building & Hardware",
       "subcategory": "Doors",
       "brand" : "Fei Dai",
@@ -293,7 +293,7 @@
       "price": "19.99€",
       "quantity": 1,
       "description": [
-        "The Fei Dai Brass Doorknob combines elegance and functionality, featuring a polished brass finish that adds a touch of sophistication to any door.",
+        "The Fei Dai Brass Door handle combines elegance and functionality, featuring a polished brass finish that adds a touch of sophistication to any door.",
         "Designed for easy installation, this doorknob includes a secure locking mechanism, making it ideal for interior doors in homes or offices.",
         "Durable and resistant to corrosion, it ensures long-lasting performance and a comfortable grip for daily use."
       ]

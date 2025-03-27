@@ -21,19 +21,19 @@ document.addEventListener('DOMContentLoaded',  () => {
 
                 clearContainer(subcategoryContainer);
 
-                subcategories .forEach(subcategory => {
+                subcategories.forEach(subcategory => {
                     const subcategoryElement = document.createElement('div');
                     subcategoryElement.classList.add('subcategory-selection-sub-category-option');
                     subcategoryElement.innerHTML = `
-                    <div class="subcategory-selection-ellipse-1">
-                        <a href="${subcategory.link}" class="subcategory-selection-full-link"></a>
-                        <img class="subcategory-selection-ellipse-2" src="${subcategory.image}" alt="${subcategory.alt}" />
-                        <p class="body-text font-base">${subcategory.name}</p>
-                    </div>
-                    
-          `;
+                        <div class="subcategory-selection-ellipse-1">
+                            <a href="${subcategory.link}" class="subcategory-selection-full-link"></a>
+                            <img class="subcategory-selection-ellipse-2" src="${subcategory.image}" alt="${subcategory.alt}" />
+                            <p class="body-text font-base">${subcategory.name}</p>
+                        </div>
+                    `;
                     subcategoryContainer.appendChild(subcategoryElement);
                 });
+
             })
             .catch(error => console.error('Error loading Subcategories:', error));
     }

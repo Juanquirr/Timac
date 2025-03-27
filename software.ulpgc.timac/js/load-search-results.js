@@ -1,6 +1,6 @@
 import { clearContainer, waitForElement } from './utils.js';
 
-document.addEventListener('DOMContentLoaded',  () => {
+document.addEventListener('DOMContentLoaded', () => {
     function loadProducts() {
 
         const productContainer = document.querySelector('.product-display-product-container');
@@ -23,15 +23,21 @@ document.addEventListener('DOMContentLoaded',  () => {
 
                 clearContainer(productContainer);
 
-                const filteredProducts = products.filter(product =>
+                let filteredProducts = products.filter(product =>
                     product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                     product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
                     product.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
                 );
 
-                if (filteredProducts.length === 0) {
-                    productContainer.innerHTML = `<p>No results found for "${searchQuery}"</p>`;
+                if (searchQuery === "new" || searchQuery === "offers" || searchQuery === "trending") {
+                    filteredProducts = products.filter(product => {
+                        if (searchQuery === "new") return product.new === true;
+                        if (searchQuery === "offers") return product.on_sale === true;
+                        if (searchQuery === "trending") return product.trending === true;
+                    });
                 }
+
+                if (filteredProducts.length === 0) productContainer.innerHTML = `<p>No results found for "${searchQuery}"</p>`;
 
                 filteredProducts.forEach(product => {
 
@@ -39,23 +45,23 @@ document.addEventListener('DOMContentLoaded',  () => {
                     productElement.classList.add('single-big-product-container');
 
                     productElement.innerHTML = `
-            <a class="single-big-product-full-link" href="../html/detailed-product-page.html?id=${product.id}"></a>
-            <img class="single-big-product-image" src="${product.image}" alt="${product.name}"/>
-            <h1 class="single-big-product-title font-base body-text">${product.name}</h1>
-            <div class="single-big-product-price font-base body-text">
-              <h2>${product.price}</h2>
-            </div>
-            <div class="availability">
-                <div class="availability-in-store">
-                    <img src="../assets/star.png" alt="Star"/>
-                    <p class="body-text font-base">${product.available_in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
-                </div>
-                <div class="availability-for-delivery">
-                    <img src="../assets/arrow.png" alt="Arrow"/>
-                    <p class="body-text font-base">${product.available_to_deliver ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY'}</p>
-                </div>
-            </div>
-          `;
+                        <a class="single-big-product-full-link" href="../html/detailed-product-page.html?id=${product.id}"></a>
+                        <img class="single-big-product-image" src="${product.image}" alt="${product.name}"/>
+                        <h1 class="single-big-product-title font-base body-text">${product.name}</h1>
+                        <div class="single-big-product-price font-base body-text">
+                          <h2>${product.price}</h2>
+                        </div>
+                        <div class="availability">
+                            <div class="availability-in-store">
+                                <img src="../assets/star.png" alt="Star"/>
+                                <p class="body-text font-base">${product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
+                            </div>
+                            <div class="availability-for-delivery">
+                                <img src="../assets/arrow.png" alt="Arrow"/>
+                                <p class="body-text font-base">${product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY'}</p>
+                            </div>
+                        </div>
+                      `;
                     productContainer.appendChild(productElement);
                 });
             })
