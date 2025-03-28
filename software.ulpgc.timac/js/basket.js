@@ -205,5 +205,9 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(document.body, { childList: true, subtree: true });
     }
 
+    if(localStorage.getItem("UserLoggedIn") !== "true") {
+        window.location.href = "../html/log-in-page.html";
+    }
+    
     waitForElement(".basket-container", loadBasket);
 });
