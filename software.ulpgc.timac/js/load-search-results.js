@@ -1,6 +1,7 @@
 import { clearContainer, waitForElement } from './utils.js';
 import { handlePriceRange } from './price-bar.js';
-
+import { updateProducts } from './update-search-results.js';
+import { togglePriceOrder } from './toggle-price-order.js';
 // Main load products function
 function loadProducts() {
     const productContainer = document.querySelector('.product-display-product-container');
@@ -37,6 +38,13 @@ function loadProducts() {
             filteredProducts.forEach(product => {
                 productContainer.appendChild(createProductElement(product));
             });
+
+            const button = document.querySelector('.product-display-title-button');
+
+            if (button) {
+
+                button.addEventListener('click', togglePriceOrder);
+            }
 
             // Create price range inputs
             const rangeContainer = document.querySelector('.range-inputs');
@@ -124,9 +132,14 @@ function createBrandFilters(brandSet) {
             <span class="brand-label">${brand}</span>
         `;
         brandFilterContainer.appendChild(brandElement);
+        const checkbox = brandElement.querySelector('input[type="checkbox"]');
+        checkbox.addEventListener('change', function() {
+            updateProducts();
+        });
     });
 }
-// Event listener
+
+
 document.addEventListener('DOMContentLoaded', () => {
     waitForElement(".product-display-product-container", loadProducts);
 });

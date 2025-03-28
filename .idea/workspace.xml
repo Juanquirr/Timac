@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="rename loadSearchResults.js to load-search-results.js.">
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default.">
+      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/toggle-price-order.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/update-search-results.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/filter-bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/filter-bar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/price-range-support-check.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/check-price-slider-support.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,29 +54,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.basket-page.html.executor": "Run",
-    "JavaScript Debug.create-account-page.html.executor": "Run",
-    "JavaScript Debug.detailed-product-page.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.product-pack.html.executor": "Run",
-    "JavaScript Debug.subcategory-results-page.html.executor": "Run",
-    "Node.js.try.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "iansamueltrujillogil",
-    "last_opened_file_path": "C:/Users/Ian/WebstormProjects/Timac3/software.ulpgc.timac/js",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.basket-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.create-account-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.detailed-product-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.product-pack.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.subcategory-results-page.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.try.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;iansamueltrujillogil&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ian/WebstormProjects/Timac3/software.ulpgc.timac/js&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ian\WebstormProjects\Timac3\software.ulpgc.timac\js" />
@@ -146,7 +148,8 @@
       <workItem from="1743039397236" duration="94000" />
       <workItem from="1743069382501" duration="149000" />
       <workItem from="1743069547038" duration="14125000" />
-      <workItem from="1743112845749" duration="10370000" />
+      <workItem from="1743112845749" duration="10556000" />
+      <workItem from="1743155401454" duration="9497000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -212,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743025618366</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default.">
+      <option name="closed" value="true" />
+      <created>1743124907039</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743124907039</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +234,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="iansamueltrujillogil" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -241,6 +264,7 @@
     <MESSAGE value="Basket page new functionality." />
     <MESSAGE value="Ensured that images on the homepage, basket page, and subcategory results page fit the required dimensions while preserving aspect ratio." />
     <MESSAGE value="Refactored subcategory results page and homePage:&#10;- Added dynamic functionality for 'Filter by' toggles.&#10;- Implemented a dynamic price limit slider as part of the 'Filter by', adapting to different browsers.&#10;- Enabled brand selection in 'Filter by'.&#10;- Adjusted homePage for better display on larger screens sizes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored subcategory results page and homePage:&#10;- Added dynamic functionality for 'Filter by' toggles.&#10;- Implemented a dynamic price limit slider as part of the 'Filter by', adapting to different browsers.&#10;- Enabled brand selection in 'Filter by'.&#10;- Adjusted homePage for better display on larger screens sizes." />
+    <MESSAGE value="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default." />
   </component>
 </project>

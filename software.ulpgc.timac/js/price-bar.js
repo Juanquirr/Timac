@@ -1,4 +1,5 @@
 import { waitForElement } from './utils.js';
+import { updateProducts } from './update-search-results.js';
 
 
 export function handlePriceRange() {
@@ -36,6 +37,7 @@ export function handlePriceRange() {
 
         rangeTrackActive.style.left = `${minPercent}%`;
         rangeTrackActive.style.width = `${maxPercent - minPercent}%`;
+        updateProducts()
     }
 
 
