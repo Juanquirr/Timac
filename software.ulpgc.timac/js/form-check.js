@@ -33,9 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         form.addEventListener("submit", function (event) {
             event.preventDefault();
-            if(!validatePassword()) {
-                console.log("no");
-            } else {
+            if(validatePassword()) {
+
                 const formData = {
                     name: document.getElementById("name-input").value,
                     email: document.getElementById("email-input").value,
@@ -59,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     form.reset();
                 }
             }
+
         });
     }
 

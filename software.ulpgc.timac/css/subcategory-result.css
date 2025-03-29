@@ -59,8 +59,14 @@
     cursor: pointer;
     top: 0;
     left: 0;
-
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 50px;
+    text-align: center;
 }
+
+
 
 .product-display-product-container {
     height: 90%;
@@ -185,7 +191,6 @@
     }
 
 }
-
 
 @media (max-width: 576px) {
 
