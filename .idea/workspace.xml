@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Refactored subcategory results page and homePage:&#10;- Added dynamic functionality for 'Filter by' toggles.&#10;- Implemented a dynamic price limit slider as part of the 'Filter by', adapting to different browsers.&#10;- Enabled brand selection in 'Filter by'.&#10;- Adjusted homePage for better display on larger screens sizes.">
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/filter-by-toggle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/price-range-support-check.js" afterDir="false" />
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default.">
+      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/toggle-price-order.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/update-search-results.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/filter-bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/filter-bar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/home-page-products.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/home-page-products.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/price-range-support-check.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/check-price-slider-support.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +87,16 @@
       <recent name="C:\Users\Usuario\Desktop\Tercero\2º Semestre\PWM\Timac\software.ulpgc.timac" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="subcategory-results-page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="37cae5b9-e8b2-4949-9172-aafa37fbc09c" uri="http://localhost:63342/Timac3/software.ulpgc.timac/html/subcategory-results-page.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -140,6 +148,8 @@
       <workItem from="1743039397236" duration="94000" />
       <workItem from="1743069382501" duration="149000" />
       <workItem from="1743069547038" duration="14125000" />
+      <workItem from="1743112845749" duration="10556000" />
+      <workItem from="1743155401454" duration="9497000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -205,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743025618366</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default.">
+      <option name="closed" value="true" />
+      <created>1743124907039</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743124907039</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +234,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="iansamueltrujillogil" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -234,6 +264,7 @@
     <MESSAGE value="Basket page new functionality." />
     <MESSAGE value="Ensured that images on the homepage, basket page, and subcategory results page fit the required dimensions while preserving aspect ratio." />
     <MESSAGE value="Refactored subcategory results page and homePage:&#10;- Added dynamic functionality for 'Filter by' toggles.&#10;- Implemented a dynamic price limit slider as part of the 'Filter by', adapting to different browsers.&#10;- Enabled brand selection in 'Filter by'.&#10;- Adjusted homePage for better display on larger screens sizes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored subcategory results page and homePage:&#10;- Added dynamic functionality for 'Filter by' toggles.&#10;- Implemented a dynamic price limit slider as part of the 'Filter by', adapting to different browsers.&#10;- Enabled brand selection in 'Filter by'.&#10;- Adjusted homePage for better display on larger screens sizes." />
+    <MESSAGE value="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default." />
   </component>
 </project>

@@ -7,6 +7,7 @@
     border-top-right-radius: 15px;
     width: 250px;
     height: fit-content;
+    max-height: 750px;
     justify-content: start;
     min-width: 250px;
 
@@ -192,8 +193,10 @@ span#minValue {
 .filter-bar-option-brand {
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 5%;
+    padding-top: 10px;
+    margin-left: 10%;
     display: none;
+    overflow: auto;
 }
 
 label {
@@ -202,6 +205,12 @@ label {
 
 input[type="checkbox"] {
     margin-right: 10px;
+}
+
+
+.brand-label{
+    font-size: var(--bodytext-font-size);
+    font-family: var(--font-family),serif;
 }
 
 
