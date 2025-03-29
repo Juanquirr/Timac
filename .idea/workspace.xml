@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Refactor.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/registration.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/create-account-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/create-account-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/log-in-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/log-in-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +35,12 @@
     &quot;assignee&quot;: &quot;Juanquirr&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Juanquirr/Timac.git",
-    "accountId": "38c25de1-a76c-423a-8f73-26c065bb555e"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Juanquirr/Timac.git&quot;,
+    &quot;accountId&quot;: &quot;38c25de1-a76c-423a-8f73-26c065bb555e&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -64,7 +62,7 @@
     "Node.js.try.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "juanquirr",
+    "git-widget-placeholder": "iansamueltrujillogil",
     "last_opened_file_path": "C:/Users/Ian/WebstormProjects/Timac3/software.ulpgc.timac/js",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -91,6 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
         <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
         <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
         <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
@@ -267,6 +266,7 @@
     <MESSAGE value="Ensured that images on the homepage, basket page, and subcategory results page fit the required dimensions while preserving aspect ratio." />
     <MESSAGE value="Refactored subcategory results page and homePage:&#10;- Added dynamic functionality for 'Filter by' toggles.&#10;- Implemented a dynamic price limit slider as part of the 'Filter by', adapting to different browsers.&#10;- Enabled brand selection in 'Filter by'.&#10;- Adjusted homePage for better display on larger screens sizes." />
     <MESSAGE value="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default." />
+    <MESSAGE value="refactor: replace duplicated code with imported function." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: replace duplicated code with imported function." />
   </component>
 </project>

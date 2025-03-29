@@ -1,4 +1,3 @@
-import { waitForElement } from './utils.js';
 import { updateProducts } from './update-search-results.js';
 
 
@@ -114,5 +113,5 @@ export function handlePriceRange() {
 
     updateRange();
 }
-waitForElement(".range-slider", handlePriceRange);
+
 
