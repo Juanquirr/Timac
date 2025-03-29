@@ -23,7 +23,7 @@ function loadProducts() {
             let filteredProducts = filterProducts(products, searchQuery);
 
             if (filteredProducts.length === 0) {
-                productContainer.innerHTML = `<p>No results found for "${searchQuery}"</p>`;
+                productContainer.innerHTML = `<p class="body-text font-base">No results found for "${searchQuery}"</p>`;
                 return;
             }
 
