@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default.">
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/toggle-price-order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/update-search-results.js" afterDir="false" />
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Refactor.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/price-range-support-check.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/check-price-slider-support.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/registration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/create-account-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/create-account-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/log-in-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/log-in-page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +37,12 @@
     &quot;assignee&quot;: &quot;Juanquirr&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Juanquirr/Timac.git&quot;,
-    &quot;accountId&quot;: &quot;af666e48-7602-4824-bf98-0c09adb84a7e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Juanquirr/Timac.git",
+    "accountId": "38c25de1-a76c-423a-8f73-26c065bb555e"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -54,29 +51,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.basket-page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.create-account-page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.detailed-product-page.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.product-pack.html.executor&quot;: &quot;Run&quot;,
-    &quot;JavaScript Debug.subcategory-results-page.html.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.try.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;iansamueltrujillogil&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ian/WebstormProjects/Timac3/software.ulpgc.timac/js&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.basket-page.html.executor": "Run",
+    "JavaScript Debug.create-account-page.html.executor": "Run",
+    "JavaScript Debug.detailed-product-page.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.log-in-page.html.executor": "Run",
+    "JavaScript Debug.product-pack.html.executor": "Run",
+    "JavaScript Debug.subcategory-results-page.html.executor": "Run",
+    "Node.js.try.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "juanquirr",
+    "last_opened_file_path": "C:/Users/Ian/WebstormProjects/Timac3/software.ulpgc.timac/js",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ian\WebstormProjects\Timac3\software.ulpgc.timac\js" />
@@ -93,6 +91,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
+        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
+        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
         <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
       </list>
     </recent_temporary>
@@ -150,6 +151,7 @@
       <workItem from="1743069547038" duration="14125000" />
       <workItem from="1743112845749" duration="10556000" />
       <workItem from="1743155401454" duration="9497000" />
+      <workItem from="1743257762990" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
