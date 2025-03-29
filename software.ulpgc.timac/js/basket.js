@@ -1,3 +1,5 @@
+import { waitForElement } from './utils.js';
+
 document.addEventListener("DOMContentLoaded", () => {
     function loadBasket() {
         const basket = JSON.parse(localStorage.getItem("basket")) || [];
@@ -190,20 +192,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }
 
-    function waitForElement(selector, callback) {
-        const element = document.querySelector(selector);
-        if (element) {
-            callback();
-            return;
-        }
-        const observer = new MutationObserver((mutations, obs) => {
-            if (document.querySelector(selector)) {
-                obs.disconnect();
-                callback();
-            }
-        });
-        observer.observe(document.body, { childList: true, subtree: true });
-    }
 
     if(localStorage.getItem("UserLoggedIn") !== "true") {
         window.location.href = "../html/log-in-page.html";

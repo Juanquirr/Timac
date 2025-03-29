@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default.">
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/toggle-price-order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/update-search-results.js" afterDir="false" />
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Add price filter, brand filter, and price sorting (low to high and high to low) on subcategory result page.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/price-range-support-check.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/check-price-slider-support.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/log-in-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/log-in-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/basket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +96,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
+        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
+        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
+        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
+        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
       </list>
     </recent_temporary>
   </component>
@@ -150,6 +156,14 @@
       <workItem from="1743069547038" duration="14125000" />
       <workItem from="1743112845749" duration="10556000" />
       <workItem from="1743155401454" duration="9497000" />
+      <workItem from="1743175239215" duration="930000" />
+      <workItem from="1743176724361" duration="3466000" />
+      <workItem from="1743182245145" duration="711000" />
+      <workItem from="1743245323015" duration="498000" />
+      <workItem from="1743245886062" duration="69000" />
+      <workItem from="1743246095498" duration="1950000" />
+      <workItem from="1743248565324" duration="14000" />
+      <workItem from="1743257706064" duration="1537000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />

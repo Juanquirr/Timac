@@ -1,3 +1,5 @@
+import { waitForElement } from './utils.js';
+
 document.addEventListener("DOMContentLoaded", () => {
 
     function loadDetailedProduct() {
@@ -94,20 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }
 
-    function waitForElement(selector, callback) {
-        const element = document.querySelector(selector);
-        if (element) {
-            callback();
-            return;
-        }
-        const observer = new MutationObserver((mutations, obs) => {
-            if (document.querySelector(selector)) {
-                obs.disconnect();
-                callback();
-            }
-        });
-        observer.observe(document.body, { childList: true, subtree: true });
-    }
+
 
     waitForElement(".top-box-detailed-product-left", loadDetailedProduct);
 });

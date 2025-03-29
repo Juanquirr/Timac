@@ -29,7 +29,7 @@ export function loadHomePageProductsFromJSON(jsonFilePath, containerSelector, ty
 
     if (!productContainer) console.error('Container not found!');
 
-    console.log(productContainer);
+
     fetch(jsonFilePath)
         .then(response => response.json())
         .then(data => {
