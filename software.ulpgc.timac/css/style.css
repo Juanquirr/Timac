@@ -128,6 +128,7 @@ html, body {
 .account-basket-container{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* FOOTER */
@@ -334,8 +335,6 @@ html, body {
     margin-top: 15px;
 }
 
-
-
 .phone-number {
     color: #ffffff;
     text-align: left;
@@ -344,9 +343,6 @@ html, body {
     font-size: var(--footertext-font-size);
     font-weight: var(--font-weight);
 }
-
-
-
 
 .contact {
     font-family: var(--font-family), sans-serif;
@@ -362,8 +358,6 @@ html, body {
     width: 30%;
     text-align: center;
 }
-
-
 
 /* FONTS */
 .font-base {
@@ -412,18 +406,6 @@ html, body {
     font-size: var(--bodytitle-font-size);
 }
 
-
-
-.product-display-title-button {
-    text-align: center;
-    font-size: var(--bodytext-font-size);
-    position: relative;
-    margin: 0;
-    top: 26px;
-    padding: 0;
-    height: 30px;
-}
-
 .subcategory-name {
     text-align: center;
     font-size: var(--bodytitle-font-size);
@@ -454,10 +436,6 @@ html, body {
     font-size: var(--bodyfiltertags-font-size);
     margin: 0;
 }
-
-
-
-
 
 .product-title {
     font-size: 1em;

@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 let basket = JSON.parse(localStorage.getItem("basket")) || [];
                 const existingProduct = basket.find(item => item.id === product.id);
-                let counter = existingProduct ? existingProduct.quantity : 0;
+                let counter = existingProduct ? existingProduct.quantity : 1;
                 counterSpan.textContent = counter;
 
                 decreaseBtn.addEventListener('click', () => {
@@ -67,6 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
 
                 const addBasketBtn = document.getElementById('add-basket-button');
+
+                document.getElementById('add-basket-button').addEventListener('click', function() {
+                    window.location.href = "../html/basket-page.html";
+                });
+
 
                 addBasketBtn.addEventListener('click', () => {
                     if (counter > 0) {

@@ -81,8 +81,8 @@ function calculatePriceRange(products) {
     });
 
     return {
-        minPrice: products.length > 0 ? parseFloat(products[0].price.replace(/[^\d.-]/g, "")) : 0,
-        maxPrice: products.length > 0 ? parseFloat(products[products.length - 1].price.replace(/[^\d.-]/g, "")) : 0
+        minPrice: products.length > 0 ? parseInt(products[0].price.replace(/[^\d.-]/g, "")) : 0,
+        maxPrice: products.length > 0 ? parseInt(products[products.length - 1].price.replace(/[^\d.-]/g, "")) : 0
     };
 }
 

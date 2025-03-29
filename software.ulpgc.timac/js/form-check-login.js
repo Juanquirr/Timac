@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     function checkInputLogIn() {
-
         const form = document.getElementById("login-form");
         const email = document.getElementById("email-input");
         const password = document.getElementById("password");
@@ -15,11 +13,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (userExists) {
                 localStorage.setItem("UserLoggedIn", "true");
-                window.location.href = "../html/index.html";
+
+                let previousPage = localStorage.getItem("previousPage");
+
+                if (!previousPage || previousPage.includes("create-account-page.html")) {
+                    previousPage = "../html/index.html";
+                }
+
+                localStorage.removeItem("previousPage");
+
+                window.location.href = previousPage;
             } else {
                 alert("User does not exist.");
             }
-
         });
     }
 

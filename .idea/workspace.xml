@@ -4,9 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Refactor.">
+    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Big refactor">
+      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/account.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/account-menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/price-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-option.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-option.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/counter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/detailed-product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/form-check-login.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/form-check-login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/detailed-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/detailed-product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/header.html" afterDir="false" />
+    </list>
+    <list id="6503c55a-5276-4836-b031-483f8a546bcd" name="Changes by Ian" comment="">
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-option.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-option.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/filter-by-toggle.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/filter-by-toggle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/form-check.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/form-check.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/templates/subcategory-results.html" afterDir="false" />
+    </list>
+    <list id="2931d308-d425-4066-944e-e94be4a2b76c" name="Changes by mario" comment="">
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/search-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/search-bar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +47,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -41,6 +72,61 @@
     &quot;accountId&quot;: &quot;38c25de1-a76c-423a-8f73-26c065bb555e&quot;
   }
 }</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html">
+      <ranges>
+        <range start1="8" end1="8" start2="8" end2="9" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+        <range start1="12" end1="13" start2="13" end2="14" changelist="2931d308-d425-4066-944e-e94be4a2b76c" />
+        <range start1="14" end1="14" start2="15" end2="16" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/software.ulpgc.timac/css/style.css">
+      <ranges>
+        <range start1="130" end1="130" start2="130" end2="131" changelist="6503c55a-5276-4836-b031-483f8a546bcd" />
+        <range start1="336" end1="338" start2="337" end2="337" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+        <range start1="347" end1="350" start2="346" end2="346" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+        <range start1="365" end1="367" start2="361" end2="361" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+        <range start1="413" end1="425" start2="407" end2="407" changelist="6503c55a-5276-4836-b031-483f8a546bcd" />
+        <range start1="456" end1="460" start2="438" end2="438" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-result.css">
+      <ranges>
+        <range start1="61" end1="62" start2="61" end2="66" changelist="6503c55a-5276-4836-b031-483f8a546bcd" />
+        <range start1="63" end1="63" start2="67" end2="69" changelist="6503c55a-5276-4836-b031-483f8a546bcd" />
+        <range start1="187" end1="188" start2="193" end2="193" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html">
+      <ranges>
+        <range start1="8" end1="8" start2="8" end2="9" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+        <range start1="11" end1="12" start2="12" end2="13" changelist="2931d308-d425-4066-944e-e94be4a2b76c" />
+        <range start1="14" end1="14" start2="15" end2="16" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/software.ulpgc.timac/css/subcategory-option.css">
+      <ranges>
+        <range start1="10" end1="11" start2="10" end2="11" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+        <range start1="43" end1="45" start2="43" end2="43" changelist="6503c55a-5276-4836-b031-483f8a546bcd" />
+        <range start1="48" end1="48" start2="46" end2="50" changelist="6503c55a-5276-4836-b031-483f8a546bcd" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/software.ulpgc.timac/html/index.html">
+      <ranges>
+        <range start1="9" end1="9" start2="9" end2="10" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+        <range start1="12" end1="13" start2="13" end2="14" changelist="2931d308-d425-4066-944e-e94be4a2b76c" />
+        <range start1="16" end1="16" start2="17" end2="18" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html">
+      <ranges>
+        <range start1="5" end1="6" start2="5" end2="6" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+        <range start1="9" end1="9" start2="9" end2="10" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+        <range start1="15" end1="16" start2="16" end2="17" changelist="2931d308-d425-4066-944e-e94be4a2b76c" />
+        <range start1="20" end1="20" start2="21" end2="22" changelist="b17be12c-89ff-4666-87af-4f29fab043e6" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -58,12 +144,14 @@
     "JavaScript Debug.index.html.executor": "Run",
     "JavaScript Debug.log-in-page.html.executor": "Run",
     "JavaScript Debug.product-pack.html.executor": "Run",
+    "JavaScript Debug.subcategory-option-selector-page.html.executor": "Run",
     "JavaScript Debug.subcategory-results-page.html.executor": "Run",
     "Node.js.try.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "iansamueltrujillogil",
+    "git-widget-placeholder": "juanquirr",
     "last_opened_file_path": "C:/Users/Ian/WebstormProjects/Timac3/software.ulpgc.timac/js",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -151,6 +239,8 @@
       <workItem from="1743112845749" duration="10556000" />
       <workItem from="1743155401454" duration="9497000" />
       <workItem from="1743257762990" duration="325000" />
+      <workItem from="1743258548751" duration="2000" />
+      <workItem from="1743259450616" duration="8192000" />
     </task>
     <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
       <option name="closed" value="true" />
@@ -256,7 +346,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Minor fix in detailed-product.html" />
     <MESSAGE value="Refactor with merge of Juanquirr branch." />
-    <MESSAGE value="Refactor." />
     <MESSAGE value="para merge" />
     <MESSAGE value="Functional version." />
     <MESSAGE value="feat: implement dynamic loading of home sections products from JSON." />
@@ -266,7 +355,8 @@
     <MESSAGE value="Ensured that images on the homepage, basket page, and subcategory results page fit the required dimensions while preserving aspect ratio." />
     <MESSAGE value="Refactored subcategory results page and homePage:&#10;- Added dynamic functionality for 'Filter by' toggles.&#10;- Implemented a dynamic price limit slider as part of the 'Filter by', adapting to different browsers.&#10;- Enabled brand selection in 'Filter by'.&#10;- Adjusted homePage for better display on larger screens sizes." />
     <MESSAGE value="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default." />
-    <MESSAGE value="refactor: replace duplicated code with imported function." />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: replace duplicated code with imported function." />
+    <MESSAGE value="Refactor." />
+    <MESSAGE value="Big refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Big refactor" />
   </component>
 </project>
