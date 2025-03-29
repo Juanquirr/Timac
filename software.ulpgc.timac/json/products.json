@@ -2,7 +2,6 @@
   "products": [
     {
       "id": "1",
-      "link": "../html/detailed-product-page.html?id=1",
       "image": "../assets/silicone.jpg",
       "image_alt": "Silicone",
       "name": "Silicone Fei Dai",
