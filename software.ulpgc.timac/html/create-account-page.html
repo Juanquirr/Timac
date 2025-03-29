@@ -4,67 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up at TIMAC</title>
-    <script src="../js/form-check.js" defer></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/registration.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <script src="../js/form-check.js" defer></script>
 </head>
 <body>
-<div class="signup-main-container">
-    <div class="left-section">
-        <h2>Welcome to TIMAC!</h2>
-        <p>Your trusted hardware store, <br> Making your projects easier than ever.</p>
-        <a href="../html/index.html">
-            <img src="../assets/logo0.png" alt="TIMAC Logo" class="logo">
-        </a>
-    </div>
-
-    <div class="right-section">
-        <div class="social-buttons">
-            <button class="social-button">
-                <img src="../assets/google-icon.png" alt="Google"> Sign up with Google
-            </button>
-            <button class="social-button">
-                <img src="../assets/facebook-icon.png" alt="Facebook"> Sign up with Facebook
-            </button>
+    <div class="signup-main-container">
+        <div class="left-section">
+            <h2>Welcome to TIMAC!</h2>
+            <p>Your trusted hardware store, <br> Making your projects easier than ever.</p>
+            <a href="../html/index.html">
+                <img src="../assets/logo0.png" alt="TIMAC Logo" class="logo">
+            </a>
         </div>
 
-        <p class="separator">- OR -</p>
-
-        <form class="signup-form" id="signup-form">
-            <label>
-                <input id="name-input" class="signup-input" type="text" placeholder="Full Name" required>
-            </label>
-            <div class="input-group">
-                <label class="small-input-label">
-                    <input type="text" placeholder="Phone" class="small-input" id="phone-input">
+        <div class="right-section">
+            <form class="signup-form" id="signup-form">
+                <label>
+                    <input id="name-input" class="signup-input" type="text" placeholder="Full Name" required>
                 </label>
-                <label class="small-input-label">
-                    <input id="date-input" type="date" min="1900-01-01" placeholder="Birth Date" class="small-input">
+                <div class="input-group">
+                    <label class="small-input-label">
+                        <input type="text" placeholder="Phone" class="small-input" id="phone-input">
+                    </label>
+                    <label class="small-input-label">
+                        <input id="date-input" type="date" min="1900-01-01" placeholder="Birth Date" class="small-input">
+                    </label>
+                </div>
+                <label>
+                    <input id="email-input" class="signup-input" type="email" placeholder="Email Address" required>
                 </label>
-            </div>
-            <label>
-                <input id="email-input" class="signup-input" type="email" placeholder="Email Address" required>
-            </label>
-            <label>
-                <input class="signup-input" type="password" placeholder="Password" id="password1" required>
-            </label>
-            <label>
-                <input class="signup-input" type="password" placeholder="Repeat Password" id="password2" required>
-            </label>
-            <span id="passwordError"></span>
+                <label>
+                    <input class="signup-input" type="password" placeholder="Password" id="password1" required>
+                </label>
+                <label>
+                    <input class="signup-input" type="password" placeholder="Repeat Password" id="password2" required>
+                </label>
+                <span id="passwordError"></span>
 
-            <div class="signup-button-container">
-                <button type="submit" class="signup-button" id="signup-button">
-                    <span class="signup-button-text">Sign Up</span>
-                </button>
-            </div>
-        </form>
-
-        <p class="login-link">Already have an account? <a href="../html/log-in-page.html">Log in</a></p>
+                <div class="signup-button-container">
+                    <button type="submit" class="signup-button" id="signup-button">
+                        <span class="signup-button-text">Sign Up</span>
+                    </button>
+                </div>
+            </form>
+            <p class="login-link">Already have an account? <a href="../html/log-in-page.html">Log in</a></p>
+        </div>
     </div>
-</div>
 </body>
 </html>
