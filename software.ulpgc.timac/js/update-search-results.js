@@ -68,11 +68,11 @@ export function updateProducts() {
                             </div>
                             <div class="availability">
                                 <div class="availability-in-store">
-                                    <img src="../assets/star.png" alt="Star"/>
+                                    <img src="../../src/assets/star.png" alt="Star"/>
                                     <p class="body-text font-base">${product.available_in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
                                 </div>
                                 <div class="availability-for-delivery">
-                                    <img src="../assets/arrow.png" alt="Arrow"/>
+                                    <img src="../../src/assets/arrow.png" alt="Arrow"/>
                                     <p class="body-text font-base">${product.available_to_deliver ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY'}</p>
                                 </div>
                             </div>

@@ -37,11 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
                             <h3 class="body-subtitle font-base">${product.name}</h3>
                             <div class="availability">
                                 <div class="availability-in-store">
-                                    <img src="../assets/star.png" alt="Star"/>
+                                    <img src="../../src/assets/star.png" alt="Star"/>
                                     <p class="body-text font-base">${product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE'}</p>
                                 </div>
                                 <div class="availability-for-delivery">
-                                    <img src="../assets/arrow.png" alt="Arrow"/>
+                                    <img src="../../src/assets/arrow.png" alt="Arrow"/>
                                     <p class="body-text font-base">${product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY'}</p>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <button class="counter-button increase">+</button>
                             </div>
                             <div class="basket-product-price">
-                                <p class="big-price font-base">${product.price}</p>                            
+                                <p class="big-price font-base">${product.price}</p>
                             </div>
                         </div>
                         <button class="remove">❌</button>
@@ -196,6 +196,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if(localStorage.getItem("UserLoggedIn") !== "true") {
         window.location.href = "../html/log-in-page.html";
     }
-    
+
     waitForElement(".basket-container", loadBasket);
 });
