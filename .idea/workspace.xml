@@ -1,42 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Big refactor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/basket-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/detailed-product-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-option-selector-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/html/subcategory-results-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/load-search-results.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/software.ulpgc.timac/js/search-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/software.ulpgc.timac/js/search-bar.js" afterDir="false" />
-    </list>
-    <list id="6503c55a-5276-4836-b031-483f8a546bcd" name="Changes by Ian" comment="" />
-    <list id="2931d308-d425-4066-944e-e94be4a2b76c" name="Changes by mario" comment="" />
+    <list default="true" id="75a25402-f016-4035-bed6-be694a56d077" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="juanquirr" />
+        <entry key="$PROJECT_DIR$/Timac" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -51,62 +29,38 @@
   }
 }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2tfJL7XE7RT1cBfucMBeQQMYoZc" />
+  <component name="ProjectId" id="2vBLTM46Y3SFRploDDXq4BLmfjN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.basket-page.html.executor": "Run",
-    "JavaScript Debug.create-account-page.html.executor": "Run",
-    "JavaScript Debug.detailed-product-page.html.executor": "Run",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.log-in-page.html.executor": "Run",
-    "JavaScript Debug.product-pack.html.executor": "Run",
-    "JavaScript Debug.subcategory-option-selector-page.html.executor": "Run",
-    "JavaScript Debug.subcategory-results-page.html.executor": "Run",
-    "Node.js.try.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Ian/WebstormProjects/Timac3/software.ulpgc.timac/js",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/Desktop/Tercero/2º Semestre/PWM&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/Usuario/AppData/Roaming/JetBrains/WebStorm2024.3/node/versions/20.15.0/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Ian\WebstormProjects\Timac3\software.ulpgc.timac\js" />
-      <recent name="C:\Users\Ian\WebstormProjects\Timac3\software.ulpgc.timac\json" />
-      <recent name="C:\Users\Ian\WebstormProjects\Timac3\software.ulpgc.timac\assets" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Usuario\Desktop\Tercero\2º Semestre\PWM\Timac\software.ulpgc.timac" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="subcategory-results-page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="37cae5b9-e8b2-4949-9172-aafa37fbc09c" uri="http://localhost:63342/Timac3/software.ulpgc.timac/html/subcategory-results-page.html" useBuiltInWebServerPort="true">
+}</component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
-        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
-        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
-        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
-        <item itemvalue="JavaScript Debug.subcategory-results-page.html" />
-      </list>
-    </recent_temporary>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -118,168 +72,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b17be12c-89ff-4666-87af-4f29fab043e6" name="Changes" comment="Minor fix in detailed-product.html" />
-      <created>1740737136686</created>
+      <changelist id="75a25402-f016-4035-bed6-be694a56d077" name="Changes" comment="" />
+      <created>1743613526527</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1740737136686</updated>
-      <workItem from="1740737137730" duration="1085000" />
-      <workItem from="1741617417977" duration="891000" />
-      <workItem from="1741618445677" duration="4401000" />
-      <workItem from="1741721020674" duration="4845000" />
-      <workItem from="1741790652320" duration="2563000" />
-      <workItem from="1741881958327" duration="16000" />
-      <workItem from="1741885425212" duration="359000" />
-      <workItem from="1742224168396" duration="925000" />
-      <workItem from="1742225797688" duration="1494000" />
-      <workItem from="1742227303524" duration="2674000" />
-      <workItem from="1742294463023" duration="3811000" />
-      <workItem from="1742343528522" duration="2256000" />
-      <workItem from="1742396467455" duration="194000" />
-      <workItem from="1742417067672" duration="665000" />
-      <workItem from="1742558787847" duration="2481000" />
-      <workItem from="1742561324888" duration="681000" />
-      <workItem from="1742564586759" duration="443000" />
-      <workItem from="1742570445931" duration="32000" />
-      <workItem from="1742576571679" duration="6270000" />
-      <workItem from="1742665793967" duration="1438000" />
-      <workItem from="1742674088020" duration="10884000" />
-      <workItem from="1742729559547" duration="3737000" />
-      <workItem from="1742742267462" duration="9253000" />
-      <workItem from="1742761115390" duration="1473000" />
-      <workItem from="1742772598671" duration="611000" />
-      <workItem from="1742810584243" duration="4008000" />
-      <workItem from="1742827421475" duration="3717000" />
-      <workItem from="1742833059035" duration="2109000" />
-      <workItem from="1742857193098" duration="322000" />
-      <workItem from="1742901179881" duration="237000" />
-      <workItem from="1742920507447" duration="2298000" />
-      <workItem from="1742999554474" duration="3387000" />
-      <workItem from="1743020787074" duration="16296000" />
-      <workItem from="1743039397236" duration="94000" />
-      <workItem from="1743069382501" duration="149000" />
-      <workItem from="1743069547038" duration="14125000" />
-      <workItem from="1743112845749" duration="10556000" />
-      <workItem from="1743155401454" duration="9497000" />
-      <workItem from="1743257762990" duration="325000" />
-      <workItem from="1743258548751" duration="2000" />
-      <workItem from="1743259450616" duration="8192000" />
+      <updated>1743613526527</updated>
+      <workItem from="1743613527546" duration="249000" />
+      <workItem from="1743613861460" duration="75000" />
     </task>
-    <task id="LOCAL-00001" summary="Minor fix in detailed-product.html">
-      <option name="closed" value="true" />
-      <created>1740737150846</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1740737150846</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Refactor with merge of Juanquirr branch.">
-      <option name="closed" value="true" />
-      <created>1740737712916</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1740737712916</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Refactor.">
-      <option name="closed" value="true" />
-      <created>1740737791116</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1740737791116</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Functional version.">
-      <option name="closed" value="true" />
-      <created>1742227574710</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1742227574710</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Functional version.">
-      <option name="closed" value="true" />
-      <created>1742229913797</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1742229913797</updated>
-    </task>
-    <task id="LOCAL-00006" summary="feat(footer): center map and update image with built-in circle.">
-      <option name="closed" value="true" />
-      <created>1742561162251</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1742561162251</updated>
-    </task>
-    <task id="LOCAL-00007" summary="feat: Load subcategories from JSON in subcategory-option-selector-page.">
-      <option name="closed" value="true" />
-      <created>1742676258153</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1742676258153</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Ensured that images on the homepage, basket page, and subcategory results page fit the required dimensions while preserving aspect ratio.">
-      <option name="closed" value="true" />
-      <created>1743025618366</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1743025618366</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default.">
-      <option name="closed" value="true" />
-      <created>1743124907039</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1743124907039</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="iansamueltrujillogil" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor fix in detailed-product.html" />
-    <MESSAGE value="Refactor with merge of Juanquirr branch." />
-    <MESSAGE value="para merge" />
-    <MESSAGE value="Functional version." />
-    <MESSAGE value="feat: implement dynamic loading of home sections products from JSON." />
-    <MESSAGE value="feat(footer): center map and update image with built-in circle." />
-    <MESSAGE value="feat: Load subcategories from JSON in subcategory-option-selector-page." />
-    <MESSAGE value="Basket page new functionality." />
-    <MESSAGE value="Ensured that images on the homepage, basket page, and subcategory results page fit the required dimensions while preserving aspect ratio." />
-    <MESSAGE value="Refactored subcategory results page and homePage:&#10;- Added dynamic functionality for 'Filter by' toggles.&#10;- Implemented a dynamic price limit slider as part of the 'Filter by', adapting to different browsers.&#10;- Enabled brand selection in 'Filter by'.&#10;- Adjusted homePage for better display on larger screens sizes." />
-    <MESSAGE value="Update subcategory search result page to dynamically load price filter limits and brand filters, with products sorted low-to-high by default." />
-    <MESSAGE value="Refactor." />
-    <MESSAGE value="Big refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Big refactor" />
   </component>
 </project>
