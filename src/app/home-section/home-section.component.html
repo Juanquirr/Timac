@@ -1,14 +1,42 @@
 <section class="product-section">
   <h2 class="product-section-title font-base" >OFFERS</h2>
   <div class="product-slider" id="product-section-offers">
-    <p>SOLO PARA PROBAR</p>
+    <div *ngFor="let product of offers" class="product-card">
+      <a [routerLink]="['/product', product.id]" class="product-link">
+        <div class="product-image-container">
+          <img [src]="product.image" [alt]="product.image_alt" class="product-image">
+        </div>
+        <p class="product-title font-base">{{ product.name }}</p>
+        <p class="product-price font-base">{{ product.price }}</p>
+      </a>
+    </div>
   </div>
+
+
   <h2 class="product-section-title font-base"  >NEW AT TIMAC</h2>
   <div class="product-slider" id="product-section-new-at-timac">
-    <p>SOLO PARA PROBAR</p>
+    <div *ngFor="let product of newProducts" class="product-card">
+      <a [routerLink]="['/product', product.id]" class="product-link">
+        <div class="product-image-container">
+          <img [src]="product.image" [alt]="product.image_alt" class="product-image">
+        </div>
+        <p class="product-title font-base">{{ product.name }}</p>
+        <p class="product-price font-base">{{ product.price }}</p>
+      </a>
+    </div>
   </div>
+
+
   <h2 class="product-section-title font-base">TRENDING</h2>
   <div class="product-slider" id="product-section-trending">
-    <p>SOLO PARA PROBAR</p>
+    <div *ngFor="let product of trendingProducts" class="product-card">
+      <a [routerLink]="['/product', product.id]" class="product-link">
+        <div class="product-image-container">
+          <img [src]="product.image" [alt]="product.image_alt" class="product-image">
+        </div>
+        <p class="product-title font-base">{{ product.name }}</p>
+        <p class="product-price font-base">{{ product.price }}</p>
+      </a>
+    </div>
   </div>
 </section>
