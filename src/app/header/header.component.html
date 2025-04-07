@@ -5,17 +5,15 @@
         <img src="/assets/logo0.png" alt="TIMAC logo">
       </a>
     </div>
-    <form class="search" id="searchForm">
+    <form class="search-form" id="searchForm">
       <label>
         <input class="search-bar font-base" type="search" placeholder="Search" id="searchBar">
       </label>
     </form>
     <div class="account-basket-container">
-<!--      <a style="text-decoration: none" href="/basket-page.html">-->
-        <img class="shopping" src="/assets/Basket.png" alt="Your basket">
-<!--      </a>-->
-      <img class="user" src="assets/AccountIcon.png" alt="Your Account" id="account-menu">
-      <div class="menu-buttons-alignment">
+      <img class="shopping" src="/assets/Basket.png" alt="Your basket">
+      <img class="user" src="assets/AccountIcon.png" alt="Your Account" id="account-menu" (click)="toggleLoginButtons()">
+      <div class="menu-buttons-alignment" *ngIf="areLoginButtonsDisplaying">
         <div class="menu-container-unlogged">
           <button class="menu-sign-up-button" type="button">
             <span class="body-text font-base">Sign up</span>
