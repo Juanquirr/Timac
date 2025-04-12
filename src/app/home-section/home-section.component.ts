@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NgForOf} from '@angular/common';
 import {RouterLink} from '@angular/router';
@@ -24,7 +24,7 @@ interface Product {
   ],
   styleUrl: './home-section.component.css'
 })
-export class HomeSectionComponent {
+export class HomeSectionComponent implements OnInit {
     offers: Product[] = [];
     newProducts: Product[] = [];
     trendingProducts: Product[] = [];
