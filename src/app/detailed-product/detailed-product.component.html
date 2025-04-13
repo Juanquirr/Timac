@@ -1,4 +1,4 @@
-<div class="detailed-product-container">
+<div *ngIf="product" class="detailed-product-container">
   <div class="top-boxes-detailed-product">
     <div class="top-box-detailed-product-left">
       <img [src]="product.image" [alt]="product.image_alt">
