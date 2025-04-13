@@ -37,12 +37,12 @@ interface BasketItem {
 })
 export class DetailedProductComponent implements OnInit {
   product: Product = {} as Product;
-  productId: string = '3';  // ESTO ES TEMPORAL
+  productId: string = '';
   counter: number = 1;
 
   constructor(private activatedRoute: ActivatedRoute, private http: HttpClient, private router: Router) {}
   ngOnInit() {
-    // this.productId = this.activatedRoute.snapshot.paramMap.get('id')!;
+    this.productId = this.activatedRoute.snapshot.paramMap.get('id')!;
     this.http.get<any>('../assets/products.json').subscribe(data => {
       this.product = data.products.find((p: Product) => p.id == this.productId);
     });
