@@ -10,42 +10,10 @@
   align-items: center;
 }
 
-.social-buttons {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 10px;
-}
-
-.social-button {
-  font-family: var(--font-family), sans-serif;
-  font-size: var(--footertext-font-size);
-  display: flex;
-  align-items: center;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-}
-
-.social-button img {
-  max-width: 22px;
-  margin-right: 10px;
-}
-
-.separator {
-  font-family: var(--font-family), sans-serif;
-  font-size: var(--bodytext-font-size);
-
-}
-
 .signup-form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .input-group {
@@ -53,11 +21,10 @@
   gap: 10px;
 }
 
-.small-input {
+.container-small-input {
+  display: flex;
+  flex-direction: column;
   width: 50%;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
 }
 
 .signup-input {
@@ -65,6 +32,7 @@
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
+  /*margin-bottom: 10px;*/
 }
 
 .signup-button {
@@ -93,6 +61,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 10px;
 }
 
 .login-link {
@@ -110,6 +79,12 @@
   color: red;
   font-size: 0.8em;
   font-family: var(--font-family), sans-serif;
+}
+
+.info-label {
+  font-size: 1em;
+  font-family: var(--font-family), sans-serif;
+  margin-top: 10px;
 }
 
 @media (max-width: 576px) {

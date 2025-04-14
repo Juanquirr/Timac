@@ -39,11 +39,11 @@ export class SignUpComponent implements OnInit {
 
   onSubmit() {
     if (this.userForm.invalid) {
-      console.log('Formulario inválido');
+      console.log('This form is invalid');
       return;
     }
-    console.log('Formulario valido:', this.userForm.value);
-    // AQUÍ SE MANEJARÁN LOS DATOS DEL FORMULARIO PARA FIREBASE
+    console.log('Valid form:', this.userForm.value);
+    // AQUÍ SE MANEJARÁN LOS DATOS PARA FIREBASE
 
   }
 
