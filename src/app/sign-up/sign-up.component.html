@@ -1,0 +1,34 @@
+<div class="main-section">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="signup-form" id="signup-form">
+    <input formControlName="name" id="name-input" class="signup-input" type="text" placeholder="Full Name">
+    <span *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name')?.touched" class="error-message">
+      Enter a name
+    </span>
+
+    <div class="input-group">
+      <input formControlName="phone" type="text" placeholder="Phone" class="small-input" id="phone-input">
+      <span *ngIf="userForm.get('phone')?.invalid" class="error-message">Phone must be 9 digits or empty</span>
+      <input formControlName="birthDate" id="date-input" type="date" min="1900-01-01" placeholder="Birth Date" class="small-input">
+    </div>
+
+    <input formControlName="email" type="email" class="signup-input" placeholder="Email Address" />
+    <span *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="error-message">
+      Enter a valid email.
+    </span>
+
+    <input formControlName="password1" class="signup-input" type="password" placeholder="Password" id="password1">
+    <input formControlName="password2" class="signup-input" type="password" placeholder="Repeat Password" id="password2">
+    <span *ngIf="userForm.hasError('passwordMismatch')" class="error-message">Passwords do not match</span>
+    <span *ngIf="userForm.get('password1')?.hasError('minlength')" class="error-message">
+      Password must be longer than 8 characters.
+    </span>
+
+    <div class="signup-button-container">
+      <button type="submit" class="signup-button" id="signup-button">
+        <span class="signup-button-text">Sign Up</span>
+      </button>
+    </div>
+  </form>
+
+  <p class="login-link">Already have an account? <a routerLink="/log-in">Log in</a></p>
+</div>
