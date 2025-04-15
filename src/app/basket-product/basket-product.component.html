@@ -1,0 +1,30 @@
+<div class="basket-product">
+  <label>
+    <input type="checkbox" [(ngModel)]="product.checkbox" (ngModelChange)="onCheckboxChange()">
+  </label>
+  <div class="item-image">
+    <img src="/assets/screwdriver.png" alt="{{ product.name }}">
+  </div>
+  <div class="item-details">
+    <h3 class="body-subtitle font-base">{{ product.name }}</h3>
+    <div class="availability">
+      <div class="availability-in-store">
+        <img src="/assets/star.png" alt="Star"/>
+        <p class="body-text font-base">21</p>
+      </div>
+      <div class="availability-for-delivery">
+        <img src="/assets/arrow.png" alt="Arrow"/>
+        <p class="body-text font-base">31</p>
+      </div>
+    </div>
+    <div class="counter-container">
+      <button class="counter-button decrease" (click)="decreaseQuantity()">-</button>
+      <span class="counter-value counter">{{ product.quantity }}</span>
+      <button class="counter-button increase" (click)="increaseQuantity()">+</button>
+    </div>
+    <div class="basket-product-price">
+      <p class="big-price font-base">{{ product.price }}</p>
+    </div>
+  </div>
+  <button class="remove" (click)="remove()">❌</button>
+</div>
