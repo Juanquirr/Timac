@@ -1,0 +1,30 @@
+.product-display-main-container {
+  flex: 1 0 auto;
+  overflow: auto;
+  width: 100%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+  padding-right: 2vw;
+
+}
+
+
+
+@media (min-width: 2000px) {
+  .product-display-main-container {
+    justify-content: flex-start;
+  }
+  .product-display-wrapper{
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-display-main-container{
+    gap: 0;
+  }
+
+}
+
