@@ -56,11 +56,9 @@ export class BasketComponent implements OnInit {
   updateBasket(event: { id: string, quantity: number }): void {
     const product: Product = <Product>this.basketProducts.find(p => p.id === event.id);
     if (product) {
-      if (event.quantity > 0) {
-        product.quantity = event.quantity;
-      } else {
+      if (event.quantity > 0) product.quantity = event.quantity;
+      else
         this.removeProduct(event.id);
-      }
       this.updateSummary();
     }
   }
