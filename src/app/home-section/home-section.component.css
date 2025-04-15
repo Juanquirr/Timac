@@ -23,7 +23,6 @@
   height: 150px;
 }
 .product-image {
-
   margin: 10px auto 0 auto;
   border-radius: 5px;
   display: block;
@@ -35,6 +34,7 @@
 
 .product-section {
   max-width: 1500px;
+  width: 100%;
   margin: 0 auto 40px auto;
 }
 
@@ -63,10 +63,8 @@
 }
 
 .main-content {
-  flex: 1 0 auto;
-  overflow: auto;
   margin: 30px auto;
-  width: 70%;
+  width: 90%;
 }
 
 .main-content-index {
