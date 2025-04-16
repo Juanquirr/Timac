@@ -1,13 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Product } from '../../models/product.model';
 
-interface Product {
-  id: string;
-  name: string;
-  price: string;
-  quantity: number;
-  checkbox: boolean;
-}
+
 
 @Component({
   selector: 'app-basket-product',
@@ -18,12 +13,13 @@ interface Product {
 })
 export class BasketProductComponent {
   @Input() product!: Product;
-  @Output() productSelected = new EventEmitter<{ id: string, selected: boolean }>();
-  @Output() quantityChange = new EventEmitter<{ id: string, quantity: number }>();
-  @Output() removeProduct = new EventEmitter<string>();
+  @Output() productSelected = new EventEmitter<{ id: number, selected: boolean }>();
+  @Output() quantityChange = new EventEmitter<{ id: number, quantity: number }>();
+  @Output() removeProduct = new EventEmitter<number>();
 
   onCheckboxChange(): void {
-    this.productSelected.emit({ id: this.product.id, selected: this.product.checkbox });
+    const isSelected = this.product.checkbox ?? false;
+    this.productSelected.emit({ id: this.product.id, selected: isSelected });
   }
 
   decreaseQuantity(): void {

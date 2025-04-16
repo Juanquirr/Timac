@@ -5,7 +5,7 @@
   <div class="filter-bar-options">
     <div class="filter-bar-option">
       <p class="filter-bar-text font-base">Price</p>
-      <img class="filter-bar-arrow" id="filter-bar-arrow-first" src="assets/arrow-filter-bar.svg" alt="Arrow icon" [ngClass]="{'rotated': arrowStates['filter-bar-arrow-first']}" (click)="barToggle('price-bar', 'filter-bar-arrow-first')" />
+      <img class="filter-bar-arrow" id="filter-bar-arrow-first" src="../../../assets/arrow-filter-bar.svg" alt="Arrow icon" [ngClass]="{'rotated': arrowStates['filter-bar-arrow-first']}" (click)="barToggle('price-bar', 'filter-bar-arrow-first')" />
     </div>
     <div class="filter-bar-option price-bar" [ngClass]="{'visible': isPriceBarVisible}">
       <div class="range-slider">
@@ -32,7 +32,7 @@
 
     <div class="filter-bar-option">
       <p class="filter-bar-text font-base">Brand</p>
-      <img class="filter-bar-arrow" id="filter-bar-arrow-second" src="assets/arrow-filter-bar.svg" alt="Arrow icon" [ngClass]="{'rotated': arrowStates['filter-bar-arrow-second']}" (click)="barToggle('filter-bar-option-brand', 'filter-bar-arrow-second')" />
+      <img class="filter-bar-arrow" id="filter-bar-arrow-second" src="../../../assets/arrow-filter-bar.svg" alt="Arrow icon" [ngClass]="{'rotated': arrowStates['filter-bar-arrow-second']}" (click)="barToggle('filter-bar-option-brand', 'filter-bar-arrow-second')" />
     </div>
     <div class="filter-bar-option filter-bar-option-brand" [ngClass]="{'visible': isBrandBarVisible}">
       <div *ngFor="let brand of brands">

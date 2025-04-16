@@ -1,16 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { BasketProductComponent } from '../basket-product/basket-product.component';
-import {DecimalPipe, NgForOf} from '@angular/common';
+import { DecimalPipe, NgForOf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-interface Product {
-  id: string;
-  name: string;
-  price: string;
-  quantity: number;
-  checkbox: boolean;
-}
+import { FirebaseService } from '../../services/firebase.service';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-basket',
@@ -27,25 +20,32 @@ export class BasketComponent implements OnInit {
   deliveryMethod: string = 'click-collect';
   paymentMethod: string = 'visa';
 
-  constructor(private http: HttpClient) {}
+  constructor(private firebaseService: FirebaseService) {}
 
   ngOnInit(): void {
     this.loadBasket();
   }
 
   loadBasket(): void {
-    this.http.get<any>('/assets/products.json').subscribe(
-      (data) => {
-        const allProducts: Product[] = data.products;
-        this.basketProducts = [
-          { ...allProducts[0], quantity: 2, checkbox: true },
-          { ...allProducts[1], quantity: 1, checkbox: true }
-        ].filter(Boolean);
-        this.totalItems = this.basketProducts.length;
-        this.updateSummary();
-      },
-      (error) => console.error('Error loading products:', error)
-    );
+    this.firebaseService.getData('products').then(products => {
+      if (products.length === 0) this.updateSummary();
+
+      const convertedProducts: Product[] = products.map((p: any) => ({
+        ...p,
+        id: Number(p.id)
+      }));
+
+      const selectedProduct = convertedProducts.find((p) => p.id === 1);
+
+      if (selectedProduct) this.basketProducts = [
+          { ...selectedProduct, quantity: 3, checkbox: true },
+        ];
+
+      this.totalItems = this.basketProducts.length;
+      this.updateSummary();
+    }).catch(error => {
+      console.error('Error loading products from Firestore:', error);
+    });
   }
 
   setDeliveryMethod(method: string): void {
@@ -53,23 +53,22 @@ export class BasketComponent implements OnInit {
     this.updateSummary();
   }
 
-  updateBasket(event: { id: string, quantity: number }): void {
-    const product: Product = <Product>this.basketProducts.find(p => p.id === event.id);
+  updateBasket(event: { id: number, quantity: number }): void {
+    const product = this.basketProducts.find(p => p.id === event.id);
     if (product) {
       if (event.quantity > 0) product.quantity = event.quantity;
-      else
-        this.removeProduct(event.id);
+      else this.removeProduct(event.id);
       this.updateSummary();
     }
   }
 
-  removeProduct(id: string): void {
+  removeProduct(id: number): void {
     this.basketProducts = this.basketProducts.filter(p => p.id !== id);
     this.totalItems = this.basketProducts.length;
     this.updateSummary();
   }
 
-  updateProductSelection(event: { id: string, selected: boolean }): void {
+  updateProductSelection(event: { id: number; selected: boolean }): void {
     const product = this.basketProducts.find(p => p.id === event.id);
     if (product) {
       product.checkbox = event.selected;
@@ -79,8 +78,8 @@ export class BasketComponent implements OnInit {
 
   updateSummary(): void {
     this.subtotal = this.basketProducts.reduce((sum, product) => {
-      const price = parseFloat(product.price.replace('€', ''));
-      return product.checkbox ? sum + price * product.quantity : sum;
+      const isChecked = product.checkbox ?? true;
+      return isChecked ? sum + product.price * product.quantity : sum;
     }, 0);
     this.deliveryFee = this.deliveryMethod === 'delivery' ? 5 : 0;
     this.estimatedTotal = this.subtotal + this.deliveryFee;

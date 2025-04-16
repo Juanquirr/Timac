@@ -1,0 +1,19 @@
+export interface Product {
+  id: number;
+  name?: string;
+  price: number;
+  quantity: number;
+  checkbox?: boolean;
+  availability?: {
+    in_store: boolean;
+    delivery: boolean;
+  };
+  brand?: string;
+  category?: string;
+  description?: string[];
+  image?: string;
+  new?: boolean;
+  on_sale?: boolean;
+  subcategory?: string;
+  trending?: boolean;
+}

@@ -1,11 +1,11 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyAwo51-gl5cKIqvOheNNpyWq8bkW27vJYA",
-    authDomain: "timac-e70b7.firebaseapp.com",
-    projectId: "timac-e70b7",
-    storageBucket: "timac-e70b7.firebasestorage.app",
-    messagingSenderId: "715325641685",
-    appId: "1:715325641685:web:f2f04b31747bd22d5a635c"
+    apiKey: "AIzaSyCNdxS8LnS3qWt3fIXPPNw_DEYb6RSwLSk",
+    authDomain: "timac-eec8e.firebaseapp.com",
+    projectId: "timac-eec8e",
+    storageBucket: "timac-eec8e.appspot.com",
+    messagingSenderId: "392105769015",
+    appId: "1:392105769015:web:1f7c013a54a24472da27b2"
   }
 };
