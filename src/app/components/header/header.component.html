@@ -33,12 +33,12 @@
     </div>
   </div>
   <nav class="nav-carousel body-text font-base">
-    <a class="nav-button" routerLink="/offers">Offers & Clearance</a>
-    <a class="nav-button" routerLink="/building">Building & Hardware</a>
-    <a class="nav-button" routerLink="/heating">Heating & Cooling</a>
-    <a class="nav-button" routerLink="/lighting">Lighting & Electrical</a>
-    <a class="nav-button" routerLink="/painting">Painting & Decorating</a>
-    <a class="nav-button" routerLink="/tools">Tools & Equipment</a>
-    <a class="nav-button" routerLink="/trending">New & Trending</a>
+    <a class="nav-button" routerLink="/offers" [queryParams]="{ query: 'offers' }" >Offers & Clearance</a>
+    <a class="nav-button" routerLink="/building" >Building & Hardware</a>
+    <a class="nav-button" routerLink="/heating"  >Heating & Cooling</a>
+    <a class="nav-button" routerLink="/lighting" >Lighting & Electrical</a>
+    <a class="nav-button" routerLink="/painting" >Painting & Decorating</a>
+    <a class="nav-button" routerLink="/tools" >Tools & Equipment</a>
+    <a class="nav-button" routerLink="/new" >New & Trending</a>
   </nav>
 </header>
