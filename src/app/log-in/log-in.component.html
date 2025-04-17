@@ -1,5 +1,5 @@
 <div class="main-section">
-  <form [formGroup]="userForm" (ngSubmit)="onSumbit()" class="signup-form" id="login-form">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="signup-form" id="login-form">
     <label for="email-input" class="info-label">Email:</label>
     <input formControlName="email" id="email-input" class="signup-input" type="email" placeholder="Email Address">
     <span *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="error-message">

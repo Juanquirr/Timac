@@ -30,7 +30,7 @@
     <input formControlName="password2" class="signup-input" type="password" placeholder="Repeat Password" id="password2">
     <span *ngIf="userForm.hasError('passwordMismatch')" class="error-message">Passwords do not match</span>
     <span *ngIf="userForm.get('password1')?.hasError('minlength')" class="error-message">
-      Password must be longer than 8 characters.
+      Password must be longer than 6 characters.
     </span>
 
     <div class="signup-button-container">

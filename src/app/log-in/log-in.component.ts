@@ -25,14 +25,14 @@ export class LogInComponent implements OnInit {
     });
   }
 
-  onSumbit(){
+  onSubmit(){
     if(this.userForm.invalid){
       console.log('This form is invalid');
       return;
     }
 
     console.log('Valid form', this.userForm.value);
-    // AQUÍ SE MANEJARÁN LOS DATOS CON FIREBASE
+    // HERE FIREBASE
 
   }
 }

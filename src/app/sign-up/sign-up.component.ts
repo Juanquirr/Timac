@@ -24,8 +24,8 @@ export class SignUpComponent implements OnInit {
       phone: ['', [Validators.pattern('[0-9]*$'), Validators.minLength(9), Validators.maxLength(9)]],
       birthDate: ['2000-01-01'],
       email: ['', [Validators.required, Validators.email]],
-      password1: ['', [Validators.required, Validators.minLength(8)]],
-      password2: ['', [Validators.required, Validators.minLength(8)]],
+      password1: ['', [Validators.required, Validators.minLength(6)]],
+      password2: ['', [Validators.required, Validators.minLength(6)]],
     }, {validators: this.passwordMatchValidator});
   }
 
@@ -43,7 +43,7 @@ export class SignUpComponent implements OnInit {
       return;
     }
     console.log('Valid form:', this.userForm.value);
-    // AQUÍ SE MANEJARÁN LOS DATOS PARA FIREBASE
+    // HERE FIREBASE
 
   }
 
