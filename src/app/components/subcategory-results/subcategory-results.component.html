@@ -1,0 +1,18 @@
+<section class="product-display-main-container">
+  <app-product-filter
+    [minPriceLimit]="minPriceLimit"
+    [maxPriceLimit]="maxPriceLimit"
+    [brands]="brands"
+    (filterChange)="onFilterChange($event)">
+  </app-product-filter>
+  <div class="product-display-wrapper">
+    <app-product-display
+      [minPrice]="newMinPrice"
+      [maxPrice]="newMaxPrice"
+      [brands]="newBrands"
+      (initialFiltersReady)="onInitialFiltersReady($event)">
+    </app-product-display>
+
+  </div>
+
+</section>

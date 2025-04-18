@@ -1,0 +1,63 @@
+<div class="basket-container">
+  <div class="basket-products-container">
+    <section class="top-basket-section">
+      <h1 class="body-title font-base">My basket - {{ totalItems }} items</h1>
+      <div class="basket-delivery-option">
+        <button class="basket-deliver-button" [class.selected]="deliveryMethod === 'delivery'" (click)="setDeliveryMethod('delivery')">
+          <span class="basket-text font-base">Delivery</span>
+        </button>
+        <button class="basket-deliver-button" [class.selected]="deliveryMethod === 'click-collect'" (click)="setDeliveryMethod('click-collect')">
+          <span class="basket-text font-base">Click & collect</span>
+        </button>
+      </div>
+    </section>
+    <section class="bottom-basket-section">
+      <app-basket-product
+        *ngFor="let product of basketProducts"
+        [product]="product"
+        (quantityChange)="updateBasket($event)"
+        (removeProduct)="removeProduct($event)"
+        (productSelected)="updateProductSelection($event)">
+      </app-basket-product>
+    </section>
+  </div>
+  <section class="basket-summary-container">
+    <section class="basket-summary-price-section">
+      <h1 class="body-subtitle center-text font-base">Order Summary</h1>
+      <dl class="body-text font-base">
+        <div class="summary-row">
+          <dt>Subtotal:</dt>
+          <dd>{{ subtotal | number:'1.2-2' }}€</dd>
+        </div>
+        <div class="summary-row">
+          <dt>Delivery Fee:</dt>
+          <dd>{{ deliveryFee | number:'1.2-2' }}€</dd>
+        </div>
+        <div class="summary-row">
+          <dt>Estimated Total:</dt>
+          <dd>{{ estimatedTotal | number:'1.2-2' }}€</dd>
+        </div>
+      </dl>
+    </section>
+    <div class="basket-summary-vertical">
+      <section>
+        <h2 class="body-subtitle center-text font-base">Payment Methods</h2>
+        <div class="basket-summary-payment-container">
+          <label>
+            <input type="radio" name="payment-method" value="visa" [(ngModel)]="paymentMethod">
+            <p class="body-text font-base">VISA</p>
+          </label>
+        </div>
+        <div class="basket-summary-payment-container">
+          <label>
+            <input type="radio" name="payment-method" value="mastercard" [(ngModel)]="paymentMethod">
+            <p class="body-text font-base">MASTERCARD</p>
+          </label>
+        </div>
+      </section>
+      <button class="checkout-now" type="button" (click)="checkout()">
+        <span class="basket-text font-base">Checkout Now</span>
+      </button>
+    </div>
+  </section>
+</div>

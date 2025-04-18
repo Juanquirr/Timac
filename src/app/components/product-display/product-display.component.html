@@ -1,0 +1,19 @@
+<div class="product-display">
+  <div class="product-display-title font-base">
+    <h1 class="subcategory-name font-base">Search results for "{{ searchQuery }}"</h1>
+    <div class="product-display-title-sort-by-container">
+      <p class="product-display-title-sort-by-text font-base">Sort by</p>
+      <button class="product-display-title-button font-base" (click)="toggleSortOrder()">{{ sortButtonLabel }}</button>
+
+    </div>
+  </div>
+
+  <div class="product-display-product-container">
+    <app-big-product
+      *ngFor="let product of products"
+      [product]="product">
+    </app-big-product>
+
+    <p *ngIf="products.length === 0">No results found.</p>
+  </div>
+</div>
