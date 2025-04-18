@@ -1,6 +1,9 @@
 import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import {BigProductComponent, Product} from '../big-product/big-product.component';
 import {NgForOf, NgIf} from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { FirebaseService } from '../../services/firebase.service';
+
 
 
 @Component({
@@ -24,8 +27,14 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
   sortAscending:boolean = true;
   sortButtonLabel:string = 'Price (Low to High)';
 
+  constructor(private route: ActivatedRoute, private firebaseService: FirebaseService) {}
+
+
   ngOnInit(): void {
-    this.loadProducts();
+    this.route.queryParams.subscribe(params => {
+      this.searchQuery = params['query'] || '';
+      this.loadProductsFromFirebase();
+    });
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -42,29 +51,36 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
 
   sortProducts(): void {
     this.products.sort((a, b) => {
-      const priceA = parseFloat(a.price.replace(/[^\d.-]/g, ''));
-      const priceB = parseFloat(b.price.replace(/[^\d.-]/g, ''));
-
-      return this.sortAscending ? priceA - priceB : priceB - priceA;
+      return this.sortAscending ? a.price - b.price : b.price - a.price;
     });
   }
 
+  loadProductsFromFirebase(): void {
+    const filterMap = new Map([
+      ['new', 'new'],
+      ['offers', 'on_sale'],
+      ['trending', 'trending']
+    ]);
 
+    const filterKey = this.searchQuery.toLowerCase();
+    let fetchPromise: Promise<any[]>;
+    const isSpecialFilter = filterMap.has(filterKey);
+    if (isSpecialFilter) {
+      fetchPromise = this.firebaseService.getFilteredData('products', filterMap.get(filterKey)!, true);
+    } else {
+      fetchPromise = this.firebaseService.getData('products');
+    }
 
-  loadProducts(): void {
-    this.searchQuery = new URLSearchParams(window.location.search).get("query") || "";
-
-
-    fetch('assets/products.json')
-      .then(response => response.json())
+    fetchPromise
       .then(data => {
-        this.allProducts = data.products;
-        this.products = this.filterProducts(this.allProducts, this.searchQuery);
+        this.allProducts = data;
+        this.products = isSpecialFilter
+          ? data
+          : this.filterProducts(data, this.searchQuery);
 
-
-        if (!this.filtersSent && this.allProducts.length > 0) {
-          const prices = this.allProducts.map(p => parseFloat(p.price.replace(/[^\d.-]/g, '')));
-          const uniqueBrands = [...new Set(this.allProducts.map(p => p.brand))];
+        if (!this.filtersSent && this.products.length > 0) {
+          const prices = this.products.map(p => Number(p.price)).filter(price => !isNaN(price));
+          const uniqueBrands = [...new Set(this.products.map(p => p.brand).filter(Boolean))];
 
           this.initialFiltersReady.emit({
             minPriceLimit: Math.floor(Math.min(...prices)),
@@ -78,10 +94,11 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
         if (this.minPrice !== null && this.maxPrice !== null) {
           this.applyFilters();
         }
-
       })
-      .catch(error => console.error('Error loading products:', error));
+      .catch(error => console.error('Error loading products from Firebase:', error));
   }
+
+
 
   applyFilters(): void {
     let filteredProducts = [...this.allProducts];
@@ -102,7 +119,7 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
   filterByPrice(products: Product[]): Product[] {
     if (this.minPrice === -1 || this.maxPrice === -1) return products;
     return products.filter(product => {
-      const price = parseFloat(product.price.replace(/[^\d.-]/g, ''));
+      const price = product.price;
       return price >= this.minPrice! && price <= this.maxPrice!;
     });
   }

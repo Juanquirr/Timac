@@ -4,6 +4,7 @@ export interface Product {
   price: number;
   quantity: number;
   checkbox?: boolean;
+  currency?: string;
   availability?: {
     in_store: boolean;
     delivery: boolean;
