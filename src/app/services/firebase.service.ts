@@ -11,6 +11,7 @@ import {
   orderBy,
   where
 } from '@angular/fire/firestore';
+import {compileOpaqueAsyncClassMetadata} from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -45,4 +46,13 @@ export class FirebaseService {
     const docRef = doc(this.firestore, collectionName, docId);
     return await deleteDoc(docRef);
   }
+
+  async getProductByFieldId(collectionName: string, productId: number): Promise<any> {
+    const coll = collection(this.firestore, collectionName);
+    const q = query(coll, where('id', '==', productId));
+    const snapshot = await getDocs(q);
+    const doc = snapshot.docs[0];
+    return doc ? {docId: doc.id, ...doc.data()} : null;
+  }
+
 }

@@ -2,24 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 import {NgForOf, NgIf} from '@angular/common';
-
-interface Product {
-  id: string;
-  image: string;
-  image_alt: string;
-  name: string;
-  subcategory: string;
-  brand: string;
-  price: string;
-  new: boolean;
-  trending: boolean;
-  on_sale: boolean;
-  availability?: {
-    in_store: boolean;
-    delivery: boolean;
-  };
-  description: string[];
-}
+import {FirebaseService} from '../../services/firebase.service';
+import {Product} from '../../models/product.model';
 
 interface ProductList {
   products: Product[];
@@ -45,24 +29,27 @@ export class DetailedProductComponent implements OnInit {
   productId: string = '';
   counter: number = 1;
 
-  constructor(private activatedRoute: ActivatedRoute, private http: HttpClient, private router: Router) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private http: HttpClient,
+    private router: Router,
+    private firebaseService: FirebaseService
+  ) {}
 
   ngOnInit() {
     this.productId = this.activatedRoute.snapshot.paramMap.get('id')!;
 
-    this.http.get<ProductList>('../assets/products.json').subscribe({
-      next: data => {
-        const foundProduct = data.products.find((p: Product) => p.id === this.productId);
-        if (foundProduct) {
-          this.product = foundProduct;
-        } else {
-          console.error('Product not found');
-          this.router.navigate(['/']).catch(error => console.error('Navigation error', error));
-        }
-      },
-      error: (error) => {
-        console.error('Error loading JSON', error);
+    this.firebaseService.getProductByFieldId('products', Number(this.productId)).then(product => {
+      if (product) {
+        this.product = product;
+        console.log(product);
+      } else {
+        console.error('Product not found.');
+        this.router.navigate(['/']).catch(error => console.error('Navigation error', error));
       }
+    }).catch(error => {
+      console.error('Error loading product:', error);
+      this.router.navigate(['/']).catch(error => console.error('Navigation error', error));
     });
   }
 
