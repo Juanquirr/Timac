@@ -3,17 +3,17 @@
     <input type="checkbox" [(ngModel)]="product.checkbox" (ngModelChange)="onCheckboxChange()">
   </label>
   <div class="item-image">
-    <img src="/src/assets/screwdriver.png" alt="{{ product.name }}">
+    <img src="../../../assets/screwdriver.png" alt="{{ product.name }}">
   </div>
   <div class="item-details">
     <h3 class="body-subtitle font-base">{{ product.name }}</h3>
     <div class="availability">
       <div class="availability-in-store">
-        <img src="/src/assets/star.png" alt="Star"/>
+        <img src="../../../assets/star.png" alt="Star"/>
         <p class="body-text font-base">{{ product.availability?.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE' }}</p>
       </div>
       <div class="availability-for-delivery">
-        <img src="/src/assets/arrow.png" alt="Arrow"/>
+        <img src="../../../assets/arrow.png" alt="Arrow"/>
         <p class="body-text font-base">{{ product.availability?.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY' }}</p>
       </div>
     </div>
