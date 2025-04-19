@@ -11,7 +11,6 @@ import {
   orderBy,
   where
 } from '@angular/fire/firestore';
-import {compileOpaqueAsyncClassMetadata} from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'

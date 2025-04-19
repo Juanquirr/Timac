@@ -5,10 +5,6 @@ import {NgForOf, NgIf} from '@angular/common';
 import {FirebaseService} from '../../services/firebase.service';
 import {Product} from '../../models/product.model';
 
-interface ProductList {
-  products: Product[];
-}
-
 interface BasketItem {
   id: string;
   quantity: number;
