@@ -2,17 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NgForOf} from '@angular/common';
 import {RouterLink} from '@angular/router';
-
-interface Product {
-  id: string;
-  image: string;
-  image_alt: string;
-  name: string;
-  price: string;
-  new: boolean;
-  trending: boolean;
-  on_sale: boolean;
-}
+import {Product} from '../../models/product.model';
+import {FirebaseService} from '../../services/firebase.service';
 
 @Component({
   selector: 'app-home-section',
@@ -29,14 +20,13 @@ export class HomeSectionComponent implements OnInit {
     newProducts: Product[] = [];
     trendingProducts: Product[] = [];
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, private firebaseService: FirebaseService) {}
 
     ngOnInit() {
-      this.http.get<any>('../assets/products.json').subscribe(data => {
-        const products: Product[] = data.products;
-        this.offers = products.filter(p => p.on_sale);
-        this.newProducts = products.filter(p => p.new);
-        this.trendingProducts = products.filter(p => p.trending);
-        });
+      this.firebaseService.getData('products').then(products => {
+        this.offers = products.filter((p: Product) => p.on_sale);
+        this.newProducts = products.filter((p: Product) => p.new);
+        this.trendingProducts = products.filter((p: Product) => p.trending);
+      });
     }
 }
