@@ -23,7 +23,7 @@ export class FirebaseService {
     return await addDoc(coll, data);
   }
 
-  async getData(collectionName: string) {
+  async getData(collectionName: string): Promise<any[]> {
     const coll = collection(this.firestore, collectionName);
     const q = query(coll, orderBy('id', 'asc'));
     const snapshot = await getDocs(q);

@@ -38,7 +38,6 @@ export class DetailedProductComponent implements OnInit {
     this.firebaseService.getProductByFieldId('products', Number(this.productId)).then(product => {
       if (product) {
         this.product = product;
-        console.log(product);
       } else {
         console.error('Product not found.');
         this.router.navigate(['/']).catch(error => console.error('Navigation error', error));
