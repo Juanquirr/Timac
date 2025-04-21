@@ -29,8 +29,7 @@ export class FirebaseService {
     const snapshot = await getDocs(q);
     return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
   }
-
-  async getFilteredData(collectionName: string, field: string, value: boolean): Promise<any[]> {
+  async getFilteredData(collectionName: string, field: string, value: any): Promise<any[]> {
     const coll = collection(this.firestore, collectionName);
     const q = query(coll, where(field, '==', value));
     const snapshot = await getDocs(q);
