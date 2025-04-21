@@ -35,10 +35,11 @@ export class BasketComponent implements OnInit {
         id: Number(p.id)
       }));
 
-      const selectedProduct = convertedProducts.find((p) => p.id === 1);
+      const selectedProduct = convertedProducts.find((p) => p.id === 3);
+
 
       if (selectedProduct) this.basketProducts = [
-          { ...selectedProduct, quantity: 3, checkbox: true },
+          { ...selectedProduct, quantity: 3, checkbox: true }
         ];
 
       this.totalItems = this.basketProducts.length;
