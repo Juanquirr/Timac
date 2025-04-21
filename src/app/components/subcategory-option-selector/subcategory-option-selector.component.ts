@@ -4,17 +4,17 @@ import { NgForOf } from '@angular/common';
 import { SubcategoryOptionComponent } from '../subcategory-option/subcategory-option.component';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import {FirebaseService} from '../../services/firebase.service';
+
 
 interface Subcategory {
   image: string;
   name: string;
   alt: string;
   link: string;
+  category: string;
 }
 
-interface CategoryData {
-  [key: string]: Subcategory[];
-}
 
 @Component({
   selector: 'app-subcategory-option-selector',
@@ -27,7 +27,8 @@ export class SubcategoryOptionSelectorComponent implements OnInit, OnDestroy {
   category: string = '';
   private httpSubscription?: Subscription;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+
+  constructor(private http: HttpClient, private route: ActivatedRoute, private firebaseService: FirebaseService) {}
 
   ngOnInit() {
     const urlSegments = this.route.snapshot.url;
@@ -42,26 +43,21 @@ export class SubcategoryOptionSelectorComponent implements OnInit, OnDestroy {
       this.category = this.category.charAt(0).toUpperCase() + this.category.slice(1);
     }
 
-    this.loadSubcategories();
+    this.loadSubcategoriesFromFirebase();
   }
 
-  loadSubcategories() {
-    this.httpSubscription = this.http
-      .get<CategoryData>('assets/subcategory-option-selector.json')
-      .subscribe({
-        next: (data) => {
-          if (this.category && data[this.category]) {
-            this.subcategories = data[this.category];
-          } else {
-            this.subcategories = Object.values(data).flat();
-          }
-        },
-        error: (error) => {
-          console.error('Error loading JSON', error);
-          this.subcategories = [];
-        },
+  private loadSubcategoriesFromFirebase() {
+    this.firebaseService.getFilteredData('subcategories', 'category', this.category)
+      .then((data: any[]) => {
+        this.subcategories = data;
+      })
+      .catch(() => {
+        this.subcategories = [];
       });
   }
+
+
+
 
   ngOnDestroy() {
     this.httpSubscription?.unsubscribe();
