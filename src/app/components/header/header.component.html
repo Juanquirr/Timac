@@ -24,8 +24,8 @@
             <span class="body-text font-base">Sign in</span>
           </button>
         </div>
-        <div class="menu-container-logged">
-          <button class="menu-log-out-button" type="button">
+        <div *ngIf="checkLoginStatus()" class="menu-container-logged">
+          <button (click)="handleLogout()" class="menu-log-out-button" type="button">
             <span class="body-text font-base">Log out</span>
           </button>
         </div>

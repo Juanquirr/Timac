@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {RouterLink} from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NgIf} from '@angular/common';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-log-in',
@@ -16,7 +17,10 @@ import {NgIf} from '@angular/common';
 export class LogInComponent implements OnInit {
   userForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder,
+              private authService: AuthService,
+              private router: Router
+  ) {}
 
   ngOnInit(){
     this.userForm = this.formBuilder.group({
@@ -31,8 +35,14 @@ export class LogInComponent implements OnInit {
       return;
     }
 
-    console.log('Valid form', this.userForm.value);
-    // HERE FIREBASE
+    console.log('Valid form for user: ', this.userForm.value.email);
+
+    try {
+      this.authService.login(this.userForm.value.email, this.userForm.value.password);
+      this.router.navigate(['/']).catch(error => console.error('Navigation error', error));
+    } catch (error) {
+      console.error('Error during log-in:', error);
+    }
 
   }
 }
