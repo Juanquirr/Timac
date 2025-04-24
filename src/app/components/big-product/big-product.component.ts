@@ -1,21 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {RouterLink} from '@angular/router';
+import {Product} from '../../models/product.model';
 
-export interface Product {
-  id: string;
-  name: string;
-  image: string;
-  price: number;
-  currency?: string;
-  category: string;
-  subcategory: string;
-  brand: string;
-  new: boolean;
-  on_sale: boolean;
-  trending: boolean;
-  available_in_store: boolean;
-  available_to_deliver: boolean;
-}
 
 @Component({
   selector: 'app-big-product',

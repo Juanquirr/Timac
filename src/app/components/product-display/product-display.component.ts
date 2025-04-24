@@ -1,9 +1,9 @@
 import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-import {BigProductComponent, Product} from '../big-product/big-product.component';
+import {BigProductComponent} from '../big-product/big-product.component';
 import {NgForOf, NgIf} from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { FirebaseService } from '../../services/firebase.service';
-
+import {Product} from '../../models/product.model';
 
 
 @Component({
@@ -58,7 +58,7 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
   loadProductsFromFirebase(): void {
     const filterMap = new Map([
       ['new', 'new'],
-      ['offers', 'on_sale'],
+      ['offers', 'offer'],
       ['trending', 'trending']
     ]);
 
@@ -126,7 +126,7 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
 
   filterProducts(products: Product[], searchQuery: string): Product[] {
     if (searchQuery === "new") return products.filter(p => p.new);
-    if (searchQuery === "offers") return products.filter(p => p.on_sale);
+    if (searchQuery === "offers") return products.filter(p => p.offer);
     if (searchQuery === "trending") return products.filter(p => p.trending);
 
     return products.filter(product =>

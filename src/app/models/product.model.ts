@@ -1,20 +1,21 @@
 export interface Product {
   id: number;
-  name?: string;
+  name: string;
   price: number;
   quantity: number;
-  checkbox?: boolean;
-  currency?: string;
-  availability?: {
+  checkbox: boolean;
+  currency: string;
+  availability: {
     in_store: boolean;
     delivery: boolean;
   };
-  brand?: string;
-  category?: string;
-  description?: string[];
-  image?: string;
-  new?: boolean;
-  on_sale?: boolean;
-  subcategory?: string;
-  trending?: boolean;
+  brand: string;
+  category: string;
+  description: string[];
+  image: string;
+  offer: boolean;
+  new: boolean;
+  on_sale: boolean;
+  subcategory: string;
+  trending: boolean;
 }
