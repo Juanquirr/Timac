@@ -1,4 +1,18 @@
-<div class="main-section">
+<div class="main-section" *ngIf="isLoading">
+  <p class="info-label">Loading...</p>
+</div>
+
+<div class="main-section" *ngIf="currentUser && !isLoading">
+  <p class="info-label">You are logged in as {{ currentUser.email }} </p>
+  <div class="signup-button-container">
+    <button class="signup-button" (click)="handleLogout()">
+      <span class="signup-button-text">Log-out</span>
+    </button>
+  </div>
+</div>
+
+
+<div class="main-section" *ngIf="!currentUser && !isLoading">
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="signup-form" id="signup-form">
     <label for="name-input" class="info-label">Name:</label>
     <input formControlName="name" id="name-input" class="signup-input" type="text" placeholder="Full Name">

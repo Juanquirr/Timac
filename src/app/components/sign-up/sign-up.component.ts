@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NgIf} from '@angular/common';
 import {AuthService} from '../../services/auth.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-sign-up',
@@ -14,8 +15,11 @@ import {AuthService} from '../../services/auth.service';
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
 })
-export class SignUpComponent implements OnInit {
+export class SignUpComponent implements OnInit, OnDestroy {
   userForm!: FormGroup;
+  currentUser: any = null;
+  userSubscription!: Subscription;
+  isLoading = true;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -24,6 +28,11 @@ export class SignUpComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.userSubscription = this.authService.getAuthState().subscribe(user => {
+      this.currentUser = user
+      this.isLoading = false;
+    });
+
     this.userForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.maxLength(32)]],
       phone: ['', [Validators.pattern('[0-9]*$'), Validators.minLength(9), Validators.maxLength(9)]],
@@ -58,5 +67,15 @@ export class SignUpComponent implements OnInit {
     } catch (error) {
       console.error('Error during registration:', error);
     }
+  }
+
+  ngOnDestroy() {
+    if(this.userSubscription){
+      this.userSubscription.unsubscribe();
+    }
+  }
+
+  handleLogout() {
+    this.authService.logout().catch(error => console.error('Logout error: ', error));
   }
 }
