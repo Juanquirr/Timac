@@ -7,11 +7,11 @@
       <div class="information-detailed-product">
 
         <h1 class="body-title font-base">{{ product.name }}</h1>
-        <h2 class="big-price font-base">{{ product.price }}</h2>
+        <h2 class="big-price font-base">{{ product.price }}{{ product.currency }}</h2>
         <p class="body-text font-base">
           Subcategory: {{ product.subcategory || 'N/A'}}<br>
           Brand: {{ product.brand || 'N/A' }}<br>
-          Color: 'N/A'<br> <!-- TODO MIRAR COMO PONER COLOR -->
+          Color: 'N/A'<br> <!-- TODO CHANGE COLOR? -->
         </p>
         <div class="availability">
           <div class="availability-in-store">
