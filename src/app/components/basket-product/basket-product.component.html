@@ -1,6 +1,6 @@
 <div class="basket-product">
   <label>
-    <input type="checkbox" [(ngModel)]="product.checkbox" (ngModelChange)="onCheckboxChange()">
+    <input type="checkbox" [ngModel]="checkbox()" (ngModelChange)="onCheckboxChange()">
   </label>
   <div class="item-image">
     <img src="{{ product.image }}" alt="{{ product.name }}">
@@ -19,7 +19,7 @@
     </div>
     <div class="counter-container">
       <button class="counter-button decrease" (click)="decreaseQuantity()">-</button>
-      <span class="counter-value counter">{{ product.quantity }}</span>
+      <span class="counter-value counter">{{ quantity() }}</span>
       <button class="counter-button increase" (click)="increaseQuantity()">+</button>
     </div>
     <div class="basket-product-price">
