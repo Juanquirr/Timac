@@ -1,8 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, signal, effect } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Product } from '../../models/product.model';
-
-
 
 @Component({
   selector: 'app-basket-product',
@@ -12,29 +10,47 @@ import { Product } from '../../models/product.model';
   standalone: true
 })
 export class BasketProductComponent {
-  @Input() product!: Product;
+  @Input() set product(value: Product) {
+    this.quantity.set(value.quantity);
+    this.checkbox.set(value.checkbox ?? true);
+    this._product = value;
+  }
   @Output() productSelected = new EventEmitter<{ id: number, selected: boolean }>();
   @Output() quantityChange = new EventEmitter<{ id: number, quantity: number }>();
   @Output() removeProduct = new EventEmitter<number>();
 
+  quantity = signal(1);
+  checkbox = signal(true);
+
+  private _product!: Product;
+
+  constructor() {
+    effect(() => {
+      this.quantityChange.emit({ id: this._product.id, quantity: this.quantity() });
+    });
+
+    effect(() => {
+      this.productSelected.emit({ id: this._product.id, selected: this.checkbox() });
+    });
+  }
+
   onCheckboxChange(): void {
-    const isSelected = this.product.checkbox ?? false;
-    this.productSelected.emit({ id: this.product.id, selected: isSelected });
+    this.checkbox.set(!this.checkbox());
   }
 
   decreaseQuantity(): void {
-    if (this.product.quantity > 1) {
-      this.product.quantity--;
-      this.quantityChange.emit({ id: this.product.id, quantity: this.product.quantity });
-    }
+    if (this.quantity() > 1) this.quantity.set(this.quantity() - 1);
   }
 
   increaseQuantity(): void {
-    this.product.quantity++;
-    this.quantityChange.emit({ id: this.product.id, quantity: this.product.quantity });
+    this.quantity.set(this.quantity() + 1);
   }
 
   remove(): void {
-    this.removeProduct.emit(this.product.id);
+    this.removeProduct.emit(this._product.id);
+  }
+
+  get product(): Product {
+    return this._product;
   }
 }
