@@ -1,7 +1,14 @@
 import { Injectable } from '@angular/core';
 import {doc, Firestore, setDoc} from '@angular/fire/firestore';
-import {Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from '@angular/fire/auth';
+import {
+  Auth, authState,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  updateProfile
+} from '@angular/fire/auth';
 import { UserCredential } from 'firebase/auth';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +20,8 @@ export class AuthService {
     try {
       const userCredential = await createUserWithEmailAndPassword(this.auth, email, password);
       const user = userCredential.user;
+
+      await updateProfile(user, {displayName: additionalData.name});
 
       await setDoc(doc(this.firestore, 'users', user.uid), {
         email: user.email,
@@ -46,4 +55,9 @@ export class AuthService {
   getCurrentUser() {
     return this.auth.currentUser;
   }
+
+  getAuthState(): Observable<any> {
+    return authState(this.auth);
+  }
+
 }

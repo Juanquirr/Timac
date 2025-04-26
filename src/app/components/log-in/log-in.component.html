@@ -1,4 +1,17 @@
-<div class="main-section">
+<div class="main-section" *ngIf="isLoading">
+  <p class="info-label">Loading...</p>
+</div>
+
+<div class="main-section" *ngIf="currentUser && !isLoading">
+  <p class="info-label">You are logged in as {{ currentUser.email }} </p>
+  <div class="signup-button-container">
+    <button class="signup-button" (click)="handleLogout()">
+      <span class="signup-button-text">Log-out</span>
+    </button>
+  </div>
+</div>
+
+<div class="main-section" *ngIf="!currentUser && !isLoading">
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="signup-form" id="login-form">
     <label for="email-input" class="info-label">Email:</label>
     <input formControlName="email" id="email-input" class="signup-input" type="email" placeholder="Email Address">
@@ -8,6 +21,9 @@
 
     <label for="password" class="info-label">Password:</label>
     <input formControlName="password" id="password" class="signup-input" type="password" placeholder="Password">
+    <div *ngIf="userForm.hasError('loginError')" class="error-message">
+      {{ userForm.errors?.['loginError'] }}
+    </div>
     <div class="signup-button-container">
       <button type="submit" class="signup-button" id="signup-button">
         <span class="signup-button-text">Log in</span>

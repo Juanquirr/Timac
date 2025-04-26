@@ -28,6 +28,6 @@ export class HeaderComponent {
   }
 
   handleLogout() {
-    this.authService.logout();
+    this.authService.logout().catch(error => console.error('Logout error: ', error));
   }
 }
