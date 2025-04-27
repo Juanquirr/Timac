@@ -15,14 +15,14 @@
   <div class="availability-in-store">
     <img src="../../../assets/star.png" alt="Star" />
     <p class="body-text font-base">
-      {{ product.available_in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE' }}
+      {{product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE' }}
     </p>
   </div>
 
   <div class="availability-for-delivery">
     <img src="../../../assets/arrow.png" alt="Arrow" />
     <p class="body-text font-base">
-      {{ product.available_to_deliver ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY' }}
+          {{product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY' }}
     </p>
   </div>
 </div>
