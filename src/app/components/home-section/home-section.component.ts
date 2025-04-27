@@ -23,8 +23,8 @@ export class HomeSectionComponent implements OnInit {
     constructor(private http: HttpClient, private firebaseService: FirebaseService) {}
 
     ngOnInit() {
-      this.firebaseService.getData('products').then(products => {
-        this.offers = products.filter((p: Product) => p.on_sale);
+      this.firebaseService.getDataObservable('products').subscribe(products => {
+        this.offers = products.filter((p: Product) => p.offer);
         this.newProducts = products.filter((p: Product) => p.new);
         this.trendingProducts = products.filter((p: Product) => p.trending);
       });

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, getDocs, query, orderBy, where} from '@angular/fire/firestore';
+import {Firestore, collection, getDocs, query, orderBy, where, collectionData} from '@angular/fire/firestore';
+import {Observable} from 'rxjs';
+import {Product} from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -7,24 +9,20 @@ import { Firestore, collection, getDocs, query, orderBy, where} from '@angular/f
 export class FirebaseService {
   constructor(private firestore: Firestore) {}
 
-  async getData(collectionName: string) {
-    const coll = collection(this.firestore, collectionName);
-    const q = query(coll, orderBy('id', 'asc'));
-    const snapshot = await getDocs(q);
-    return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-  }
-  async getFilteredData(collectionName: string, field: string, value: any): Promise<any[]> {
-    const coll = collection(this.firestore, collectionName);
-    const q = query(coll, where(field, '==', value));
-    const snapshot = await getDocs(q);
-    return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  getFilteredData(collectionName: string, field: string, value: any): Observable<any[]> {
+    const collRef = collection(this.firestore, collectionName);
+    const q = query(collRef, where(field, '==', value));
+    return collectionData(q) as Observable<any[]>;
   }
 
-  async getProductByFieldId(collectionName: string, productId: number): Promise<any> {
+  getProductByFieldId(collectionName: string, productId: number): Observable<Product[]> {
     const coll = collection(this.firestore, collectionName);
     const q = query(coll, where('id', '==', productId));
-    const snapshot = await getDocs(q);
-    const doc = snapshot.docs[0];
-    return doc ? {docId: doc.id, ...doc.data()} : null;
+    return collectionData(q) as Observable<Product[]>;
+  }
+
+  getDataObservable(collectionName: string): Observable<any[]> {
+    const collRef = collection(this.firestore, collectionName);
+    return collectionData(collRef) as Observable<any[]>;
   }
 }

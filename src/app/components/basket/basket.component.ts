@@ -27,7 +27,7 @@ export class BasketComponent implements OnInit {
   }
 
   loadBasket(): void {
-    this.firebaseService.getData('products').then(products => {
+    this.firebaseService.getDataObservable('products').subscribe(products => {
       if (products.length === 0) this.updateSummary();
 
       const convertedProducts: Product[] = products.map((p: any) => ({
@@ -44,8 +44,6 @@ export class BasketComponent implements OnInit {
 
       this.totalItems = this.basketProducts.length;
       this.updateSummary();
-    }).catch(error => {
-      console.error('Error loading products from Firestore:', error);
     });
   }
 

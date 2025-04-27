@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {HttpClient} from '@angular/common/http';
 import {NgForOf, NgIf} from '@angular/common';
 import {FirebaseService} from '../../services/firebase.service';
 import {Product} from '../../models/product.model';
@@ -27,7 +26,6 @@ export class DetailedProductComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private http: HttpClient,
     private router: Router,
     private firebaseService: FirebaseService
   ) {}
@@ -35,16 +33,13 @@ export class DetailedProductComponent implements OnInit {
   ngOnInit() {
     this.productId = this.activatedRoute.snapshot.paramMap.get('id')!;
 
-    this.firebaseService.getProductByFieldId('products', Number(this.productId)).then(product => {
-      if (product) {
-        this.product = product;
+    this.firebaseService.getProductByFieldId('products', Number(this.productId)).subscribe(products => {
+      if (products[0]) {
+        this.product = products[0];
       } else {
         console.error('Product not found.');
         this.router.navigate(['/']).catch(error => console.error('Navigation error', error));
       }
-    }).catch(error => {
-      console.error('Error loading product:', error);
-      this.router.navigate(['/']).catch(error => console.error('Navigation error', error));
     });
   }
 

@@ -15,7 +15,7 @@ export interface Product {
   image: string;
   offer: boolean;
   new: boolean;
-  on_sale: boolean;
   subcategory: string;
   trending: boolean;
+  image_alt: string;
 }

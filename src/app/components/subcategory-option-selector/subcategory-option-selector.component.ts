@@ -48,11 +48,8 @@ export class SubcategoryOptionSelectorComponent implements OnInit, OnDestroy {
 
   private loadSubcategoriesFromFirebase() {
     this.firebaseService.getFilteredData('subcategories', 'category', this.category)
-      .then((data: any[]) => {
+      .subscribe((data: any[]) => {
         this.subcategories = data;
-      })
-      .catch(() => {
-        this.subcategories = [];
       });
   }
 

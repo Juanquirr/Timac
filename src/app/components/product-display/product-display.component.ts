@@ -4,6 +4,7 @@ import {NgForOf, NgIf} from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { FirebaseService } from '../../services/firebase.service';
 import {Product} from '../../models/product.model';
+import {Observable} from 'rxjs';
 
 
 @Component({
@@ -63,16 +64,16 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
     ]);
 
     const filterKey = this.searchQuery.toLowerCase();
-    let fetchPromise: Promise<any[]>;
+    let fetchPromise: Observable<Product[]>;
     const isSpecialFilter = filterMap.has(filterKey);
     if (isSpecialFilter) {
       fetchPromise = this.firebaseService.getFilteredData('products', filterMap.get(filterKey)!, true);
     } else {
-      fetchPromise = this.firebaseService.getData('products');
+      fetchPromise = this.firebaseService.getDataObservable('products');
     }
 
     fetchPromise
-      .then(data => {
+      .subscribe(data => {
         this.allProducts = data;
         this.products = isSpecialFilter
           ? data
@@ -94,8 +95,7 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
         if (this.minPrice !== null && this.maxPrice !== null) {
           this.applyFilters();
         }
-      })
-      .catch(error => console.error('Error loading products from Firebase:', error));
+      });
   }
 
 
