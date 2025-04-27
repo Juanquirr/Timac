@@ -56,17 +56,31 @@ export class SignUpComponent implements OnInit, OnDestroy {
       console.log('This form is invalid');
       return;
     }
-    console.log('Valid form for user: ', this.userForm.value.name);
-    try {
-      this.authService.register(
-        this.userForm.value.email,
-        this.userForm.value.password1,
-        {name: this.userForm.value.name, phone: this.userForm.value.phone, birthDate: this.userForm.value.birthDate}
-        );
-      this.router.navigate(['/']).catch(error => console.error('Navigation error', error));
-    } catch (error) {
-      console.error('Error during registration:', error);
-    }
+
+    this.authService.register(
+      this.userForm.value.email,
+      this.userForm.value.password1,
+      {name: this.userForm.value.name, phone: this.userForm.value.phone, birthDate: this.userForm.value.birthDate}
+      ).then(() => {
+      this.router.navigate(['/']).catch(error => console.error('Navigation error', error))
+    }).catch(error => {
+      console.error('Error during sign-in:', error);
+      let errorMsg = 'Sign-in error, please try again.';
+      const errorCode = error.code;
+      switch (errorCode) {
+        case 'auth/email-already-in-use':
+          errorMsg = 'Email already in use.';
+          break;
+        case 'auth/operation-not-allowed':
+          errorMsg = 'Operation not allowed, please log out first.';
+          break;
+        case 'auth/too-many-requests':
+          errorMsg = 'Too many requests, try again later.';
+          break;
+      }
+      this.userForm.setErrors({registrationError: errorMsg});
+    });
+
   }
 
   ngOnDestroy() {

@@ -46,14 +46,27 @@ export class LogInComponent implements OnInit, OnDestroy {
 
     console.log('Valid form for user: ', this.userForm.value.email);
 
-      this.authService.login(this.userForm.value.email, this.userForm.value.password).then((userCredential) => {
-        if (userCredential.user) {
-          this.router.navigate(['/']).catch(error => console.error('Navigation error', error));
-        }
-      }).catch(error => {
-        console.error('Error during log-in:', error);
-        this.userForm.setErrors({ loginError: 'Credenciales incorrectas. Intenta de nuevo.' });
-      });
+    this.authService.login(this.userForm.value.email, this.userForm.value.password).then((userCredential) => {
+      if (userCredential.user) {
+        this.router.navigate(['/']).catch(error => console.error('Navigation error', error));
+      }
+    }).catch(error => {
+      console.error('Error during log-in:', error);
+      let errorMsg = 'Log-in error, please try again.';
+      const errorCode = error.code;
+      switch (errorCode){
+        case 'auth/invalid-credential':
+          errorMsg = 'Email or password incorrect.';
+          break;
+        case 'auth/too-many-requests':
+          errorMsg = 'Too many requests, try again later.';
+          break;
+        case 'auth/user-disabled':
+          errorMsg = 'This account is disabled.';
+          break;
+      }
+      this.userForm.setErrors({ loginError: errorMsg });
+    });
   }
 
   ngOnDestroy() {

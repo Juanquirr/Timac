@@ -52,6 +52,9 @@
         <span class="signup-button-text">Sign Up</span>
       </button>
     </div>
+    <div *ngIf="userForm.hasError('registrationError')" class="error-message" style="align-self: center; font-size: 1em">
+      {{ userForm.errors?.['registrationError'] }}
+    </div>
   </form>
 
   <p class="login-link">Already have an account? <a routerLink="/log-in">Log in</a></p>

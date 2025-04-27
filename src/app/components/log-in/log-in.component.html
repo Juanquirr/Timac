@@ -21,13 +21,13 @@
 
     <label for="password" class="info-label">Password:</label>
     <input formControlName="password" id="password" class="signup-input" type="password" placeholder="Password">
-    <div *ngIf="userForm.hasError('loginError')" class="error-message">
-      {{ userForm.errors?.['loginError'] }}
-    </div>
     <div class="signup-button-container">
       <button type="submit" class="signup-button" id="signup-button">
         <span class="signup-button-text">Log in</span>
       </button>
+    </div>
+    <div *ngIf="userForm.hasError('loginError')" class="error-message" style="align-self: center; font-size: 1em">
+      {{ userForm.errors?.['loginError'] }}
     </div>
   </form>
     <p class="login-link">Don't have an account? <a routerLink="/sign-up">Create account</a></p>
