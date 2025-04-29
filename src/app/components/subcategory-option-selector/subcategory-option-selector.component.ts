@@ -1,19 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForOf } from '@angular/common';
-import { SubcategoryOptionComponent } from '../subcategory-option/subcategory-option.component';
+import {Subcategory, SubcategoryOptionComponent} from '../subcategory-option/subcategory-option.component';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import {FirebaseService} from '../../services/firebase.service';
 
 
-interface Subcategory {
-  image: string;
-  name: string;
-  alt: string;
-  link: string;
-  category: string;
-}
+
 
 
 @Component({

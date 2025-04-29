@@ -23,6 +23,7 @@ export const routes: Routes = [
       { path: 'new', component: SubcategoryOptionSelectorComponent },
       { path: 'basket', component: BasketComponent },
       { path: 'product/:id', component: DetailedProductComponent },
+      { path: 'search-subcategory', component:  SubcategoryResultsComponent }
     ]
   },
   { path: '', component: AuthLayoutComponent, children: [
