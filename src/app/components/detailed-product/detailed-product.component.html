@@ -11,15 +11,15 @@
         <p class="body-text font-base">
           Subcategory: {{ product.subcategory || 'N/A'}}<br>
           Brand: {{ product.brand || 'N/A' }}<br>
-          Color: 'N/A'<br> <!-- TODO CHANGE COLOR? -->
+          Color: 'N/A'<br>
         </p>
         <div class="availability">
           <div class="availability-in-store">
-            <img src="../../../assets/star.png" alt="Star"/>
+            <img src="assets/star.png" alt="Star"/>
             <p class="body-text font-base">{{ product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE' }}</p>
           </div>
           <div class="availability-for-delivery">
-            <img src="../../../assets/arrow.png" alt="Arrow"/>
+            <img src="assets/arrow.png" alt="Arrow"/>
             <p class="body-text font-base">{{ product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY' }}</p>
           </div>
         </div>
@@ -28,7 +28,7 @@
       <div class="counter-container">
         <p class="body-text font-base ">Amount</p>
         <button class="counter-button" id="decrease" (click)="decrementCounter()" >-</button>
-        <span class="counter-value" id="counter">{{ counter }}</span>
+        <span class="counter-value" id="counter">{{ counter() }}</span>
         <button class="counter-button" id="increase" (click)="incrementCounter()" >+</button>
       </div>
       <div id="add-basket-container">
