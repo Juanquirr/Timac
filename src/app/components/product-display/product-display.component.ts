@@ -64,15 +64,15 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
     ]);
 
     const filterKey = this.searchQuery.toLowerCase();
-    let fetchPromise: Observable<Product[]>;
+    let productObservable: Observable<Product[]>;
     const isSpecialFilter = filterMap.has(filterKey);
     if (isSpecialFilter) {
-      fetchPromise = this.firebaseService.getFilteredData('products', filterMap.get(filterKey)!, true);
+      productObservable = this.firebaseService.getFilteredData('products', filterMap.get(filterKey)!, true);
     } else {
-      fetchPromise = this.firebaseService.getDataObservable('products');
+      productObservable = this.firebaseService.getDataByArrayContains('products', 'keywords', this.searchQuery.toLowerCase());
     }
 
-    fetchPromise
+    productObservable
       .subscribe(data => {
         this.allProducts = data;
         this.products = isSpecialFilter
