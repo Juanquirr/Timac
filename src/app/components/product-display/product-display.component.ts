@@ -129,10 +129,6 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
     if (searchQuery === "offers") return products.filter(p => p.offer);
     if (searchQuery === "trending") return products.filter(p => p.trending);
 
-    return products.filter(product =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    return products;
   }
 }
