@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {Firestore, collection, query, where, collectionData} from '@angular/fire/firestore';
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 import {Product} from '../models/product.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -25,4 +26,12 @@ export class FirebaseService {
     const collRef = collection(this.firestore, collectionName);
     return collectionData(collRef) as Observable<any[]>;
   }
+
+  getDataByArrayContains(collectionName: string, field: string, searchString: string): Observable<Product[]> {
+     const collRef = collection(this.firestore, collectionName);
+    const q = query(collRef, where(field, 'array-contains', searchString));
+     return collectionData(q, { idField: 'id' }) as Observable<Product[]>;
+  }
+
+
 }
