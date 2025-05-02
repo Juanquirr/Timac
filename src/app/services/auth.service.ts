@@ -28,6 +28,7 @@ export class AuthService {
         name: additionalData.name,
         phone: additionalData.phone,
         birthDate: additionalData.birthDate,
+        basket: []
       });
 
       return userCredential;
