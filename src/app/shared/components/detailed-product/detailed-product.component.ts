@@ -36,7 +36,7 @@ export class DetailedProductComponent implements OnInit, OnDestroy {
       if (products[0]) {
         this.product = products[0];
       } else {
-        console.error('Product not found.');
+        console.error(`Product with id ${this.productId} not found.`);
         this.router.navigate(['/']).catch(error => console.error('Navigation error', error));
       }
     });
