@@ -1,13 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NgForOf, NgIf} from '@angular/common';
 import {FirebaseService} from '../../services/firebase.service';
 import {Product} from '../../models/product.model';
-
-interface BasketItem {
-  id: string;
-  quantity: number;
-}
+import {AuthService} from '../../services/auth.service';
+import {BasketItem} from '../../models/basketItem.model';
 
 @Component({
   selector: 'app-detailed-product',
@@ -19,15 +16,17 @@ interface BasketItem {
   templateUrl: './detailed-product.component.html',
   styleUrl: './detailed-product.component.css'
 })
-export class DetailedProductComponent implements OnInit {
+export class DetailedProductComponent implements OnInit, OnDestroy {
   product: Product | undefined;
   productId: string = '';
   counter: number = 1;
+  subscription: any;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private firebaseService: FirebaseService
+    private firebaseService: FirebaseService,
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -44,23 +43,41 @@ export class DetailedProductComponent implements OnInit {
   }
 
   addToBasket() {
-    if (this.counter > 0 && this.product) {
-      let basket: BasketItem[] = JSON.parse(localStorage.getItem('basket') || '[]');
-      const existingProductIndex = basket.findIndex(item => item.id == this.productId);
+    if (this.counter <= 0 || !this.product) {
+      console.log('Please, select a quantity greater than 0');
+      alert('Please, select a quantity greater than 0');
+    }
 
-      if (existingProductIndex > -1){
+    const user = this.authService.getCurrentUser();
+
+    if (!user) {
+      console.log('User not authenticated');
+      alert('User not authenticated, you need to log-in in order to buy or use the basket.');
+      return;
+    }
+
+    this.subscription = this.firebaseService.getUserById(user.uid).subscribe(userDoc => {
+      let basket: BasketItem[] = [];
+
+      if (userDoc.basket && Array.isArray(userDoc.basket)) {
+        basket = userDoc.basket;
+      } else {
+        console.warn('Warning: basket value is not an array');
+      }
+
+      const existingProductIndex = basket.findIndex(item => item.id === this.productId);
+
+      if (existingProductIndex > -1) {
         basket[existingProductIndex].quantity = this.counter;
-      } else{
+      } else {
         basket.push({id: this.productId, quantity: this.counter});
       }
 
-      localStorage.setItem('basket', JSON.stringify(basket));
-      console.log(`Added ${this.counter} ${this.product.name} to Basket`);
-      this.router.navigate(['/basket']).catch(error => console.error('Navigation error', error));
-    } else {
-      console.log('Please select a quantity greater than 0');
-      alert('Please select a quantity greater than 0');
-    }
+      this.firebaseService.updateUserBasket(user.uid, basket).then(() => {
+        console.log(`Added ${this.counter} ${this.product?.name} to Basket`);
+        this.router.navigate(['/basket']).catch(error => console.error('Navigation error', error));
+        }).catch(error => console.error('Error updating basket', error));
+    });
   }
 
   incrementCounter(){
@@ -71,5 +88,9 @@ export class DetailedProductComponent implements OnInit {
     if(this.counter > 0){
       this.counter--;
     }
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }
