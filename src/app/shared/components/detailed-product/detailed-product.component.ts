@@ -46,6 +46,7 @@ export class DetailedProductComponent implements OnInit, OnDestroy {
     if (this.counter <= 0 || !this.product) {
       console.log('Please, select a quantity greater than 0');
       alert('Please, select a quantity greater than 0');
+      return;
     }
 
     const user = this.authService.getCurrentUser();
@@ -62,7 +63,7 @@ export class DetailedProductComponent implements OnInit, OnDestroy {
       if (userDoc.basket && Array.isArray(userDoc.basket)) {
         basket = userDoc.basket;
       } else {
-        console.warn('Warning: basket value is not an array');
+        console.warn('Warning: basket value in database is not an array');
       }
 
       const existingProductIndex = basket.findIndex(item => item.id === this.productId);
@@ -91,6 +92,6 @@ export class DetailedProductComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    this.subscription?.unsubscribe();
   }
 }
