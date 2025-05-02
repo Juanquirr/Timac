@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {Firestore, collection, query, where, collectionData} from '@angular/fire/firestore';
+import {Firestore, collection, query, where, collectionData, doc, docData, updateDoc} from '@angular/fire/firestore';
 import {Observable} from 'rxjs';
 import {Product} from '../models/product.model';
+import {BasketItem} from '../models/basketItem.model';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +25,16 @@ export class FirebaseService {
   getDataObservable(collectionName: string): Observable<any[]> {
     const collRef = collection(this.firestore, collectionName);
     return collectionData(collRef) as Observable<any[]>;
+  }
+
+  getUserById(uid: string): Observable<any> {
+    const docRef = doc(this.firestore, 'users', uid);
+    return docData(docRef) as Observable<any>;
+  }
+
+  async updateUserBasket(uid: string, basket: BasketItem[]): Promise<void>{
+    const docRef = doc(this.firestore, 'users', uid);
+    updateDoc(docRef, {basket}).then(() => console.log('Basket updated successfully for user: ', uid))
+      .catch(error => console.error('Error updating user basket', error));
   }
 }
