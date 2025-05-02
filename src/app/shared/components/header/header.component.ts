@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import {NgIf} from '@angular/common';
-import {RouterLink} from '@angular/router';
+import {RouterLink, Router} from '@angular/router';
 import {AuthService} from '../../../core/services/auth.service';
+import {FormsModule} from '@angular/forms';
+
 
 @Component({
   selector: 'app-header',
@@ -9,15 +11,17 @@ import {AuthService} from '../../../core/services/auth.service';
   templateUrl: './header.component.html',
   imports: [
     NgIf,
-    RouterLink
+    RouterLink,
+    FormsModule
 
   ],
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
   areLoginButtonsDisplaying: boolean = false;
+  searchText: String = "";
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   toggleLoginButtons(): void {
     this.areLoginButtonsDisplaying = !this.areLoginButtonsDisplaying;
@@ -29,5 +33,14 @@ export class HeaderComponent {
 
   handleLogout() {
     this.authService.logout().catch(error => console.error('Logout error: ', error));
+  }
+
+  onSearch() {
+    if (this.searchText.length < 1) {
+      return;
+    }
+    this.router.navigate(['/search-subcategory'], {
+      queryParams: { query: this.searchText }
+    });
   }
 }

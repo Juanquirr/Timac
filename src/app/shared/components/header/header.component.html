@@ -5,11 +5,13 @@
         <img src="../../../../assets/logo0.png" alt="TIMAC logo">
       </a>
     </div>
-    <form class="search-form" id="searchForm">
-      <label>
-        <input class="search-bar font-base" type="search" placeholder="Search" id="searchBar">
-      </label>
+    <form (submit)="onSearch(); $event.preventDefault()">
+        <label>
+          <input [(ngModel)]="searchText" name="search" class="search-bar font-base" type="search" placeholder="Search" id="searchBar" />
+        </label>
     </form>
+
+
     <div class="account-basket-container">
       <a routerLink="/basket">
         <img class="shopping" src="../../../../assets/Basket.png" alt="Your basket">
