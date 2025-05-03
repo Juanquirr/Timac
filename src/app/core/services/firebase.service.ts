@@ -42,8 +42,10 @@ export class FirebaseService {
 
     const queries = words.map(word => {
       const q = query(collRef, where(field, 'array-contains', word));
-      return collectionData(q, { idField: 'id' }) as Observable<Product[]>;
+      return collectionData(q) as Observable<Product[]>;
     });
+
+
 
     return combineLatest(queries).pipe(
       map(results => {
