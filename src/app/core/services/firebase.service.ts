@@ -36,16 +36,12 @@ export class FirebaseService {
       .map(word => word.trim())
       .filter(word => word.length > 0);
 
-    if (words.length === 0) {
-      return of([]);
-    }
+    if (words.length === 0) return of([]);
 
     const queries = words.map(word => {
       const q = query(collRef, where(field, 'array-contains', word));
       return collectionData(q) as Observable<Product[]>;
     });
-
-
 
     return combineLatest(queries).pipe(
       map(results => {
@@ -64,9 +60,8 @@ export class FirebaseService {
     return docData(docRef) as Observable<any>;
   }
 
-  async updateUserBasket(uid: string, basket: BasketItem[]): Promise<void>{
+  async updateUserBasket(uid: string, basket: BasketItem[]): Promise<void> {
     const docRef = doc(this.firestore, 'users', uid);
-    updateDoc(docRef, {basket}).then(() => console.log('Basket updated successfully for user: ', uid))
-      .catch(error => console.error('Error updating user basket', error));
+    updateDoc(docRef, {basket})
   }
 }

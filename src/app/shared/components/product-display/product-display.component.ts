@@ -72,11 +72,8 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
     const filterKey = this.searchQuery.toLowerCase();
     let productObservable: Observable<Product[]>;
     const isSpecialFilter = filterMap.has(filterKey);
-    if (isSpecialFilter) {
-      productObservable = this.firebaseService.getFilteredData('products', filterMap.get(filterKey)!, true);
-    } else {
-      productObservable = this.firebaseService.getDataByArrayContains('products', 'keywords', this.searchQuery.toLowerCase());
-    }
+    if (isSpecialFilter) productObservable = this.firebaseService.getFilteredData('products', filterMap.get(filterKey)!, true);
+    else productObservable = this.firebaseService.getDataByArrayContains('products', 'keywords', this.searchQuery.toLowerCase());
 
     productObservable.subscribe(data => {
       this.allProducts = data;
@@ -95,9 +92,7 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
         this.filtersSent = true;
       }
 
-      if (this.minPrice !== null && this.maxPrice !== null) {
-        this.applyFilters();
-      }
+      if (this.minPrice !== null && this.maxPrice !== null) this.applyFilters();
     });
   }
 
@@ -106,13 +101,9 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
 
     filteredProducts = this.filterProducts(filteredProducts, this.searchQuery);
 
-    if (this.minPrice !== null && this.maxPrice !== null) {
-      filteredProducts = this.filterByPrice(filteredProducts);
-    }
+    if (this.minPrice !== null && this.maxPrice !== null) filteredProducts = this.filterByPrice(filteredProducts);
 
-    if (this.brands.length > 0) {
-      filteredProducts = filteredProducts.filter(product => this.brands.includes(product.brand));
-    }
+    if (this.brands.length > 0) filteredProducts = filteredProducts.filter(product => this.brands.includes(product.brand));
     this.products = filteredProducts;
     this.sortProducts();
   }

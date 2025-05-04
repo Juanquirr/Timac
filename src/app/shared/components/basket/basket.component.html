@@ -13,8 +13,9 @@
     </section>
     <section class="bottom-basket-section">
       <app-basket-product
-        *ngFor="let product of basketProducts"
+        *ngFor="let product of basketProductArray"
         [product]="product"
+        [quantityInput]="basketProductsQuantities.get(product.id)!"
         (quantityChange)="updateBasket($event)"
         (removeProduct)="removeProduct($event)"
         (productSelected)="updateProductSelection($event)">
@@ -44,14 +45,14 @@
         <h2 class="body-subtitle center-text font-base">Payment Methods</h2>
         <div class="basket-summary-payment-container">
           <label>
-            <input type="radio" name="payment-method" value="visa" [(ngModel)]="paymentMethod">
-            <p class="body-text font-base">VISA</p>
+            <input type="radio" name="payment-method" value="visa" id="visa" [(ngModel)]="paymentMethod">
+            <label class="body-text font-base" style="margin-left: 10px" for="visa">VISA</label>
           </label>
         </div>
         <div class="basket-summary-payment-container">
           <label>
-            <input type="radio" name="payment-method" value="mastercard" [(ngModel)]="paymentMethod">
-            <p class="body-text font-base">MASTERCARD</p>
+            <input type="radio" name="payment-method" value="mastercard" id="master" [(ngModel)]="paymentMethod">
+            <label class="body-text font-base" style="margin-left: 10px" for="master">MASTERCARD</label>
           </label>
         </div>
       </section>

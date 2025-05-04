@@ -10,27 +10,33 @@ import { Product } from '../../../core/models/product.model';
   standalone: true
 })
 export class BasketProductComponent {
+  private _product!: Product;
+  private _productQuantity: number = 1;
+
+  quantity = signal(this._productQuantity);
+  checkbox = signal(true);
+
+  @Input() set quantityInput(value: number) {
+    this._productQuantity = value;
+    this.quantity.set(value);
+  }
+
   @Input() set product(value: Product) {
-    this.quantity.set(value.quantity);
     this.checkbox.set(value.checkbox ?? true);
     this._product = value;
   }
+
   @Output() productSelected = new EventEmitter<{ id: number, selected: boolean }>();
   @Output() quantityChange = new EventEmitter<{ id: number, quantity: number }>();
   @Output() removeProduct = new EventEmitter<number>();
 
-  quantity = signal(1);
-  checkbox = signal(true);
-
-  private _product!: Product;
-
   constructor() {
     effect(() => {
-      this.quantityChange.emit({ id: this._product.id, quantity: this.quantity() });
+      this.quantityChange.emit({ id: this._product?.id, quantity: this.quantity() });
     });
 
     effect(() => {
-      this.productSelected.emit({ id: this._product.id, selected: this.checkbox() });
+      this.productSelected.emit({ id: this._product?.id, selected: this.checkbox() });
     });
   }
 

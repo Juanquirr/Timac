@@ -24,9 +24,7 @@
   padding: 0;
   aspect-ratio: 1 / 1;
   margin: 0;
-
 }
-
 
 .item-image img {
   align-self: center;
@@ -57,7 +55,6 @@
   align-items: center;
   gap: 5px;
 }
-
 
 .counter-container {
   margin: 15px 5px 0 0;
