@@ -1,11 +1,10 @@
 import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-import {BigProductComponent} from '../big-product/big-product.component';
-import {NgForOf, NgIf} from '@angular/common';
+import { BigProductComponent } from '../big-product/big-product.component';
+import { NgForOf, NgIf } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { FirebaseService } from '../../../core/services/firebase.service';
-import {Product} from '../../../core/models/product.model';
-import {Observable} from 'rxjs';
-
+import { Product } from '../../../core/models/product.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-product-display',
@@ -23,18 +22,17 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
 
   products: Product[] = [];
   allProducts: Product[] = [];
-  filtersSent:boolean = false;
-  searchQuery:string = "";
-  sortAscending:boolean = true;
-  sortButtonLabel:string = 'Price (Low to High)';
+  filtersSent: boolean = false;
+  searchQuery: string = "";
+  sortAscending: boolean = true;
+  sortButtonLabel: string = 'Price (Low to High)';
 
   constructor(private route: ActivatedRoute, private firebaseService: FirebaseService) {}
-
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.searchQuery = params['query'] || '';
-      this.loadProductsFromFirebase();
+      this.resetAndUpdate();
     });
   }
 
@@ -42,6 +40,14 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
     if (changes['minPrice'] || changes['maxPrice'] || changes['brands']) {
       this.applyFilters();
     }
+  }
+
+  resetAndUpdate(): void {
+
+    this.products = [];
+    this.allProducts = [];
+    this.filtersSent = false;
+    this.loadProductsFromFirebase();
   }
 
   toggleSortOrder(): void {
@@ -72,33 +78,28 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
       productObservable = this.firebaseService.getDataByArrayContains('products', 'keywords', this.searchQuery.toLowerCase());
     }
 
-    productObservable
-      .subscribe(data => {
-        this.allProducts = data;
-        this.products = isSpecialFilter
-          ? data
-          : this.filterProducts(data, this.searchQuery);
+    productObservable.subscribe(data => {
+      this.allProducts = data;
+      this.products = isSpecialFilter ? data : this.filterProducts(data, this.searchQuery);
 
-        if (!this.filtersSent && this.products.length > 0) {
-          const prices = this.products.map(p => Number(p.price)).filter(price => !isNaN(price));
-          const uniqueBrands = [...new Set(this.products.map(p => p.brand).filter(Boolean))];
+      if (!this.filtersSent && this.products.length > 0) {
+        const prices = this.products.map(p => Number(p.price)).filter(price => !isNaN(price));
+        const uniqueBrands = [...new Set(this.products.map(p => p.brand).filter(Boolean))];
 
-          this.initialFiltersReady.emit({
-            minPriceLimit: Math.floor(Math.min(...prices)),
-            maxPriceLimit: Math.ceil(Math.max(...prices)),
-            brands: uniqueBrands
-          });
+        this.initialFiltersReady.emit({
+          minPriceLimit: Math.floor(Math.min(...prices)),
+          maxPriceLimit: Math.ceil(Math.max(...prices)),
+          brands: uniqueBrands
+        });
 
-          this.filtersSent = true;
-        }
+        this.filtersSent = true;
+      }
 
-        if (this.minPrice !== null && this.maxPrice !== null) {
-          this.applyFilters();
-        }
-      });
+      if (this.minPrice !== null && this.maxPrice !== null) {
+        this.applyFilters();
+      }
+    });
   }
-
-
 
   applyFilters(): void {
     let filteredProducts = [...this.allProducts];
@@ -128,7 +129,6 @@ export class ProductDisplayComponent implements OnInit, OnChanges {
     if (searchQuery === "new") return products.filter(p => p.new);
     if (searchQuery === "offers") return products.filter(p => p.offer);
     if (searchQuery === "trending") return products.filter(p => p.trending);
-
     return products;
   }
 }

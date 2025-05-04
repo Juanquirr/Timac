@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {Firestore, collection, query, where, collectionData} from '@angular/fire/firestore';
+import {Firestore, collection, query, where, collectionData, doc, docData, updateDoc} from '@angular/fire/firestore';
 import { Observable, of, combineLatest } from 'rxjs';
 import {Product} from '../models/product.model';
+import {BasketItem} from '../models/basketItem.model';
 import { map } from 'rxjs/operators';
 
 
@@ -41,8 +42,10 @@ export class FirebaseService {
 
     const queries = words.map(word => {
       const q = query(collRef, where(field, 'array-contains', word));
-      return collectionData(q, { idField: 'id' }) as Observable<Product[]>;
+      return collectionData(q) as Observable<Product[]>;
     });
+
+
 
     return combineLatest(queries).pipe(
       map(results => {
@@ -56,5 +59,14 @@ export class FirebaseService {
     );
   }
 
+  getUserById(uid: string): Observable<any> {
+    const docRef = doc(this.firestore, 'users', uid);
+    return docData(docRef) as Observable<any>;
+  }
 
+  async updateUserBasket(uid: string, basket: BasketItem[]): Promise<void>{
+    const docRef = doc(this.firestore, 'users', uid);
+    updateDoc(docRef, {basket}).then(() => console.log('Basket updated successfully for user: ', uid))
+      .catch(error => console.error('Error updating user basket', error));
+  }
 }
