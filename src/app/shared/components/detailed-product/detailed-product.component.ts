@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, signal} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NgForOf, NgIf} from '@angular/common';
 import {FirebaseService} from '../../../core/services/firebase.service';
@@ -19,7 +19,7 @@ import {BasketItem} from '../../../core/models/basketItem.model';
 export class DetailedProductComponent implements OnInit, OnDestroy {
   product: Product | undefined;
   productId: string = '';
-  counter: number = 1;
+  counter = signal(1);
   subscription: any;
 
   constructor(
@@ -43,7 +43,7 @@ export class DetailedProductComponent implements OnInit, OnDestroy {
   }
 
   addToBasket() {
-    if (this.counter <= 0 || !this.product) {
+    if (this.counter() <= 0 || !this.product) {
       console.log('Please, select a quantity greater than 0');
       alert('Please, select a quantity greater than 0');
       return;
@@ -66,12 +66,12 @@ export class DetailedProductComponent implements OnInit, OnDestroy {
         console.warn('Warning: basket value in database is not an array');
       }
 
-      const existingProductIndex = basket.findIndex(item => item.id === this.productId);
+      const existingProductIndex = basket.findIndex(item => item.id === Number(this.productId));
 
       if (existingProductIndex > -1) {
-        basket[existingProductIndex].quantity = this.counter;
+        basket[existingProductIndex].quantity = this.counter();
       } else {
-        basket.push({id: this.productId, quantity: this.counter});
+        basket.push({id: Number(this.productId), quantity: this.counter()});
       }
 
       this.firebaseService.updateUserBasket(user.uid, basket).then(() => {
@@ -82,13 +82,11 @@ export class DetailedProductComponent implements OnInit, OnDestroy {
   }
 
   incrementCounter(){
-    this.counter++;
+    this.counter.set(this.counter() + 1);
   }
 
   decrementCounter(){
-    if(this.counter > 0){
-      this.counter--;
-    }
+    if (this.counter() > 1) this.counter.set(this.counter() - 1);
   }
 
   ngOnDestroy() {

@@ -60,5 +60,4 @@ export class AuthService {
   getAuthState(): Observable<any> {
     return authState(this.auth);
   }
-
 }

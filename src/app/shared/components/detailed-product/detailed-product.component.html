@@ -15,11 +15,11 @@
         </p>
         <div class="availability">
           <div class="availability-in-store">
-            <img src="../../../assets/star.png" alt="Star"/>
+            <img src="assets/star.png" alt="Star"/>
             <p class="body-text font-base">{{ product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE' }}</p>
           </div>
           <div class="availability-for-delivery">
-            <img src="../../../assets/arrow.png" alt="Arrow"/>
+            <img src="assets/arrow.png" alt="Arrow"/>
             <p class="body-text font-base">{{ product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY' }}</p>
           </div>
         </div>
@@ -27,9 +27,9 @@
       </div>
       <div class="counter-container">
         <p class="body-text font-base ">Amount</p>
-        <button class="counter-button" id="decrease" (click)="decrementCounter()" >-</button>
-        <span class="counter-value" id="counter">{{ counter }}</span>
-        <button class="counter-button" id="increase" (click)="incrementCounter()" >+</button>
+        <button class="counter-button" id="decrease" (click)="decrementCounter()">-</button>
+        <span class="counter-value" id="counter">{{ counter() }}</span>
+        <button class="counter-button" id="increase" (click)="incrementCounter()">+</button>
       </div>
       <div id="add-basket-container">
         <button class="add-basket-button" id="add-basket-button" (click)="addToBasket()" >
@@ -40,6 +40,6 @@
   </div>
   <div class="bottom-box-detailed-product">
     <h2 class="body-title font-base">About this item</h2>
-    <p class="body-text font-base" *ngFor="let line of product.description" >{{ line }}</p>
+    <p class="body-text font-base" *ngFor="let line of product.description">{{ line }}</p>
   </div>
 </div>

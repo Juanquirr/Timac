@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
 import {NgForOf} from '@angular/common';
 import {RouterLink} from '@angular/router';
 import {Product} from '../../../core/models/product.model';
@@ -20,7 +19,7 @@ export class HomeSectionComponent implements OnInit {
     newProducts: Product[] = [];
     trendingProducts: Product[] = [];
 
-    constructor(private http: HttpClient, private firebaseService: FirebaseService) {}
+    constructor(private firebaseService: FirebaseService) {}
 
     ngOnInit() {
       this.firebaseService.getDataObservable('products').subscribe(products => {

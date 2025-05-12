@@ -26,7 +26,7 @@
         <span class="signup-button-text">Log in</span>
       </button>
     </div>
-    <div *ngIf="userForm.hasError('loginError')" class="error-message" style="align-self: center; font-size: 1em">
+    <div *ngIf="userForm.hasError('loginError')" class="error-message" style="align-self: center; font-size: 1rem">
       {{ userForm.errors?.['loginError'] }}
     </div>
   </form>

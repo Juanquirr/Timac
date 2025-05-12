@@ -4,7 +4,6 @@ import {RouterLink, Router} from '@angular/router';
 import {AuthService} from '../../../core/services/auth.service';
 import {FormsModule} from '@angular/forms';
 
-
 @Component({
   selector: 'app-header',
   standalone: true,

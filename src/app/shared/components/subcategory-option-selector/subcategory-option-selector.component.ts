@@ -1,14 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { NgForOf } from '@angular/common';
 import {Subcategory, SubcategoryOptionComponent} from '../subcategory-option/subcategory-option.component';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import {FirebaseService} from '../../../core/services/firebase.service';
-
-
-
-
 
 @Component({
   selector: 'app-subcategory-option-selector',
@@ -21,21 +16,15 @@ export class SubcategoryOptionSelectorComponent implements OnInit, OnDestroy {
   category: string = '';
   private httpSubscription?: Subscription;
 
-
-  constructor(private http: HttpClient, private route: ActivatedRoute, private firebaseService: FirebaseService) {}
+  constructor(private route: ActivatedRoute, private firebaseService: FirebaseService) {}
 
   ngOnInit() {
     const urlSegments = this.route.snapshot.url;
 
-    if (urlSegments.length > 0) {
-      this.category = urlSegments[urlSegments.length - 1].path;
-    } else {
-      this.category = '';
-    }
+    if (urlSegments.length > 0) this.category = urlSegments[urlSegments.length - 1].path;
+    else this.category = '';
 
-    if (this.category) {
-      this.category = this.category.charAt(0).toUpperCase() + this.category.slice(1);
-    }
+    if (this.category) this.category = this.category.charAt(0).toUpperCase() + this.category.slice(1);
 
     this.loadSubcategoriesFromFirebase();
   }
@@ -46,9 +35,6 @@ export class SubcategoryOptionSelectorComponent implements OnInit, OnDestroy {
         this.subcategories = data;
       });
   }
-
-
-
 
   ngOnDestroy() {
     this.httpSubscription?.unsubscribe();

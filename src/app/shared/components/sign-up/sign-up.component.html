@@ -11,23 +11,22 @@
   </div>
 </div>
 
-
 <div class="main-section" *ngIf="!currentUser && !isLoading">
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="signup-form" id="signup-form">
     <label for="name-input" class="info-label">Name:</label>
     <input formControlName="name" id="name-input" class="signup-input" type="text" placeholder="Full Name">
-    <span *ngIf="userForm.get('name')?.hasError('required') && userForm.get('name')?.touched" class="error-message">
+    <span *ngIf="userForm.get('name')!.hasError('required') && userForm.get('name')?.touched" class="error-message">
       Enter a name
     </span>
 
     <div class="input-group">
       <div class="container-small-input">
-        <label for="phone-input" class="info-label">Phone:</label>
+        <label for="phone-input" class="info-label">Phone (optional):</label>
         <input formControlName="phone" type="text" placeholder="Phone" class="signup-input" id="phone-input">
         <span *ngIf="userForm.get('phone')?.invalid" class="error-message">Phone must be 9 digits or empty</span>
       </div>
       <div class="container-small-input">
-        <label for="date-input" class="info-label">Birth Date:</label>
+        <label for="date-input" class="info-label">Birth Date (optional):</label>
         <input formControlName="birthDate" id="date-input" type="date" min="1900-01-01" placeholder="Birth Date" class="signup-input">
       </div>
     </div>
@@ -43,7 +42,7 @@
     <label for="password2" class="info-label">Repeat password:</label>
     <input formControlName="password2" class="signup-input" type="password" placeholder="Repeat Password" id="password2">
     <span *ngIf="userForm.hasError('passwordMismatch')" class="error-message">Passwords do not match</span>
-    <span *ngIf="userForm.get('password1')?.hasError('minlength')" class="error-message">
+    <span *ngIf="userForm.get('password1')!.hasError('minlength')" class="error-message">
       Password must be longer than 6 characters.
     </span>
 

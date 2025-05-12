@@ -13,7 +13,7 @@ import {Subscription} from 'rxjs';
     NgIf,
   ],
   templateUrl: './log-in.component.html',
-  styleUrl: '../sign-up/sign-up.component.css' // Usa el mismo que el sign-up
+  styleUrl: '../sign-up/sign-up.component.css'
 })
 export class LogInComponent implements OnInit, OnDestroy {
   userForm!: FormGroup;

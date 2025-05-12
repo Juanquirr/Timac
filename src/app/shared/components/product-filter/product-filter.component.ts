@@ -109,7 +109,6 @@ export class ProductFilterComponent implements AfterViewInit, OnChanges {
     this.minPercent = ((min - this.minPriceLimit) / (this.maxPriceLimit - this.minPriceLimit)) * 100;
     this.maxPercent = ((max - this.minPriceLimit) / (this.maxPriceLimit - this.minPriceLimit)) * 100;
 
-
     this.minPriceInput = `${this.minPrice}€`;
     this.maxPriceInput = `${this.maxPrice}€`;
 
@@ -137,9 +136,7 @@ export class ProductFilterComponent implements AfterViewInit, OnChanges {
   disableEditing(field: string) {
     if (field === 'minValue') {
       let value = parseInt(this.minPriceInput);
-      if (isNaN(value)) {
-        value = this.minPriceLimit;
-      }
+      if (isNaN(value)) value = this.minPriceLimit;
       value = Math.max(this.minPriceLimit, Math.min(this.maxPriceLimit, value));
       this.minPrice = value;
       this.minPriceInput = `${this.minPrice}€`;
@@ -153,9 +150,7 @@ export class ProductFilterComponent implements AfterViewInit, OnChanges {
       this.updateRange('minValue');
     } else if (field === 'maxValue') {
       let value = parseInt(this.maxPriceInput);
-      if (isNaN(value)) {
-        value = this.maxPriceLimit;
-      }
+      if (isNaN(value)) value = this.maxPriceLimit;
       value = Math.max(this.minPriceLimit, Math.min(this.maxPriceLimit, value));
       this.maxPrice = value;
       this.maxPriceInput = `${this.maxPrice}€`;
@@ -171,9 +166,7 @@ export class ProductFilterComponent implements AfterViewInit, OnChanges {
   }
 
   onKeyPress(event: KeyboardEvent, field: string) {
-    if (event.key === 'Enter') {
-      this.disableEditing(field);
-    }
+    if (event.key === 'Enter') this.disableEditing(field);
   }
 
   restrictToNumbers(event: Event) {

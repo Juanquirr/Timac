@@ -1,4 +1,4 @@
 export interface BasketItem {
-  id: string;
+  id: number;
   quantity: number;
 }
