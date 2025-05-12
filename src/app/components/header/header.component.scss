@@ -1,11 +1,17 @@
 .header-content {
   background-color: #FC4C21;
   display: flex;
-  padding: 10px 20px;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  width: 100%;
   flex-shrink: 0;
+}
+
+.logo {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .logo img {
@@ -13,16 +19,25 @@
   height: auto;
 }
 
-.header-icons {
+.account-basket-container-left,
+.account-basket-container-right {
   display: flex;
-  gap: 20px;
+  align-items: center;
+}
+
+.account-basket-container-left {
+  justify-content: flex-start;
+}
+
+.account-basket-container-right {
+  justify-content: flex-end;
 }
 
 .shopping,
 .user {
   width: 50px;
   height: 50px;
-  margin: 0 25px;
+  margin: 0 10px;
 }
 
 .search-bar {
@@ -35,72 +50,51 @@
   outline: none;
 }
 
-.nav-carousel {
+.menu-buttons-alignment {
   display: flex;
-  padding: 10px;
-  justify-content: center;
-  gap: 10px;
 }
 
-.nav-button {
-  background-color: #c9ddcb;
-  border: solid 1px #999;
-  border-radius: 5px;
-  padding: 5px 10px;
-  height: 50px;
-  text-align: center;
-  align-content: center;
-  text-decoration: none;
-  color: inherit;
-  transition: background-color 0.3s;
-}
-
-.nav-button:hover {
-  background-color: #b0c4b1;
-}
-
-.account-basket-container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.menu-container-unlogged button,
+.menu-container-logged button {
+  margin: 5px;
 }
 
 @media (max-width: 1200px) {
-  .nav-carousel{
+  .nav-carousel {
     flex-wrap: wrap;
   }
 }
 
 @media (max-width: 992px) {
-  .search-form{
+  .search-form {
     width: 50%;
   }
-  .search-bar{
+  .search-bar {
     width: 100%;
   }
-  .account-basket-container{
+  .account-basket-container {
     width: 20%;
   }
-  .account-basket-container *{
+  .account-basket-container * {
     margin: 5%;
   }
-  .header-content{
+  .header-content {
     gap: 10px;
   }
 }
 
 @media (max-width: 768px) {
-  .logo a img{
+  .logo a img {
     width: 150px;
     height: auto;
   }
-  .account-basket-container{
+  .account-basket-container {
     width: 20%;
   }
-  .search-form{
+  .search-form {
     width: 50%;
   }
-  .search-bar{
+  .search-bar {
     width: 100%;
   }
 }
@@ -111,18 +105,18 @@
     width: 100%;
     height: auto;
   }
-  .search-form{
+  .search-form {
     flex-shrink: 1;
     width: 85%;
     margin: 0 auto;
   }
-  .search-bar{
+  .search-bar {
     width: 100%;
   }
-  .logo a img{
+  .logo a img {
     flex-shrink: 1;
   }
-  .account-basket-container{
+  .account-basket-container {
     flex-shrink: 1;
     justify-content: space-evenly;
     width: 90%;
