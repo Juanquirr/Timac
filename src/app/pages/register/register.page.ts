@@ -1,21 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {FormBuilder, FormGroup, FormsModule, Validators} from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Subscription} from "rxjs";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterLink]
 })
-export class RegisterPage implements OnInit {
+export class RegisterPage implements OnInit, OnDestroy {
   userForm!: FormGroup;
   currentUser: any = null;
-  isLoading = true;
-  userSubscription = Subscription;
+  isLoading = false;
+  userSubscription!: Subscription;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -50,6 +50,12 @@ export class RegisterPage implements OnInit {
 
     // LOGICA DE REGISTER
 
+  }
+
+  ngOnDestroy() {
+    if(this.userSubscription){
+      this.userSubscription.unsubscribe();
+    }
   }
 
   handleLogout(){

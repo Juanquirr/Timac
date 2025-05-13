@@ -1,13 +1,60 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="main-section" *ngIf="isLoading">
+  <p class="info-label">Loading...</p>
+</div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<div class="main-section" *ngIf="currentUser && !isLoading">
+  <p class="info-label">You are logged in as {{ currentUser.email }} </p>
+  <div class="signup-button-container">
+    <button class="signup-button" (click)="handleLogout()">
+      <span class="signup-button-text">Log-out</span>
+    </button>
+  </div>
+</div>
+
+<div class="main-section" *ngIf="!currentUser && !isLoading">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="signup-form" id="signup-form">
+    <label for="name-input" class="info-label">Name:</label>
+    <input formControlName="name" id="name-input" class="signup-input" type="text" placeholder="Full Name">
+    <span *ngIf="userForm.get('name')!.hasError('required') && userForm.get('name')?.touched" class="error-message">
+      Enter a name
+    </span>
+
+    <div class="input-group">
+      <div class="container-small-input">
+        <label for="phone-input" class="info-label">Phone (optional):</label>
+        <input formControlName="phone" type="text" placeholder="Phone" class="signup-input" id="phone-input">
+        <span *ngIf="userForm.get('phone')?.invalid" class="error-message">Phone must be 9 digits or empty</span>
+      </div>
+      <div class="container-small-input">
+        <label for="date-input" class="info-label">Birth Date (optional):</label>
+        <input formControlName="birthDate" id="date-input" type="date" min="1900-01-01" placeholder="Birth Date" class="signup-input">
+      </div>
+    </div>
+
+    <label for="email-input" class="info-label">Email:</label>
+    <input formControlName="email" type="email" class="signup-input" placeholder="Email Address" id="email-input"/>
+    <span *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="error-message">
+      Enter a valid email.
+    </span>
+
+    <label for="password1" class="info-label">Password:</label>
+    <input formControlName="password1" class="signup-input" type="password" placeholder="Password" id="password1">
+    <label for="password2" class="info-label">Repeat password:</label>
+    <input formControlName="password2" class="signup-input" type="password" placeholder="Repeat Password" id="password2">
+    <span *ngIf="userForm.hasError('passwordMismatch')" class="error-message">Passwords do not match</span>
+    <span *ngIf="userForm.get('password1')!.hasError('minlength')" class="error-message">
+      Password must be longer than 6 characters.
+    </span>
+
+    <div class="signup-button-container">
+      <button type="submit" class="signup-button" id="signup-button">
+        <span class="signup-button-text">Sign Up</span>
+      </button>
+    </div>
+    <div *ngIf="userForm.hasError('registrationError')" class="error-message" style="align-self: center; font-size: 1em">
+      {{ userForm.errors?.['registrationError'] }}
+    </div>
+  </form>
+
+  <p class="login-link">Already have an account? <a [routerLink]="['/auth/login']">Log in</a></p>
+</div>
