@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { DefaultComponent } from './components/layouts/default/default.component';
 import { AuthComponent } from './components/layouts/auth/auth.component';
 
+
 export const routes: Routes = [
   {
     path: '',
@@ -16,7 +17,7 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/favorites/favorites.page').then((m) => m.FavoritesPage),
       },
       {
-        path: 'detailed-product',
+        path: 'product/:id',
         loadComponent: () => import('./pages/detailed-product/detailed-product.page').then((m) => m.DetailedProductPage),
       },
       {

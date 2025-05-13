@@ -1,0 +1,158 @@
+.body {
+  align-items: center;
+}
+
+.detailed-product-container {
+  width: 100%;
+}
+
+.top-boxes-detailed-product {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin: 0 15%;
+}
+
+.top-box-detailed-product-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-box-detailed-product-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.information-detailed-product {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.bottom-box-detailed-product {
+  text-align: justify;
+  margin: 0 15%;
+  align-items: center;
+}
+
+.availability {
+  display: flex;
+  flex-direction: column;
+}
+
+.availability-in-store {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.availability-for-delivery {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.counter-container {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter-button {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  background-color: var(--headerfootercolor-100);
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.counter-button:hover {
+  border: 2px solid black;
+}
+
+.counter-value {
+  font-size: 20px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.add-basket-button {
+  align-self: start;
+  background-color: var(--headerfootercolor-0);
+  width: 50%;
+  font-size: var(--bodyprice-font-size);
+  text-align: center;
+  cursor: pointer;
+  margin: 20px 0;
+  padding: 15px 0;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+}
+
+.add-basket-button:hover {
+  border: 2px solid black
+}
+
+#add-basket-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .top-box-detailed-product-left img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .top-box-detailed-product-left img {
+    width: 100%;
+    height: auto;
+  }
+
+  .top-boxes-detailed-product {
+    margin-top: 30px;
+    flex-direction: column;
+  }
+
+  .information-detailed-product * {
+    text-align: center;
+    align-items: center;
+  }
+
+  .counter-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .add-basket-button {
+    margin: 0;
+    width: 70%;
+    align-self: center;
+  }
+
+  .bottom-box-detailed-product {
+    text-align: justify;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-box-detailed-product-left img {
+    width: 70%;
+    height: auto;
+  }
+}

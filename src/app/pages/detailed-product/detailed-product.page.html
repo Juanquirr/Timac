@@ -1,13 +1,40 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>detailed-product</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div *ngIf="product" class="detailed-product-container">
+  <div class="top-boxes-detailed-product">
+    <div class="top-box-detailed-product-left">
+      <img [src]="product.image" [alt]="product.image_alt">
+    </div>
+    <div class="top-box-detailed-product-right">
+      <div class="information-detailed-product">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">detailed-product</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+        <h1 class="body-title font-base">{{ product.name }}</h1>
+        <h2 class="big-price font-base">{{ product.price }}{{ product.currency }}</h2>
+        <p class="body-text font-base">
+          Subcategory: {{ product.subcategory || 'N/A'}}<br>
+          Brand: {{ product.brand || 'N/A' }}<br>
+          Color: 'N/A'<br>
+        </p>
+        <div class="availability">
+          <div class="availability-in-store">
+            <img src="assets/star.png" alt="Star"/>
+            <p class="body-text font-base">{{ product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE' }}</p>
+          </div>
+          <div class="availability-for-delivery">
+            <img src="assets/arrow.png" alt="Arrow"/>
+            <p class="body-text font-base">{{ product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY' }}</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="add-basket-container">
+        <button class="add-basket-button" id="add-basket-button" (click)="addToWishList()" >
+          <span class="basket-text font-base">Add to wish list</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-box-detailed-product">
+    <h2 class="body-title font-base">About this item</h2>
+    <p class="body-text font-base" *ngFor="let line of product.description">{{ line }}</p>
+  </div>
+</div>
