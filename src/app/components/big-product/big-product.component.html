@@ -1,0 +1,29 @@
+<div class="single-big-product-container">
+  <a class="single-big-product-full-link" [routerLink]="['/product', product.id]"></a>
+
+  <div class="single-big-product-image-container">
+    <img class="single-big-product-image" [src]="product.image" [alt]="product.name" />
+  </div>
+
+  <h1 class="single-big-product-title font-base body-text">{{ product.name }}</h1>
+
+  <div class="single-big-product-price font-base body-text">
+    <h2>{{ product.price }}{{ product.currency}}</h2>
+  </div>
+
+  <div class="availability">
+    <div class="availability-in-store">
+      <img src="assets/star.png" alt="Star" />
+      <p class="body-text font-base">
+        {{product.availability.in_store ? 'AVAILABLE IN STORE' : 'NOT AVAILABLE IN STORE' }}
+      </p>
+    </div>
+
+    <div class="availability-for-delivery">
+      <img src="assets/arrow.png" alt="Arrow" />
+      <p class="body-text font-base">
+        {{product.availability.delivery ? 'AVAILABLE FOR DELIVERY' : 'NOT AVAILABLE FOR DELIVERY' }}
+      </p>
+    </div>
+  </div>
+</div>
