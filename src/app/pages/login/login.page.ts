@@ -1,20 +1,48 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import {Subscription} from "rxjs";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  styleUrls: ['../register/register.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterLink]
 })
-export class LoginPage implements OnInit {
+export class LoginPage implements OnInit, OnDestroy {
+  userForm!: FormGroup;
+  currentUser: any = null;
+  userSubscription!: Subscription;
+  isLoading = false;
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder,
+  ) {}
 
-  ngOnInit() {
+  ngOnInit(){
+    // COMPROBAR QUE NO HAY NADIE LOGEADO
+
+    this.userForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]]
+    });
+  }
+
+  onSubmit() {
+    if (this.userForm.invalid) {
+      console.log('This form is invalid');
+      return;
+    }
+  }
+  ngOnDestroy() {
+    if(this.userSubscription){
+      this.userSubscription.unsubscribe();
+    }
+  }
+
+  handleLogout() {
+    // LOGOUT CON AUTHSERVICE
   }
 
 }
