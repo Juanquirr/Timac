@@ -1,44 +1,33 @@
 import { Component } from '@angular/core';
-import {NgIf} from '@angular/common';
-import {RouterLink, Router} from '@angular/router';
+import {RouterLink} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {IonicModule} from "@ionic/angular";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
   imports: [
-    NgIf,
     RouterLink,
-    FormsModule
-
+    FormsModule,
+    IonicModule,
+    NgIf
   ],
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent {
-  // areLoginButtonsDisplaying: boolean = false;
-  // searchText: String = "";
-  //
-  // constructor(private authService: AuthService, private router: Router) {}
-  //
-  // toggleLoginButtons(): void {
-  //   this.areLoginButtonsDisplaying = !this.areLoginButtonsDisplaying;
-  // }
-  //
-  // checkLoginStatus(){
-  //   return !!this.authService.getCurrentUser();
-  // }
-  //
-  // handleLogout() {
-  //   this.authService.logout().catch(error => console.error('Logout error: ', error));
-  // }
-  //
-  // onSearch() {
-  //   if (this.searchText.length < 1) {
-  //     return;
-  //   }
-  //   this.router.navigate(['/search-subcategory'], {
-  //     queryParams: { query: this.searchText }
-  //   });
-  // }
+  isLoggedIn = false; // Mario Service
+  showMenu = false;
+
+  toggleMenu(): void {
+    this.showMenu = !this.showMenu;
+  }
+
+  logout(): void {
+    this.isLoggedIn = false;
+    this.showMenu = false;
+    // Mario service
+  }
 }

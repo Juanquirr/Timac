@@ -1,13 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>favorites</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding favorites-container">
+  <div class="favorites-products-container">
+    <ion-card class="title-favorites-section">
+      <ion-card-header>
+        <ion-card-title class="body-title font-base">
+          My favorites - {{ totalItems }} items
+        </ion-card-title>
+      </ion-card-header>
+    </ion-card>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">favorites</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-list class="bottom-favorites-section">
+      <ion-item></ion-item>
+    </ion-list>
+  </div>
 </ion-content>
