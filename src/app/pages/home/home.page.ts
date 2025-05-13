@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { IonHeader, IonContent } from '@ionic/angular/standalone';
 import {HeaderComponent} from "../../components/header/header.component";
 import {FooterComponent} from "../../components/footer/footer.component";
 
@@ -7,7 +7,7 @@ import {FooterComponent} from "../../components/footer/footer.component";
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, HeaderComponent, FooterComponent],
+  imports: [IonHeader, IonContent, HeaderComponent, FooterComponent],
 })
 export class HomePage {
   constructor() {}
