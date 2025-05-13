@@ -15,10 +15,10 @@
         <img class="user" src="assets/AccountIcon.png" alt="Your Account" (click)="toggleMenu()"/>
         <div class="menu-buttons-alignment" *ngIf="showMenu">
           <div class="menu-container-unlogged" *ngIf="!isLoggedIn">
-            <ion-button class="menu-sign-up-button" fill="clear" [routerLink]="['/register']">
+            <ion-button class="menu-sign-up-button" fill="clear" [routerLink]="['auth/register']">
               <span class="body-text font-base">Register</span>
             </ion-button>
-            <ion-button class="menu-sign-in-button" fill="clear" [routerLink]="['/login']">
+            <ion-button class="menu-sign-in-button" fill="clear" [routerLink]="['auth/login']">
               <span class="body-text font-base">Log in</span>
             </ion-button>
           </div>
