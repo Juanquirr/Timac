@@ -1,4 +1,4 @@
-.basket-product {
+.favorite-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,7 +93,7 @@
     max-height: 45%;
   }
 
-  .basket-product {
+  .favorite-item {
     height: 750px;
     display: flex;
     flex-direction: column;
