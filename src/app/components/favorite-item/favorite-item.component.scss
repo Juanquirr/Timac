@@ -1,0 +1,107 @@
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--containerbackground-300);
+  margin: 5px 0;
+  border: 1px solid black;
+  height: 400px;
+}
+
+.basket-checkbox {
+  margin-right: 10px;
+}
+
+.item-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  max-height: 80%;
+  height: auto;
+  padding: 0;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+}
+
+.item-image img {
+  align-self: center;
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+  object-position: center;
+  border: 3px solid black;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.availability {
+  display: flex;
+  flex-direction: column;
+}
+
+.availability-in-store {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.availability-for-delivery {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.counter-container {
+  margin: 15px 5px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter-button {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  background-color: var(--headerfootercolor-100);
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.counter-button:hover {
+  border: 2px solid black;
+}
+
+.counter-value {
+  font-size: 20px;
+  min-width: 40px;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .item-image img {
+    max-width: 90%;
+    max-height: 90%;
+
+  }
+  .item-image{
+    max-height: 45%;
+  }
+
+  .favorite-item {
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-details * {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+}
