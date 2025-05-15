@@ -10,10 +10,6 @@
   height: 400px;
 }
 
-.basket-checkbox {
-  margin-right: 10px;
-}
-
 .item-image {
   display: flex;
   align-items: center;
@@ -54,33 +50,6 @@
   display: flex;
   align-items: center;
   gap: 5px;
-}
-
-.counter-container {
-  margin: 15px 5px 0 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.counter-button {
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  background-color: var(--headerfootercolor-100);
-  cursor: pointer;
-  border-radius: 5px;
-  border: none;
-}
-
-.counter-button:hover {
-  border: 2px solid black;
-}
-
-.counter-value {
-  font-size: 20px;
-  min-width: 40px;
-  text-align: center;
 }
 
 @media (max-width: 576px) {

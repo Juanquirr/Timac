@@ -29,7 +29,6 @@ export class FirebaseService {
     return collectionData(collRef) as Observable<any[]>;
   }
 
-
   getUserById(uid: string): Observable<any> {
     const docRef = doc(this.firestore, 'users', uid);
     return docData(docRef) as Observable<any>;

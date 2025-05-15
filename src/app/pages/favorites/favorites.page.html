@@ -1,12 +1,19 @@
-<div class="favorites-products-container">
-  <ion-card class="title-favorites-section">
-    <ion-card-header>
-      <ion-card-title class="body-title font-base">
-        My favorites - {{ totalItems }} items
-      </ion-card-title>
-    </ion-card-header>
-  </ion-card>
-  <ion-list class="bottom-favorites-section">
-    <ion-item></ion-item>
-  </ion-list>
+<div class="favorites-container">
+  <div class="favorites-products-container">
+    <ion-card class="title-favorites-section">
+      <ion-card-header>
+        <ion-card-title class="body-title font-base">
+          My favorites - {{ totalItems }} items
+        </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-list class="bottom-favorites-section">
+      <app-favorite-item
+        *ngFor="let product of basketProducts.values()"
+        [product]="product"
+        (removeProduct)="handleRemove($event)">
+      </app-favorite-item>
+    </ion-list>
+  </div>
 </div>
