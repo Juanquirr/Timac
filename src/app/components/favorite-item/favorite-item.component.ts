@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Product} from "../../core/model/product.model";
 
 @Component({
@@ -8,18 +8,11 @@ import {Product} from "../../core/model/product.model";
 })
 export class FavoriteItemComponent {
 
-  constructor() { }
-
-
-  private _product!: Product;
+  @Input() product!: Product;
 
   @Output() removeProduct = new EventEmitter<number>();
 
   remove(): void {
-    this.removeProduct.emit(this._product.id);
-  }
-
-  get product(): Product {
-    return this._product;
+    this.removeProduct.emit(this.product.id);
   }
 }
