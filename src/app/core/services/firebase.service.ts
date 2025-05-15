@@ -4,19 +4,11 @@ import { Observable} from "rxjs";
 import {Product} from "../model/product.model";
 import {BasketItem} from "../model/basketItem.model";
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseService {
-  constructor(private firestore: Firestore) {
-  }
-
-  getFilteredData(collectionName: string, field: string, value: any): Observable<any[]> {
-    const collRef = collection(this.firestore, collectionName);
-    const q = query(collRef, where(field, '==', value));
-    return collectionData(q) as Observable<any[]>;
-  }
+  constructor(private firestore: Firestore) {}
 
   getProductByFieldId(collectionName: string, productId: number): Observable<Product[]> {
     const coll = collection(this.firestore, collectionName);

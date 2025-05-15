@@ -13,6 +13,7 @@ import {Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
   constructor(private auth: Auth, private firestore: Firestore) {}
 

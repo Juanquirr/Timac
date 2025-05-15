@@ -6,7 +6,6 @@ import {FirebaseService} from "../../core/services/firebase.service";
 import {Observable} from "rxjs";
 import {Product} from "../../core/model/product.model";
 
-
 @Component({
   selector: 'app-product-display',
   standalone: true,
@@ -19,11 +18,9 @@ export class ProductDisplayComponent implements OnInit {
 
   constructor(private firebaseService: FirebaseService) {}
 
-
   ngOnInit(): void {
     this.loadProductsFromFirebase();
   }
-
 
   loadProductsFromFirebase(): void {
     const productObservable: Observable<Product[]> = this.firebaseService.getDataObservable('products');
@@ -32,5 +29,4 @@ export class ProductDisplayComponent implements OnInit {
       console.log(data);
     });
   }
-
 }

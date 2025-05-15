@@ -111,6 +111,9 @@
 }
 
 @media (max-width: 576px) {
+  .account-favorites-container-left {
+    order: 2;
+  }
   .header-content {
     flex-direction: column;
     width: 100%;

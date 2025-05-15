@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
-import {FormsModule} from '@angular/forms';
-import {IonicModule} from "@ionic/angular";
-import {NgIf} from "@angular/common";
+import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from "@ionic/angular";
+import { NgIf } from "@angular/common";
+import { AuthService } from "../../core/services/auth.service";
 
 @Component({
   selector: 'app-header',
@@ -17,17 +18,26 @@ import {NgIf} from "@angular/common";
   styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent {
-  isLoggedIn = false; // Mario Service
+export class HeaderComponent implements OnInit {
+  isLoggedIn = false;
   showMenu = false;
+
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {
+    this.authService.getAuthState().subscribe(user => {
+      this.isLoggedIn = !!user;
+    });
+  }
 
   toggleMenu(): void {
     this.showMenu = !this.showMenu;
   }
 
   logout(): void {
-    this.isLoggedIn = false;
-    this.showMenu = false;
-    // Mario service
+    this.authService.logout().then(() => {
+      this.isLoggedIn = false;
+      this.showMenu = false;
+    });
   }
 }

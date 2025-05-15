@@ -3,14 +3,14 @@
     <ion-card class="title-favorites-section">
       <ion-card-header>
         <ion-card-title class="body-title font-base">
-          My favorites - {{ totalItems }} items
+          Wish list - {{ totalItems }} items
         </ion-card-title>
       </ion-card-header>
     </ion-card>
 
     <ion-list class="bottom-favorites-section">
       <app-favorite-item
-        *ngFor="let product of basketProducts.values()"
+        *ngFor="let product of favoriteProducts.values()"
         [product]="product"
         (removeProduct)="handleRemove($event)">
       </app-favorite-item>
