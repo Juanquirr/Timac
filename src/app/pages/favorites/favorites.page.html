@@ -1,4 +1,16 @@
-<div class="favorites-container">
+<div class="not-authenticated-container" *ngIf="!userUid">
+  <p class="info-label">You need to be logged in to use the favourites page.</p>
+  <div class="navigate-buttons-container">
+    <button class="navigate-button" [routerLink]="['/auth/login']">
+      <span class="navigate-button-text">Log-in</span>
+    </button>
+    <button class="navigate-button" [routerLink]="['/']">
+      <span class="navigate-button-text">Home page</span>
+    </button>
+  </div>
+</div>
+
+<div class="favorites-container" *ngIf="userUid">
   <div class="favorites-products-container">
     <ion-card class="title-favorites-section">
       <ion-card-header>
