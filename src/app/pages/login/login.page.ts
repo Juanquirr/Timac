@@ -16,7 +16,7 @@ export class LoginPage implements OnInit, OnDestroy {
   userForm!: FormGroup;
   currentUser: any = null;
   userSubscription!: Subscription;
-  isLoading = false;
+  isLoading = true;
 
   constructor(
     private formBuilder: FormBuilder,

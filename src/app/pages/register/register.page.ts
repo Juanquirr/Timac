@@ -15,7 +15,7 @@ import {AuthService} from "../../core/services/auth.service";
 export class RegisterPage implements OnInit, OnDestroy {
   userForm!: FormGroup;
   currentUser: any = null;
-  isLoading = false;
+  isLoading = true;
   userSubscription!: Subscription;
 
   constructor(
