@@ -12,7 +12,7 @@ import {BasketItem} from "../../core/model/basketItem.model";
 import {Product} from "../../core/model/product.model";
 import {FavoriteItemComponent} from '../../components/favorite-item/favorite-item.component';
 import {AuthService} from "../../core/services/auth.service";
-import {Router, RouterLink} from "@angular/router";
+import {RouterLink} from "@angular/router";
 import {Subscription} from "rxjs";
 
 @Component({
@@ -30,7 +30,7 @@ export class FavoritesPage implements OnInit, OnDestroy {
   userUid: any = null;
   userSubscription!: Subscription;
 
-  constructor(private firebaseService: FirebaseService, private authService: AuthService, private router: Router) { }
+  constructor(private firebaseService: FirebaseService, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.userSubscription = this.authService.getAuthState().subscribe(user => {
