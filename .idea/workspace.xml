@@ -4,23 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75a25402-f016-4035-bed6-be694a56d077" name="Changes" comment="Favorites of a user are properly loaded to the wish list.">
+    <list default="true" id="75a25402-f016-4035-bed6-be694a56d077" name="Changes" comment="Scroll is properly working on login and register pages now.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/capacitor.build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/capacitor.build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/capacitor.settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/capacitor.settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/product-display/product-display.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/product-display/product-display.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/product-display/product-display.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/product-display/product-display.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/services/firebase.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/services/firebase.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/detailed-product/detailed-product.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/detailed-product/detailed-product.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/detailed-product/detailed-product.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/detailed-product/detailed-product.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/detailed-product/detailed-product.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/detailed-product/detailed-product.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/favorites/favorites.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/favorites/favorites.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/favorites/favorites.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/favorites/favorites.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/layouts/auth/auth.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/layouts/auth/auth.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/layouts/auth/auth.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/layouts/auth/auth.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/login/login.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/register/register.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/register/register.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/register/register.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/register/register.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/register/register.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/register/register.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="juanquirr" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,12 +56,13 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;juanquirr&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\juanq\\WebstormProjects\\Timac\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -123,6 +117,11 @@
       <workItem from="1747231231251" duration="3936000" />
       <workItem from="1747244335113" duration="817000" />
       <workItem from="1747300126146" duration="8239000" />
+      <workItem from="1747320692568" duration="677000" />
+      <workItem from="1747323298995" duration="144000" />
+      <workItem from="1747324915802" duration="283000" />
+      <workItem from="1747661793910" duration="3819000" />
+      <workItem from="1747665724660" duration="811000" />
     </task>
     <task id="LOCAL-00001" summary="Ionic working with simple header.">
       <option name="closed" value="true" />
@@ -159,6 +158,7 @@
     <MESSAGE value="Merge fix with main." />
     <MESSAGE value="Smoother swipe through pages and connection with Android studio." />
     <MESSAGE value="Favorites of a user are properly loaded to the wish list." />
-    <option name="LAST_COMMIT_MESSAGE" value="Favorites of a user are properly loaded to the wish list." />
+    <MESSAGE value="Scroll is properly working on login and register pages now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Scroll is properly working on login and register pages now." />
   </component>
 </project>
